@@ -323,10 +323,9 @@
     }
   }
   
-  .logo {
-    display: block;  
-    margin-left: auto;
-  }
+  /* .logo {
+    
+  } */
   .sbox {
     position: relative;
     }
