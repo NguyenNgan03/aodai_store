@@ -13,6 +13,9 @@ class ProductController extends CustomerController
     function store()
     {
     }
+    public function category(){
+        
+    }
 
     public function detail()
     {

@@ -5,11 +5,18 @@ class HomeController extends CustomerController
     {
         parent::template('app\views\users\home\homePage.php');
     }
-    public function detail($id = "", $slug = "")
-    {
-
-        echo 'id san phan ' . $id . '<br>';
-        echo 'slug ' . $slug . '<br>';
+    public function products(){
+        parent::template('app\views\users\Products\products.php');
+       
+    }
+    public function information(){
+        parent::template('app\views\users\home\about.php');
+    }
+    public function contact(){
+        parent::template('app\views\users\home\contact.php');
+    }
+    public function profile(){
+        parent::template('app\views\users\home\profile.php');
     }
     public function search()
     {
