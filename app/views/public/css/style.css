@@ -1,7 +1,6 @@
 .product {
     position: relative;
-    width: 1500px;
-    height: 2651px;
+    width: 100%;
     background-color: #ffffff;
     overflow: hidden;
   }
