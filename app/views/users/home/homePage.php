@@ -70,10 +70,10 @@
     </div>
     <h1 class="san-pham-ban-chay">SẢN PHẨM BÁN CHẠY</h1>
     <div class="flex-row-c">
-      <img class="imgl-master-21" src="../image/image1.png" />
-      <img class="img-master-22" src="../image/image2.png" />
-      <img class="mgm-master-23" src="../image/image3.png" />
-      <img class="mgl-master-24" src="../image/image4.png" />
+      <img class="imgl-master-21" src="app\views\public\Images\image1.png" />
+      <img class="img-master-22" src="app\views\public\Images\image2.png" />
+      <img class="mgm-master-23" src="app\views\public\Images\image3.png" />
+      <img class="mgl-master-24" src="app\views\public\Images\image4.png" />
       <span class="ao-dai-bach-hoa-xuan-hong-dam-25">Áo dài Bách Hoa Xuân - Hồng đậm</span>
       <span class="ao-dai-truyen-thong-tinh-khoi-hong-26">Áo dài Truyền thống Tinh Khôi - Hồng</span>
       <span class="ao-dai-truyen-thong-tinh-khoi-hong-27">Áo dài Truyền thống Tinh Khôi - Hồng</span>
