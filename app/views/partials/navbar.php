@@ -13,7 +13,7 @@
     <section class="header-navbar">
         <div class="navbar">
             <div class="logo">
-                <img src="image/Logo.png" alt="Logo">
+                <img src="app\views\public\Images\Logo.png" alt="Logo">
             </div>
             <div class="box">
                 <form class="sbox" action="/search" method="get">
