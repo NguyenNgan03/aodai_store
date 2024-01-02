@@ -1,3 +1,16 @@
+<?php
+// Include necessary files and classes
+require_once 'app\models\product.php'; // Adjust the path accordingly
+
+// Create an instance of the Category class
+$product = new Products();
+
+// Get all products
+$products = $category->getAllProducts();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,19 +39,22 @@
         </div>
       </div> -->
     <h1 class="outstanding-products">SẢN PHẨM NỔI BẬT</h1>
+
+    <?php foreach ($products as $product): ?>
+
     <div class="flex-row-a">
-      <img class="imgl-master" src="app\views\public\Images\image1.png" />
-      <img class="img-master" src="app\views\public\Images\image2.png" />
-      <img class="mgm-master" src="app\views\public\Images\image3.png" />
-      <img class="mgl-master" src="app\views\public\Images\image4.png" />
-      <span class="text-1">Áo dài Truyền thống Tinh Khôi - Hồng</span>
-      <span class="text-2">Áo dài Bách Hoa Xuân - Hồng đậm</span>
-      <span class="text-3">Áo dài Dáng Xưa Yên Phương - Hồng pastel</span>
-      <span class="text-4">Áo dài gấm dáng suôn Yên Cảnh - Hồng sen</span>
-      <div class="frame-a"><span class="text-6">750.000 VNĐ</span></div>
-      <div class="frame-b"><span class="text-7">790.000 VNĐ</span></div>
-      <div class="frame-c"><span class="text-8">750.000 VNĐ</span></div>
-      <div class="frame-d"><span class="text-9">750.000 VNĐ</span></div>
+      <img class="img-master" src="<?= $product['image1 ']; ?>" />
+      <img class="img-master" src="<?= $product['image1 ']; ?>" />
+      <img class="mgm-master" src="<?= $product['image1 ']; ?>" />
+      <img class="mgl-master" src="<?= $product['image1 ']; ?>" />
+      <span class="text-1"> <?= $product['description ']; ?> </span>
+      <span class="text-2"><?= $product['description ']; ?></span>
+      <span class="text-3"><?= $product['description ']; ?></span>
+      <span class="text-4"><?= $product['description ']; ?></span>
+      <div class="frame-a"><span class="text-6"><?= $product['price ']; ?></span></div>
+      <div class="frame-b"><span class="text-7"><?= $product['price ']; ?></span></div>
+      <div class="frame-c"><span class="text-8"><?= $product['price ']; ?></span></div>
+      <div class="frame-d"><span class="text-9"><?= $product['price ']; ?></span></div>
     </div>
     <div class="flex-row-b">
       <img class="mgl-master-c" src="app\views\public\Images\image5.png" />
@@ -54,6 +70,7 @@
       <div class="frame-17"><span class="vnd-18">750.000 VNĐ</span></div>
       <div class="frame-19"><span class="vnd-1a">750.000 VNĐ</span></div>
     </div>
+    <?php endforeach; ?>
     <h1 class="service">DỊCH VỤ</h1>
     <div class="flex-row-cd">
       <img class="refund" src="app\views\public\Images\refund.png" />
