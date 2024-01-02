@@ -7,7 +7,7 @@
   <title>homepage</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400&display=swap" />
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="app\views\public\css\homePage.css" />
 </head>
 
 <body>
