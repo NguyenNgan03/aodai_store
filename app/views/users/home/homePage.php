@@ -7,11 +7,11 @@
   <title>homepage</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400&display=swap" />
-  <link rel="stylesheet" href="app\views\public\css\homePage.css" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
-<div class="main-container">
+  <div class="main-container">
     <img class="banner" src="app\views\public\Images\Banner-1.png" />
     <!-- <div class="slider">
   
@@ -25,16 +25,16 @@
           <img id="slide-3" src="../image/Banner-3.png"/>
         </div>
       </div> -->
-    <h1 class="san-pham-noi-bat">SẢN PHẨM NỔI BẬT</h1>
+    <h1 class="outstanding-products">SẢN PHẨM NỔI BẬT</h1>
     <div class="flex-row-a">
       <img class="imgl-master" src="app\views\public\Images\image1.png" />
       <img class="img-master" src="app\views\public\Images\image2.png" />
       <img class="mgm-master" src="app\views\public\Images\image3.png" />
       <img class="mgl-master" src="app\views\public\Images\image4.png" />
-      <span class="ao-dai-truyen-thong-tinh-khoi-hong">Áo dài Truyền thống Tinh Khôi - Hồng</span>
-      <span class="ao-dai-bach-hoa-xuan-hong-dam">Áo dài Bách Hoa Xuân - Hồng đậm</span>
-      <span class="ao-dai-dang-xua-yen-phuong-hong-pastel">Áo dài Dáng Xưa Yên Phương - Hồng pastel</span>
-      <span class="ao-dai-gam-dang-suon-yen-canh-hong-sen">Áo dài gấm dáng suôn Yên Cảnh - Hồng sen</span>
+      <span class="text-1">Áo dài Truyền thống Tinh Khôi - Hồng</span>
+      <span class="text-2">Áo dài Bách Hoa Xuân - Hồng đậm</span>
+      <span class="text-3">Áo dài Dáng Xưa Yên Phương - Hồng pastel</span>
+      <span class="text-4">Áo dài gấm dáng suôn Yên Cảnh - Hồng sen</span>
       <div class="frame-a"><span class="text-6">750.000 VNĐ</span></div>
       <div class="frame-b"><span class="text-7">790.000 VNĐ</span></div>
       <div class="frame-c"><span class="text-8">750.000 VNĐ</span></div>
@@ -54,30 +54,32 @@
       <div class="frame-17"><span class="vnd-18">750.000 VNĐ</span></div>
       <div class="frame-19"><span class="vnd-1a">750.000 VNĐ</span></div>
     </div>
-    <h1 class="dich-vu">DỊCH VỤ</h1>
+    <h1 class="service">DỊCH VỤ</h1>
     <div class="flex-row-cd">
       <img class="refund" src="app\views\public\Images\refund.png" />
       <img class="support" src="app\views\public\Images\support.png" />
       <img class="shipping" src="app\views\public\Images\shipping.png" />
     </div>
     <div class="flex-row-bf">
-      <span class="mien-phi-van-chuyen">MIỄN PHÍ VẬN CHUYỂN</span><span class="ho-tro-24-7">HỖ TRỢ 24/7</span><span class="hoan-tien-100">HOÀN TIỀN 100%</span>
+      <span class="free-shipping">MIỄN PHÍ VẬN CHUYỂN</span>
+      <span class="support-24-7">HỖ TRỢ 24/7</span>
+      <span class="refund-100">HOÀN TIỀN 100%</span>
     </div>
     <div class="flex-row-d-1e">
       <span class="lorem-ipsum-printing">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
       <span class="lorem-ipsum-printing-1f">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
       <span class="lorem-ipsum-printing-20">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
     </div>
-    <h1 class="san-pham-ban-chay">SẢN PHẨM BÁN CHẠY</h1>
+    <h1 class="selling-products">SẢN PHẨM BÁN CHẠY</h1>
     <div class="flex-row-c">
       <img class="imgl-master-21" src="app\views\public\Images\image1.png" />
       <img class="img-master-22" src="app\views\public\Images\image2.png" />
       <img class="mgm-master-23" src="app\views\public\Images\image3.png" />
       <img class="mgl-master-24" src="app\views\public\Images\image4.png" />
-      <span class="ao-dai-bach-hoa-xuan-hong-dam-25">Áo dài Bách Hoa Xuân - Hồng đậm</span>
-      <span class="ao-dai-truyen-thong-tinh-khoi-hong-26">Áo dài Truyền thống Tinh Khôi - Hồng</span>
-      <span class="ao-dai-truyen-thong-tinh-khoi-hong-27">Áo dài Truyền thống Tinh Khôi - Hồng</span>
-      <span class="ao-dai-truyen-thong">Áo dài Truyền thống Tinh Khôi - Hồng</span>
+      <span class="text-e">Áo dài Bách Hoa Xuân - Hồng đậm</span>
+      <span class="text-f">Áo dài Truyền thống Tinh Khôi - Hồng</span>
+      <span class="text-g">Áo dài Truyền thống Tinh Khôi - Hồng</span>
+      <span class="text-h">Áo dài Truyền thống Tinh Khôi - Hồng</span>
       <div class="frame-2d"><span class="text-21">750.000 VNĐ</span></div>
       <div class="frame-2e"><span class="text-22">750.000 VNĐ</span></div>
       <div class="frame-2f"><span class="text-23">750.000 VNĐ</span></div>
@@ -89,6 +91,6 @@
       <span class="text-27">3</span>
     </div>
   </div>
-  </body>
+</body>
 
 </html>
