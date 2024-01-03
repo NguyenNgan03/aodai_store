@@ -1,6 +1,7 @@
 <?php
 
 // use aodai_store\app\models\Product;
+
 include 'app\models\Product.php';
 
 class ProductController extends CustomerController
