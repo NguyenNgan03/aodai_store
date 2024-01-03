@@ -1,19 +1,17 @@
 <?php
 class AdminController
 {
-    public function index()
+    public function template($view, $data = null)
+	{
+		if ($data != null) {
+			extract($data);
+		}
+		ob_start();
+		include $view;
+		$content = ob_get_clean(); //content cho thằng template gọi nội dung đổ ra view
+		include 'app\views\users\temlate.php';
+	}
+    public function before()
     {
-        include 'app\views\users\home\homePage.php';
-    }
-    public function detail($id = "", $slug = "")
-    {
-
-        echo 'id san phan ' . $id . '<br>';
-        echo 'slug ' . $slug . '<br>';
-    }
-    public function search()
-    {
-        $keyword = $_GET["keyword"];
-        echo "từ khóa cần tìm: " . $keyword;
     }
 }

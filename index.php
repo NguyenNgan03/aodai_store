@@ -4,7 +4,9 @@
 // error_reporting(E_ALL);
 
 session_start();
-require_once 'bootstrap.php';
+// include 'auto_load.php';
+include 'bootstrap.php';
+// include 'app\App.php';
 $app = new App();
-
+$app->handle();
 

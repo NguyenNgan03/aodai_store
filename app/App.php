@@ -3,13 +3,6 @@ global $routes;
 
 class App
 {
-    private $__controller, $__action, $__params;
-
-    function __construct()
-    {
-        $this->handle();
-    }
-
     public function loadError($name = '404')
     {
         require_once 'errors/' . $name . '.php';

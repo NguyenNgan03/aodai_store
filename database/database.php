@@ -2,10 +2,10 @@
 
 class Database
 {
-    private $host = 'localhost';
-    private $database = 'aodaistore_sql';
-    private $user = 'root';
-    private $password = 'mysql';
+    private $host = "localhost";
+    private $dbname = "aodaistore_sql";
+    private $user = "root";
+    private $password = "";
     private $connection;
 
     public function __construct()
@@ -16,7 +16,8 @@ class Database
     private function connect()
     {
         try {
-            $connection = new PDO("mysql:host={$this->host};dbname={$this->database}", $this->user, $this->password);
+            // $connect = new PDO("mysql:host=$host;dbname=$$dbname", $user, $password);
+            $connection = new PDO("mysql:host={$this->host};dbname={$this->dbname}", $this->user, $this->password);
             $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $connection;
         } catch (PDOException $e) {
@@ -37,14 +38,14 @@ class Database
 }
 
 // Ví dụ sử dụng:
-$db = new Database();
+// $db = new Database();
 
 // Lấy tất cả dữ liệu từ bảng users
-$users = $db->query('SELECT * FROM users');
-print_r($users);
+// $users = $db->query('SELECT * FROM users');
+// print_r($users);
 
 // Lấy tất cả dữ liệu từ bảng categories
-$categories = $db->query('SELECT * FROM categories');
-print_r($categories);
+// $categories = $db->query('SELECT * FROM categories');
+// print_r($categories);
 
 // Tương tự, bạn có thể sử dụng hàm query cho các truy vấn SELECT khác trong cơ sở dữ liệu của bạn.
