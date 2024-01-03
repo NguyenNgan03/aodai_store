@@ -1,9 +1,22 @@
 <?php
+
+// use aodai_store\app\models\Product;
+
 class ProductController extends CustomerController
 {
-    function index()
+    private $product;
+    private $category;
+
+    public function __construct() {
+        $this->product = new Product;
+        $this->category = new Category;
+    }
+
+    public function index()
     {
-        parent::template('app\views\users\Products\products.php');
+        $data = $this->product->getAllProducts();
+        parent::template('app\views\users\Products\products.php',$data);
+        
     }
 
     function create()

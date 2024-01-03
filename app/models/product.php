@@ -1,9 +1,9 @@
 <?php
+// namespace aodai_store\app\models;
 
-// use database;
+// use Database;
 
-
-class Products extends Database
+class Product extends Database
 {
     public function getAllProducts()
     {
