@@ -12,6 +12,7 @@ class Product extends Database
 
         return $result;
     }
+
     public function addProduct($id)
     {
         $sql = 'INSERT INTO product (id) VALUES (?)';
@@ -26,14 +27,10 @@ class Product extends Database
         $this->query($sql, $params);
     }
 
-    public function deleteCategory($id)
+    public function deleteProduct($id)
     {
         $sql = 'DELETE FROM products WHERE id = ?';
         $params = [$id];
         $this->query($sql, $params);
     }
-
-
-
 }
-
