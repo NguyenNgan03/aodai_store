@@ -25,7 +25,7 @@
                     <i class="fas fa-users-rectangle"></i>
                     <span>Users</span>
                 </a>
-            </li>
+            </li>   
             <li>
                 <a href="ad_details.php">
                     <i class="fas fa-rectangle-list"></i>

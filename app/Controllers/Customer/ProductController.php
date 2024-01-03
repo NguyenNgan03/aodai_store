@@ -1,6 +1,7 @@
 <?php
 
 // use aodai_store\app\models\Product;
+include 'app\models\Product.php';
 
 class ProductController extends CustomerController
 {
@@ -9,9 +10,9 @@ class ProductController extends CustomerController
 
     public function __construct() {
         $this->product = new Product;
-        $this->category = new Category;
+       
     }
-
+    
     public function index()
     {
         $data = $this->product->getAllProducts();
