@@ -35,6 +35,7 @@ class Database
             throw new Exception("Lỗi truy vấn cơ sở dữ liệu: " . $e->getMessage());
         }
     }
+    
 }
 
 // Ví dụ sử dụng:
