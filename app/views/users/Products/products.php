@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="MediaCenter, Template, eCommerce">
-    <meta name="robots" content="all">
-    <title>AoDai_Store</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="aodai_store\app\views\public\css\bootstrap.min.css">
-
-    <!-- Customizable CSS -->
-    <link rel="stylesheet" href="aodai_store\app\views\public\css\main.css">
-    <link rel="stylesheet" href="aodai_store\app\views\public\css\animate.min.css">
-
-    <!-- Icons/Glyphs -->
-    <link rel="stylesheet" href="aodai_store\app\views\public\css\font-awesome.css">
-
-    <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-</head>
-
-
-
-<body>
     <div class="body-content outer-top-xs">
         <div class='container'>
             <div class='row'>
@@ -411,10 +380,7 @@
                                                     </div>
                                                     <!-- /.cart -->
                                                 </div>
-                                                <!-- /.product -->
-
                                             </div>
-                                            <!-- /.products -->
                                         </div>
 
 
@@ -449,14 +415,9 @@
                                                                 <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                                                             </ul>
                                                         </div>
-                                                        <!-- /.action -->
                                                     </div>
-                                                    <!-- /.cart -->
                                                 </div>
-                                                <!-- /.product -->
-
                                             </div>
-                                            <!-- /.products -->
                                         </div>
 
                                         <div class="col-sm-6 col-md-4 wow fadeInUp">
@@ -490,14 +451,9 @@
                                                                 <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                                                             </ul>
                                                         </div>
-                                                        <!-- /.action -->
                                                     </div>
-                                                    <!-- /.cart -->
                                                 </div>
-                                                <!-- /.product -->
-
                                             </div>
-                                            <!-- /.products -->
                                         </div>
 
 
@@ -532,18 +488,10 @@
                                                                 <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                                                             </ul>
                                                         </div>
-                                                        <!-- /.action -->
                                                     </div>
-                                                    <!-- /.cart -->
                                                 </div>
-                                                <!-- /.product -->
-
                                             </div>
-                                            <!-- /.products -->
                                         </div>
-
-
-
                                     </div>
                                 </div>
                             </div>
@@ -801,14 +749,9 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-
-
                                 </div>
                             </div>
                         </div>
-
                         <div class="clearfix filters-container">
                             <div class="text-right">
                                 <div class="pagination-container">
@@ -820,34 +763,10 @@
                                         <li><a href="#">4</a></li>
                                         <li class="next"><a href="#"><i class="fa fa-angle-right"></i></a></li>
                                     </ul>
-                                    <!-- /.list-inline -->
                                 </div>
-                                <!-- /.pagination-container -->
                             </div>
-                            <!-- /.text-right -->
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
-
-        <script src="aodai_store\app\views\public\js\bootstrap-hover-dropdown.min.js"></script>
-        <script src="aodai_store\app\views\public\js\bootstrap.min.js"></script>
-        <script src="aodai_store\app\views\public\js\bootstrap-hover-dropdown.min.js"></script>
-        <script src="aodai_store\app\views\public\js\owl.carousel.min.js"></script>
-        <script src="assets\js\echo.min.js"></script>
-        <script src="assets\js\jquery.easing-1.3.min.js"></script>
-        <script src="assets\js\bootstrap-slider.min.js"></script>
-        <script src="assets\js\jquery.rateit.min.js"></script>
-        <script src="assets\js\bootstrap-select.min.js"></script>
-        <script src="assets\js\wow.min.js"></script>
-        <script src="assets\js\scripts.js"></script>
-</body>
-
-</html>
