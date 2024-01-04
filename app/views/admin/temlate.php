@@ -7,6 +7,8 @@
     <title>Admin-Users</title>
     <link rel="stylesheet" href="app\views\public\css\dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' />
+    <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css' />
 </head>
 
 <body>
@@ -16,13 +18,13 @@
             <li>
                 <a href="ad_details.php">
                     <i class="fas fa-rectangle-list"></i>
-                    <span>Categories</span>
+                    <span>User</span>
                 </a>
             </li>
             <li class="active">
                 <a href="ad_users.php">
                     <i class="fas fa-users-rectangle"></i>
-                    <span>Users</span>
+                    <span>Categories</span>
                 </a>
             </li>
             <li>
@@ -53,15 +55,19 @@
     </div>
 
     <div class="main--content">
+
         <div class="header--wrapper">
-            <div class="header--title">
+        <?php
+        echo $content;
+        ?>
+            <!-- <div class="header--title">
                 <span>Primary</span>
                 <h2>Users</h2>
             </div>
-       
+        -->
             
-        </div>
-
+        <!-- </div> -->
+<!-- 
         <div class="tabular--wrapper">
             <h3 class="main--add">Add user
                 <i class="fa-solid fa-square-plus"></i></h3>
@@ -88,9 +94,9 @@
                     </tfoot>
                 </table>
             </div>
-        </div>
+        </div> -->
         <!-- Modal -->
-        <div id="modal-delete" class="modal">
+        <!-- <div id="modal-delete" class="modal">
             <div class="modal-content">
                 <h4>Confirmation</h4>
                 <p>Are you sure you want to delete this resource?</p>
@@ -99,9 +105,9 @@
                     <button id="cancel-delete-btn" class="btn btn-cancel">Cancel</button>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div id="id01" class="modal">
+        <!-- <div id="id01" class="modal">
             <form class="modal-content">
                 <div class="container">
                     <h1>Add User</h1>
@@ -169,8 +175,10 @@
                     </div>
                 </div>
             </form>
-        </div>
+        </div> -->
     </div>
+
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 

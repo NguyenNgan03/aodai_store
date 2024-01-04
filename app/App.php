@@ -42,7 +42,6 @@ class App
             // Include file Controller.php và file controller của 'page'
             include_once 'app/Controllers/Controller.php';
             include_once 'app/Controllers/' . $page . '/' . $controller . 'Controller.php';
-
             // Kiểm tra xem có phương thức 'before' trong controller không
             $check_before = get_class_methods($page . 'Controller');
             if (in_array('before', $check_before)) {
