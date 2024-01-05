@@ -6,17 +6,19 @@ include 'app\models\Product.php';
 
 class ProductController extends CustomerController
 {
-    private $product;
-    private $category;
+    // private $product;
+    // private $category;
 
-    public function __construct() {
-        $this->product = new Product;
+    // public function __construct() {
+    //     $this->product = new Product;
        
-    }
+    // }
     
     public function index()
     {
-        $data = $this->product->getAllProducts();
+        $product = new Product();
+        $data['products'] = $product->getAllProducts();
+
         parent::template('app\views\users\Products\products.php',$data);
         
     }
