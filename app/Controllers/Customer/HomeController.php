@@ -6,8 +6,8 @@ include 'app\models\Product.php';
 
 class HomeController extends CustomerController
 {
-    private $product;
-    private $category;
+    // private $product;
+    // private $category;
 
     // public function __construct()
     // {
