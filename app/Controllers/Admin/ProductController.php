@@ -14,22 +14,11 @@ class ProductController extends AdminController
         $data['products'] = $this->product->getAllProducts();
         parent::template('app\views\admin\products\index.php', $data);
     }
+
     public function getCreate()
     {
         parent::template("app/views/admin/products/create.php");
     }
-
-    // public function index()
-    // {
-    //     $product = new Product();
-    //     $data['products'] = $product->getAllProducts();
-
-    //     parent::template('app\views\users\Products\products.php',$data);
-
-    // }
-    // public function render() {
-    //     parent::template('app\views\admin\products\index.php');
-    // }
 
     public function create()
     {

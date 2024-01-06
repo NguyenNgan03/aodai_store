@@ -19,14 +19,11 @@ class Product extends Database
     {
         $sql = 'SELECT * FROM products';
         $result = $this->query($sql);
-
         return $result;
     }
 
     public function getProductById($produc_id){
         $sql = 'SELECT * FROM products WHERE id = :$produc_id';
-        
-
     }
 
     public function addProduct($data)
@@ -55,8 +52,6 @@ class Product extends Database
         $params = [$name, $id];
         $this->query($sql, $params);
     }
-
-
 
     public function deleteProduct($id)
     {
