@@ -89,6 +89,15 @@ class Product extends Database
 
     }
     
+    public function delete($id)
+    {
+        $tableName = $this->model();
+        $condition = "id = :id";
+        $params = [':id' => (int)$id];
+
+        return $this->deleteData($tableName, $condition, $params);
+    }
+    
 
     ///
 

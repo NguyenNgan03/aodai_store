@@ -81,7 +81,6 @@ class ProductController extends AdminController
                     return;
                 }
             }
-
             $id = $_POST['id'];
             $name = $_POST['name'];
             $discount_id = $_POST['discount_id'];
@@ -109,8 +108,17 @@ class ProductController extends AdminController
 
     //
 
-    public function  delete()
+    public function delete()
     {
-        parent::template('app\views\admin\products\delete.php');
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $result = $this->product->delete($id);
+            if ($result) {
+                header('location:?controller=product&action=index&page=admin');
+            } else {
+                echo "<script> alert('Xóa không thành công');
+					window.location.href('?controller=product&action=index&page=admin');</script>";
+            }
     }
+}
 }
