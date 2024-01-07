@@ -5,6 +5,7 @@
         </div>
         <div class="form-group">
             <input type="number" class="form-control" placeholder="Discount ID" name="discount_id">
+           
         </div>
         <div class="form-group">
             <input type="number" class="form-control" placeholder="Category ID" name="category_id">

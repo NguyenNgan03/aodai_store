@@ -18,7 +18,7 @@ class HomeController extends CustomerController
     public function index()
     {
         $product = new Product();
-        $data['products'] =  $product->getAllProducts();
+        $data['products'] =  $product->index();
         parent::template('app\views\users\home\homePage.php', $data);
     }
 

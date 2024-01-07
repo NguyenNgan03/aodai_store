@@ -4,7 +4,6 @@
   <h1 class="outstanding-products">SẢN PHẨM NỔI BẬT</h1>
 
   <?php foreach ($products as $product) : ?>
-
     <div class="flex-row-a">
       <img class="img-master" src="<?= $product['image1']; ?>" />
       <img class="img-master" src="<?= $product['image1']; ?>" />

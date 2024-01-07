@@ -51,10 +51,8 @@
                             <td> <?php echo  $product['image4']; ?></td>
                             <td> <?php echo  $product['created_at']; ?></td>
                             <td> <?php echo  $product['updated_at']; ?></td>
-                            <td> <a href="?controller=product&action=update&page=admin" class="btn btn-primary btn-sm mr-2"><i class="fa fa-pencil"></i></a></td>
-                            <td>  <a href="=<?php echo $product['id']; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a></td>
-
-                          
+                            <td> <a href="?controller=product&action=edit&page=admin&id=<?php echo $product['id'] ?>" class="btn btn-primary btn-sm mr-2"><i class="fa fa-pencil"></i></a></td>
+                            <td> <a href="?controller=product&action=delete&page=admin&id=<?php echo $product['id'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

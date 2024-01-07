@@ -17,7 +17,7 @@ class ProductController extends CustomerController
     public function index()
     {
         $product = new Product();
-        $data['products'] = $product->getAllProducts();
+        $data['products'] = $product->index();
 
         parent::template('app\views\users\Products\products.php',$data);
         

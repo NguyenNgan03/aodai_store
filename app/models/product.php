@@ -1,6 +1,6 @@
 <?php
-// namespace aodai_store\app\models;
 
+// namespace aodai_store\app\models;
 // use Database;
 
 class Product extends Database
@@ -12,51 +12,90 @@ class Product extends Database
 
     public function model()
     {
-        return "categories";
+        return "products";
     }
 
-    public function getAllProducts()
+    public function index()
     {
-        $sql = 'SELECT * FROM products';
-        $result = $this->query($sql);
+        $tableName = $this->model();
+        $data = $this->getAll($tableName);
+        $result = [];
+        foreach($data as $row){
+            $result[] = $row;
+        }
         return $result;
     }
 
-    public function getProductById($produc_id){
-        $sql = 'SELECT * FROM products WHERE id = :$produc_id';
+    // public function getAllProducts()
+    // {
+    //     $sql = 'SELECT * FROM products';
+    //     $result = $this->query($sql);
+    //     return $result;
+    // }
+
+    
+    public function create ($name, $discount_id, $category_id, $description, $price, $color, $material, $size, $image1, $image2, $image3, $image4)
+    {
+        $tableName = $this->model();
+        $params = [
+            'name' => $name, 
+            'discount_id' => $discount_id, 
+            'category_id' => $category_id, 
+            'description' => $description, 
+            'price' => $price, 
+            'color' => $color, 
+            'material' => $material, 
+            'size' => $size, 
+            'image1' => $image1, 
+            'image2' => $image2, 
+            'image3' => $image3, 
+            'image4' => $image4,
+        ];
+        return $this->insertData($tableName,$params);
     }
 
-    public function addProduct($data)
-    {
-        if ($data) {
-            $sql = 'INSERT INTO products (name, discount_id, category_id, description, price, color, material, size, image1, image2, image3, image4) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
-            $params = [
-                $data['name'], $data['discount_id'], $data['category_id'], $data['description'],
-                $data['price'], $data['color'], $data['material'], $data['size'],
-                $data['image1'], $data['image2'], $data['image3'], $data['image4'],
-            ];
-            try{
-                $this->query($sql,$params);
-                return true;
-            }
-            catch(Exception $e){
-                echo'Lỗ thêm sản phẩm '. $e->getMessage();
-            }
-        }
-        return false;
+    ///
+
+    public function getProductById($product_id){
+        $tableName = $this->model();
+        $sql = "SELECT * FROM $tableName WHERE id = :product_id";
+        $params = [':product_id' => $product_id];
+        $data = $this->getDataByQuery($sql, $params);
+        return $data;
+       
     }
 
-    public function updateProduct($id, $name)
+    public function update($id, $name, $discount_id, $category_id, $description, $price, $color, $material, $size, $image1, $image2, $image3, $image4)
     {
-        $sql = 'UPDATE products SET name = ? WHERE id = ?';
-        $params = [$name, $id];
-        $this->query($sql, $params);
-    }
+        $tableName = $this -> model();
+        $data = [
+            'name' => $name, 
+            'discount_id' => $discount_id, 
+            'category_id' => $category_id, 
+            'description' => $description, 
+            'price' => $price, 
+            'color' => $color, 
+            'material' => $material, 
+            'size' => $size, 
+            'image1' => $image1, 
+            'image2' => $image2, 
+            'image3' => $image3, 
+            'image4' => $image4,
+        ];
+        $condition = "id = :id";
+        $params = [':id' => (int)$id];
 
-    public function deleteProduct($id)
-    {
-        $sql = 'DELETE FROM products WHERE id = ?';
-        $params = [$id];
-        $this->query($sql, $params);
+        return $this->updateData($tableName, $data, $condition, $params);
+
     }
+    
+
+    ///
+
+    // public function deleteProduct($id)
+    // {
+    //     $sql = 'DELETE FROM products WHERE id = ?';
+    //     $params = [$id];
+    //     $this->query($sql, $params);
+    // }
 }
