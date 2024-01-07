@@ -15,7 +15,7 @@ class App
             $page = $_GET['page'];
         } else {
             // Nếu không có giá trị, sử dụng giá trị mặc định là 'customer'
-            $page = 'Customer'; 
+            $page = 'Customer';
         }
 
         // Kiểm tra xem có giá trị nào được truyền qua tham số 'controller' không
