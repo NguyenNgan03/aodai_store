@@ -26,7 +26,7 @@ class CategoryController extends AdminController
     {
         $errors = '';
         if (empty($data['name'])) {
-            $errors = "Vui lòng nhập tên.";
+            $errors = "Vui lòng nhập thông tin.";
         }
         return $errors;
     }

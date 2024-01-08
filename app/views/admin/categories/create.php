@@ -11,8 +11,8 @@
             <div cl ass="border p-3">
                 <div class="form-group form-floating py-2 col-12">
                     <label class="ms-2" style="">Name</label>
-                    <input class="form-control border-0 shadow" name="name" required/>
-                    <p style="color: red;"><?php if(!empty($errors)) {echo $errors;} ?></p>
+                    <input class="form-control border-0 shadow" name="name" require/>
+                    <p style="color: red;"><?php if(isset($errors)  && !empty($errors)) {echo $errors;} ?></p>
                 </div>
                 <div class="row pt-2">
                     <div class="col-6 col-md-3">
