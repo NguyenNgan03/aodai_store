@@ -16,7 +16,6 @@ class Database
     private function connect()
     {
         try {
-            // $connect = new PDO("mysql:host=$host;dbname=$$dbname", $user, $password);
             $connection = new PDO("mysql:host={$this->host};dbname={$this->dbname}", $this->user, $this->password);
             $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $connection;
@@ -30,16 +29,6 @@ class Database
         return $this->connection;
     }
 
-    // public function query($sql, $params = [])
-    // {
-    //     try {
-    //         $statement = $this->connection->prepare($sql);
-    //         $statement->execute($params);
-    //         return $statement->fetchAll(PDO::FETCH_ASSOC);
-    //     } catch (PDOException $e) {
-    //         throw new Exception("Lỗi truy vấn cơ sở dữ liệu: " . $e->getMessage());
-    //     }
-    // }
     public function getData($tableName, $params)
     {
         $conditions = '';

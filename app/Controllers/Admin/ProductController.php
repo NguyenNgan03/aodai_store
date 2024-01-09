@@ -19,6 +19,8 @@ class ProductController extends AdminController
 
     public function getCreate()
     {
+        // $data['categories'] = $this->product->getAllCategories();
+        // $data['discounts'] = $this->product->getAllDiscounts();
         parent::template("app/views/admin/products/create.php");
     }
 
@@ -32,6 +34,24 @@ class ProductController extends AdminController
                 if (!isset($_POST[$field]) || empty($_POST[$field])) {
                     echo "Trường $field không được để trống";
                     return;
+                }
+            }
+            // Kiểm tra hình ảnh có đúng định dạng không và lưu vào thư mục
+            $imageFields = ['image1', 'image2', 'image3', 'image4'];
+            foreach ($imageFields as $imageField) {
+                if (isset($_FILES[$imageField]) && $_FILES[$imageField]['error'] === UPLOAD_ERR_OK) {
+                    $uploadDir = 'uploads/'; // Thay đổi đường dẫn tùy vào cấu hình của bạn
+                    $uploadFile = $uploadDir . basename($_FILES[$imageField]['name']);
+
+                    $imageFileType = strtolower(pathinfo($uploadFile, PATHINFO_EXTENSION));
+                    $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+
+                    if (!in_array($imageFileType, $allowedExtensions)) {
+                        echo "File ở trường $imageField không phải là hình ảnh hợp lệ";
+                        return;
+                    }
+                    move_uploaded_file($_FILES[$imageField]['tmp_name'], $uploadFile);
+                    $_POST[$imageField] = $uploadFile; // Lưu đường dẫn hình ảnh vào $_POST
                 }
             }
 

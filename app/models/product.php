@@ -62,7 +62,6 @@ class Product extends Database
         $params = [':product_id' => $product_id];
         $data = $this->getDataByQuery($sql, $params);
         return $data;
-       
     }
 
     public function update($id, $name, $discount_id, $category_id, $description, $price, $color, $material, $size, $image1, $image2, $image3, $image4)
@@ -86,9 +85,8 @@ class Product extends Database
         $params = [':id' => (int)$id];
 
         return $this->updateData($tableName, $data, $condition, $params);
-
     }
-    
+
     public function delete($id)
     {
         $tableName = $this->model();
@@ -97,14 +95,4 @@ class Product extends Database
 
         return $this->deleteData($tableName, $condition, $params);
     }
-    
-
-    ///
-
-    // public function deleteProduct($id)
-    // {
-    //     $sql = 'DELETE FROM products WHERE id = ?';
-    //     $params = [$id];
-    //     $this->query($sql, $params);
-    // }
 }
