@@ -162,4 +162,15 @@ class Database
             throw new Exception("Query failed: " . $e->getMessage());
         }
     }
+
+    public function query($sql, $params = [])
+    {
+        try {
+            $statement = $this->connection->prepare($sql);
+            $statement->execute($params);
+            return $statement->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            throw new Exception("Lỗi truy vấn cơ sở dữ liệu: " . $e->getMessage());
+        }
+    }
 }

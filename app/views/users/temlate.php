@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400&display=swap" />
     <link rel="stylesheet" href="app\views\public\css\homePage.css" />
-
     <link rel="stylesheet" href="app\views\public\css\animate.min.css">
     <link rel="stylesheet" href="app\views\public\css\blue.css">
     <link rel="stylesheet" href="app\views\public\css\bootstrap-select.min.css">

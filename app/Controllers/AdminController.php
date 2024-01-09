@@ -8,6 +8,7 @@ class AdminController
 		}
 		ob_start();
 		include $view;
+
 		$content = ob_get_clean(); //content cho thằng template gọi nội dung đổ ra view
 		include 'app\views\admin\temlate.php';
 	}

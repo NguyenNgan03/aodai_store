@@ -1,5 +1,7 @@
 <?php
 include 'app\models\Product.php';
+include_once dirname(__DIR__) . '/CustomerController.php';
+
 // use aodai_store\app\models\Product;
 
 // use aodai_store\app\models\Product;

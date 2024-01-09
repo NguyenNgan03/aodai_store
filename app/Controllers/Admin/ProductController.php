@@ -1,5 +1,6 @@
 <?php
 include 'app\models\Product.php';
+include dirname(__DIR__) . '/AdminController.php';
 
 
 class ProductController extends AdminController

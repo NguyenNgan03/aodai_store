@@ -3,6 +3,8 @@
 // use aodai_store\app\models\Product;
 
 include 'app\models\Product.php';
+include_once dirname(__DIR__) . '/CustomerController.php';
+
 
 class ProductController extends CustomerController
 {

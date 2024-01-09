@@ -7,6 +7,7 @@ session_start();
 // include 'auto_load.php';
 include 'bootstrap.php';
 // include 'app\App.php';
+
 $app = new App();
 $app->handle();
 
