@@ -8,8 +8,8 @@ include_once dirname(__DIR__) . '/CustomerController.php';
 
 class HomeController extends CustomerController
 {
-    private $product;
-    private $category;
+    // private $product;
+    // private $category;
 
     // public function __construct()
     // {
@@ -20,7 +20,7 @@ class HomeController extends CustomerController
     public function index()
     {
         $product = new Product();
-        $data['products'] =  $product->getAllProducts();
+        $data['products'] =  $product->index();
         parent::template('app\views\users\home\homePage.php', $data);
     }
 
