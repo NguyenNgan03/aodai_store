@@ -7,9 +7,10 @@ class AdminController
 			extract($data);
 		}
 		ob_start();
-		include_once dirname((__DIR__)) . $view;
+		include $view;
+
 		$content = ob_get_clean(); //content cho thằng template gọi nội dung đổ ra view
-		include_once 'app\views\admin\temlate.php';
+		include 'app\views\admin\temlate.php';
 	}
     public function before()
     {

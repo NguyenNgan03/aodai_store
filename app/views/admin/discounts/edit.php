@@ -7,12 +7,13 @@
         </div>
     </div>
     <div class="card-body p-4">
+ <?php   foreach ($discounts as $discount) : ?>
         <form class="col-12" action="/?page=Admin&controller=Discount&action=EditPost" method="post" class="row">
             <div cl ass="border p-3">
 
                 <div class="form-group form-floating py-2 col-12">
                     <label class="ms-2" style="">Name</label>
-                    <input class="form-control border-0 shadow" name="name" value="<?= $discount['name'] ?>" />
+                    <input class="form-control border-0 shadow" name="name" value="<?php echo $discount['name'] ?>" />
                 </div>
 
                 <div class="form-group form-floating py-2 col-12">
@@ -22,7 +23,7 @@
 
                 <div class="form-group form-floating py-2 col-12">
                     <label class="ms-2" style="">Start date</label>
-                    <input type="datetime-local" class="form-control border-0 shadow" name="start_date" value="<?= $discount['start_date'] ?>" />
+                    <input type="datetime-local" class="form-control border-0 shadow" name="start_date" value="<?=$discount['start_date'] ?>" />
                 </div>
 
                 <div class="form-group form-floating py-2 col-12">
@@ -44,6 +45,7 @@
 
             </div>
         </form>
+        <?php endforeach; ?>
     </div>
 </div>
 

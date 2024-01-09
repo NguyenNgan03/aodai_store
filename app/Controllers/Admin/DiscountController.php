@@ -1,7 +1,7 @@
 <?php
 
-include_once dirname(__DIR__) . '/AminController.php';
-include_once dirname(dirname(__DIR__)) . '/models/discount.php';
+include 'app\models\Discount.php';
+include dirname(__DIR__) . '/AdminController.php';
 class DiscountController extends AdminController
 {
     private $discount;
@@ -14,12 +14,12 @@ class DiscountController extends AdminController
     public function index()
     {
         $discounts =  $this->discount->getAllDiscounts();
-        parent::template("/views/admin/discounts/index.php", compact("discounts"));
+        parent::template("app/views/admin/discounts/index.php", compact("discounts"));
     }
 
     public function create()
     {
-        parent::template("/views/admin/discounts/create.php");
+        parent::template("app/views/admin/discounts/create.php");
     }
 
     public function validateForm($data)
@@ -51,12 +51,10 @@ class DiscountController extends AdminController
             ":discount_rate" => $discount_rate,
             ":start_date" => $start_date,
             ":end_date" => $end_date,
-            ":created_at" => (new DateTime())->format('Y-m-d H:i:s'),
-            ":updated_at" => (new DateTime())->format('Y-m-d H:i:s')
         ];
         $errors = $this->validateForm($_POST);
         if (!empty($errors)) {
-            parent::template("/views/admin/discounts/create.php", compact("errors"));
+            parent::template("app/views/admin/discounts/create.php", compact("errors"));
         } else {
             $this->discount->addDiscount($params);
             header("location: /?page=Admin&controller=Discount");
@@ -69,8 +67,8 @@ class DiscountController extends AdminController
         $params = [
             ":id" => $id
         ];
-        $discount = $this->discount->getDiscount($params)[0];
-        parent::template("/views/admin/discounts/edit.php", compact("discount"));
+        $discounts = $this->discount->getDiscount($params);
+        parent::template("app/views/admin/discounts/edit.php", compact("discounts"));
     }
 
     public function editPost()
@@ -86,7 +84,6 @@ class DiscountController extends AdminController
             ":discount_rate" => $discount_rate,
             ":start_date" => $start_date,
             ":end_date" => $end_date,
-            ":updated_at" => (new DateTime())->format('Y-m-d H:i:s')
         ];
         $this->discount->updateDiscount($params);
         header("location: /?page=Admin&controller=Discount");

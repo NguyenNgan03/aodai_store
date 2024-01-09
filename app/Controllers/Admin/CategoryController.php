@@ -1,7 +1,7 @@
 <?php
 
-include_once dirname(__DIR__) . '/AminController.php';
-include_once dirname(dirname(__DIR__)) . '/models/Category.php';
+include 'app\models\Category.php';
+include dirname(__DIR__) . '/AdminController.php';
 class CategoryController extends AdminController
 {
     private $category;
@@ -14,35 +14,32 @@ class CategoryController extends AdminController
     public function index()
     {
         $categories =  $this->category->getAllCategories();
-        parent::template("/views/admin/categories/index.php", compact("categories"));
+        parent::template("app/views/admin/categories/index.php", compact("categories"));
     }
 
     public function create()
     {
-        parent::template("/views/admin/categories/create.php");
+        parent::template("app/views/admin/categories/create.php");
     }
 
     public function validateForm($data)
     {
-        $errors = '';
+        // $errors = '';
         if (empty($data['name'])) {
-            $errors = "Vui lòng nhập thông tin.";
+            $errors["name"] = "Name is required!";
         }
         return $errors;
     }
 
     public function createPost()
     {
-        $category_name = isset($_POST['name']) ?  $_POST['name'] : "";
-        $params = [
-            ":name" =>  $category_name,
-            ":created_at" => (new DateTime())->format('Y-m-d H:i:s'),
-            ":updated_at" => (new DateTime())->format('Y-m-d H:i:s')
-        ];
         $errors = $this->validateForm($_POST);
         if (!empty($errors)) {
             parent::template("/views/admin/categories/create.php", compact("errors"));
         } else {
+            $params = [
+                ":name" =>  $_POST['name'],
+            ];
             $this->category->addCategory($params);
             header("location: /?page=Admin&controller=Category");
         }
@@ -55,8 +52,8 @@ class CategoryController extends AdminController
             $params = [
                 ":id" => $id
             ];
-            $category = $this->category->getCategory($params)[0];
-            parent::template("/views/admin/categories/edit.php", compact("category"));
+            $category = $this->category->getCategoryById($id);
+            parent::template("app/views/admin/categories/edit.php", compact("category"));
         } else {
             parent::template("/views/not-found.php");
         }
@@ -69,7 +66,6 @@ class CategoryController extends AdminController
         $params = [
             ":id" =>  $id,
             ":name" =>  $category_name,
-            ":updated_at" => (new DateTime())->format('Y-m-d H:i:s')
         ];
         $this->category->updateCategory($params);
         header("location: /?page=Admin&controller=Category");
@@ -77,11 +73,22 @@ class CategoryController extends AdminController
 
     public function delete()
     {
-        $id = isset($_GET['id']) ?  $_GET['id'] : "";
-        $params = [
-            ":id" =>  $id,
-        ];
-        $this->category->deleteCategory($params);
-        header("location: /?page=Admin&controller=Category");
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $result = $this->category->delete($id);
+            if ($result) {
+                header('location: ?controller=category&action=index&page=admin');
+            } else {
+                echo "<script> alert('Xóa không thành công');
+					window.location.href('?controller=category&action=index&page=admin');</script>";
+            }
+        }
     }
+        // $id = isset($_GET['id']) ?  $_GET['id'] : "";
+        // $params = [
+        //     ":id" =>  $id,
+        // ];
+        // $this->category->deleteCategory($params);
+        // header("location: /?page=Admin&controller=Category");
+    
 }

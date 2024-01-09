@@ -38,10 +38,10 @@
           <td><?= $discount['end_date'] ?></td>
           <td>
             <div class="w-75 btn-group" role="group">
-              <a href=<?= "/?page=Admin&controller=Discount&action=Edit&id=" . $discount["id"] ?> class="btn btn-primary mx-2">
+              <a href=<?= "/?controller=discount&action=Edit&page=admin&id=" . $discount["id"] ?> class="btn btn-primary mx-2">
                 <i class="bi bi-pencil-square"></i> Edit
               </a>
-              <a href="<?= "/?page=Admin&controller=Discount&action=Delete&id=" . $discount["id"] ?>" class="btn btn-danger mx-2">
+              <a href="<?= "/?controller=discount&action=Delete&page=admin&id=" . $discount["id"] ?>" class="btn btn-danger mx-2">
                 <i class="bi bi-trash-fill"></i> Delete
               </a>
             </div>

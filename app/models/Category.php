@@ -12,36 +12,44 @@ class Category extends Database
         return $result;
     }
 
-    public function getCategory($param = [])
+    public function getCategoryById($category_id)
     {
-        $sql = "SELECT * FROM categories where id = :id";
-        $result = $this->query($sql, $param);
-        return $result;
+        $tableName = 'categories';
+        $sql = "SELECT * FROM $tableName WHERE id = :category_id";
+        $params = [':category_id' => (int)$category_id];
+        $data = $this->getDataByQuery($sql, $params);
+
+        foreach($data as $value)
+        {
+            return $value;
+        }
+
+        return null;
     }
 
     public function addCategory($param = [])
     {
-        $sql = "INSERT INTO categories 
-        (name, created_at, updated_at)
-         VALUES (:name, :created_at, :updated_at)";
+        $sql = "INSERT INTO categories (name) VALUES (:name)";
         $result = $this->query($sql, $param);
         return $result;
     }
 
     public function updateCategory($param = [])
     {
+
         $sql = "UPDATE categories SET 
-        name = :name,
-        updated_at = :updated_at
+        name = :name
          WHERE id    = :id";
         $result = $this->query($sql, $param);
         return $result;
     }
 
-    public function deleteCategory($param = [])
+    public function delete($id)
     {
-        $sql = "DELETE FROM categories WHERE id = :id";
-        $result = $this->query($sql, $param);
-        return $result;
+        $tableName = 'categories';
+        $condition = "id = :id";
+        $params = [':id' => (int)$id];
+
+        return $this->deleteData($tableName, $condition, $params);
     }
 }

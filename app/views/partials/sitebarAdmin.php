@@ -8,13 +8,13 @@
                 </a>
             </li>
             <li>
-                <a href="?page=Admin&controller=Category">
+                <a href="?controller=category&action=index&page=Admin">
                     <i class="fas fa-users-rectangle"></i>
                     <span>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="?page=Admin&controller=Product">
+                <a href="?controller=product&action=index&page=Admin">
                     <i class="fas fa-rectangle-list"></i>
                     <span>Products</span>
                 </a>
@@ -38,7 +38,7 @@
                 </a>
             </li>
             <li class="active">
-                <a href="?page=Admin&controller=Discount">
+                <a href="?controller=discount&action=index&page=Admin">
                     <i class="fas fa-percent"></i>
                     <span>Discount</span>
                 </a>

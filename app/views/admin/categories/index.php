@@ -35,7 +35,7 @@
                 <a href=<?= "/?page=Admin&controller=Category&action=Edit&id=" . $category["id"] ?> class="btn btn-primary mx-2">
                   <i class="bi bi-pencil-square"></i> Edit
                 </a>
-                <a href="<?= "/?page=Admin&controller=Category&action=Delete&id=" . $category["id"] ?>" class="btn btn-danger mx-2">
+                <a href="<?= "/?controller=category&action=Delete&page=admin&id=" . $category['id'] ?>" class="btn btn-danger mx-2">
                   <i class="bi bi-trash-fill"></i> Delete
                 </a>
               </div>

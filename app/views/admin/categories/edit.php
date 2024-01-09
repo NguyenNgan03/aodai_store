@@ -9,12 +9,19 @@
         </div>
     </div>
     <div class="card-body p-4">
-        <form class="col-12" action="/?page=Admin&controller=Category&action=EditPost" method="post" class="row">
+        <form class="col-12" action="/?controller=category&page=Admin&action=EditPost" method="post" class="row">
             <div cl ass="border p-3">
 
                 <div class="form-group form-floating py-2 col-12">
                     <label class="ms-2" style="">Name</label>
                     <input class="form-control border-0 shadow" name="name" value="<?= $category['name'] ?>" />
+                    <span style="color: red">
+                        <?php
+                        if (isset($error["name"])) {
+                            echo $error["name"];
+                        }
+                        ?>
+                    </span>
                 </div>
 
                 <input name="id" value=<?= $category["id"] ?> hidden>
@@ -23,7 +30,7 @@
                         <button type="submit" class="btn btn-primary form-control">Edit</button>
                     </div>
                     <div class="col-6 col-md-3">
-                        <a href=<?= "/?page=Admin&controller=Category" ?> class="btn btn-info btn-outline-primary border form-control">
+                        <a href=<?= "/?controller=category&action=index&page=Admin" ?> class="btn btn-info btn-outline-primary border form-control">
                             Back to List
                         </a>
                     </div>
