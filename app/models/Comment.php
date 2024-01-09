@@ -1,6 +1,6 @@
 <?php
 
-class User extends Database
+class Comment extends Database
 {
     public function __construct()
     {
@@ -9,7 +9,7 @@ class User extends Database
 
     public function model()
     {
-        return "users";
+        return "comments";
     }
 
     public function index()
@@ -23,35 +23,33 @@ class User extends Database
         return $result;
     }
 
-    public function create($name, $email, $phone, $role)
+    public function create($product_id, $user_id, $content)
     {
         $tableName = $this->model();
         $params = [
-            'username' => $name,
-            'email' => $email,
-            'phone' => $phone,
-            'role' => $role,
+            'product_id' => $product_id,
+            'user_id' => $user_id,
+            'content' => $content,
         ];
         return $this->insertData($tableName, $params);
     }
 
-    public function getUserById($user_id)
+    public function getCommentById($comment_id)
     {
         $tableName = $this->model();
-        $sql = "SELECT * FROM $tableName WHERE id = :user_id";
-        $params = [':user_id' => $user_id];
+        $sql = "SELECT * FROM $tableName WHERE id = :comment_id";
+        $params = [':comment_id' => $comment_id];
         $data = $this->getDataByQuery($sql, $params);
         return $data;
     }
 
-    public function update($id, $name, $email, $phone, $role)
+    public function update($id, $product_id, $user_id, $content)
     {
         $tableName = $this->model();
         $data = [
-            'username' => $name,
-            'email' => $email,
-            'phone' => $phone,
-            'role' => $role,
+            'product_id' => $product_id,
+            'user_id' => $user_id,
+            'content' => $content,
         ];
         $condition = "id = :id";
         $params = [':id' => (int)$id];

@@ -1,58 +1,13 @@
-<div class="sidebar">
-    <div class="backtoHome"><i class="fa-solid fa-arrow-left"></i></div>
-    <ul class="menu">
-        <li>
-            <a href="ad_details.php">
-                <i class="fas fa-rectangle-list"></i>
-                <span>Categories</span>
-            </a>
-        </li>
-        <li class="active">
-            <a href="ad_users.php">
-                <i class="fas fa-users-rectangle"></i>
-                <span>Users</span>
-            </a>
-        </li>
-        <li>
-            <a href="ad_details.php">
-                <i class="fas fa-rectangle-list"></i>
-                <span>Products</span>
-            </a>
-        </li>
-        <li>
-            <a href="ad_destination.php">
-                <i class="fas fa-comment-dots"></i>
-                <span>Comments</span>
-            </a>
-        </li>
-        <li>
-            <a href="ad_order.php">
-                <i class="fas fa-shopping-cart"></i>
-                <span>Orders</span>
-            </a>
-        </li>
-        <li>
-            <a href="ad_order.php">
-                <i class="fas fa-ticket"></i>
-                <span>Vourchers</span>
-            </a>
-        </li>
-    </ul>
-</div>
-
 <div class="main--content">
     <div class="header--wrapper">
         <div class="header--title">
             <span>Primary</span>
-            <h2>Users</h2>
+            <h2>User</h2>
         </div>
-
-
     </div>
-
     <div class="tabular--wrapper">
-        <h3 class="main--add">Add user
-            <i class="fa-solid fa-square-plus"></i>
+        <h3>
+            <a href="?controller=user&action=getCreate&page=Admin" class="btn btn-primary">Add user</a>
         </h3>
         <div class="table-container">
             <table>
@@ -63,13 +18,30 @@
                         <th>Email</th>
                         <th>Phone Number</th>
                         <th>Role</th>
-                        <th>Status</th>
-                        <th>Action</th>
+                        <th>Created_at</th>
+                        <th>Updated_at</th>
+                        <th>Create</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
-                <tbody id="tbody"></tbody>
 
+                <tbody id="tbody">
+                    <?php foreach ($users as $user) : ?>
+                        <tr>
+                            <td> <?php echo  $user['id']; ?></td>
+                            <td> <?php echo  $user['username']; ?></td>
+                            <td> <?php echo  $user['email']; ?></td>
+                            <td> <?php echo  $user['phone']; ?></td>
+                            <td> <?php echo  $user['role']; ?></td>
+                            <td> <?php echo  $user['created_at']; ?></td>
+                            <td> <?php echo  $user['updated_at']; ?></td>
+                            <td> <a href="?controller=user&action=edit&page=admin&id=<?php echo $user['id'] ?>" class="btn btn-primary btn-sm mr-2"><i class="fa fa-pencil"></i></a></td>
+                            <td> <a href="?controller=user&action=delete&page=admin&id=<?php echo $user['id'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a></td>
+                        </tr>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
+
                 <tfoot>
                     <tr>
                         <td colspan="7">Total: <span id="total--users"></span> users</td>
@@ -78,4 +50,5 @@
             </table>
         </div>
     </div>
+
 </div>

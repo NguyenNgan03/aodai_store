@@ -1,33 +1,25 @@
-<div id="id02" class="modal-update">
-    <form class="modal-content">
-        <div class="container">
-            <h1>Update User</h1>
-            <p>Please fill in this form to update Detail .</p>
-            <hr />
-            <label for="name-update"><b>Name</b></label>
-            <input name="name-update" id="name-update" type="text" placeholder="Enter Name" required />
-
-            <label for="email-update"><b>Email</b></label>
-            <input name="email-update" id="email-update" type="email" placeholder="Enter email" required />
-
-            <label for="phone-update"><b>Phone number</b></label>
-            <input name="phone-update" id="phone-update" type="tel" placeholder="Enter phone number" required />
-
-            <div class="role-select">
-                <label for="role-update"><b>Role</b></label>
-                <select name="role-update" id="role-update">
-                    <option value="Admin">Admin</option>
-                    <option value="Customer" selected>Customer</option>
+<div class="container p-4">
+    <?php foreach ($users as $user) : ?>
+        <form action="?controller=user&action=update&page=admin" method="post">
+            <input name="id" value="<?php echo $user['id']; ?>" hidden>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Name" name="username" value="<?php echo $user['username']; ?>">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" name="email" value="<?php echo $user['email']; ?>">
+            </div>
+            <div class="form-group">
+                <input type="tel" class="form-control" placeholder="Phone Number" name="phone" value="<?php echo $user['phone']; ?>">
+            </div>
+            <div class="form-group">
+                <select name="role" id="role">
+                    <option value="<?php echo $user['role']; ?>">Admin</option>
+                    <option value="<?php echo $user['role']; ?>" selected>Customer</option>
                 </select>
             </div>
-
-            <div class="status-select">
-                <label for="status-update"><b>Status</b></label>
-                <select name="status-update" id="status-update">
-                    <option value="Active">Active</option>
-                    <option value="Inactive">Inactive</option>
-                </select>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Update</button>
             </div>
-        </div>
-    </form>
+        </form>
+    <?php endforeach ?>
 </div>

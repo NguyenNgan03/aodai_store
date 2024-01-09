@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li class="active">
-                <a href="ad_users.php">
+                <a href="?page=Admin&controller=User">
                     <i class="fas fa-users-rectangle"></i>
                     <span>Users</span>
                 </a>
