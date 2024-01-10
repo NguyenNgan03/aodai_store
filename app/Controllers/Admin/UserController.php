@@ -27,6 +27,7 @@ class UserController extends AdminController
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $requiredFields = ['username', 'email', 'phone', 'role'];
 
+            // Kiểm tra xem tất cả các trường cần thiết đã được gửi hay không
             foreach ($requiredFields as $field) {
                 if (!isset($_POST[$field]) || empty($_POST[$field])) {
                     echo "Trường $field không được để trống";
@@ -49,6 +50,7 @@ class UserController extends AdminController
             echo 'yêu cầu lỗi';
         }
     }
+    //
 
     public function edit()
     {
@@ -64,6 +66,7 @@ class UserController extends AdminController
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $requiredFields = ['username', 'email', 'phone', 'role'];
 
+            // Kiểm tra xem tất cả các trường cần thiết đã được gửi hay không
             foreach ($requiredFields as $field) {
                 if (!isset($_POST[$field]) || empty($_POST[$field])) {
                     echo "Trường $field không được để trống";
@@ -87,6 +90,8 @@ class UserController extends AdminController
         }
     }
 
+    //
+
     public function delete()
     {
         if (isset($_GET['id'])) {
@@ -98,6 +103,6 @@ class UserController extends AdminController
                 echo "<script> alert('Xóa không thành công');
 					window.location.href('?controller=user&action=index&page=admin');</script>";
             }
-        }
     }
+}
 }

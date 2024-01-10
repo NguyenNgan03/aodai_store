@@ -14,7 +14,6 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>User ID</th>
                         <th>Code</th>
                         <th>Discoun Amount</th>
                         <th>Status</th>
@@ -29,7 +28,6 @@
                     <?php foreach ($vourchers as $vourcher) : ?>
                         <tr>
                             <td> <?php echo  $vourcher['id']; ?></td>
-                            <td> <?php echo  $vourcher['user_id']; ?></td>
                             <td> <?php echo  $vourcher['vourcher_code']; ?></td>
                             <td> <?php echo  $vourcher['discount_amount']; ?></td>
                             <td> <?php echo  $vourcher['status']; ?></td>

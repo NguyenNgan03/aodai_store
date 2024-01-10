@@ -3,9 +3,6 @@
         <form action="?controller=vourcher&action=update&page=admin" method="post">
             <input name="id" value="<?php echo $user['id']; ?>" hidden>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="User ID" name="user_id" value="<?php echo $user['user_id']; ?>">
-            </div>
-            <div class="form-group">
                 <input type="text" class="form-control" placeholder="Code" name="vourcher_code" value="<?php echo $user['vourcher_code']; ?>">
             </div>
             <div class="form-group">
