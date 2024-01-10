@@ -3,6 +3,8 @@
 // use aodai_store\app\models\Product;
 
 include 'app\models\Product.php';
+include_once dirname(__DIR__) . '/CustomerController.php';
+
 
 class ProductController extends CustomerController
 {
@@ -17,7 +19,7 @@ class ProductController extends CustomerController
     public function index()
     {
         $product = new Product();
-        $data['products'] = $product->getAllProducts();
+        $data['products'] = $product->index();
 
         parent::template('app\views\users\Products\products.php',$data);
         

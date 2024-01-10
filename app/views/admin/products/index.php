@@ -1,82 +1,70 @@
-<div class="sidebar">
-    <div class="backtoHome"><i class="fa-solid fa-arrow-left"></i></div>
-    <ul class="menu">
-      <li>
-        <a href="ad_categories.php">
-          <i class="fas fa-rectangle-list"></i>
-          <span>Categories</span>
-        </a>
-      </li>
-      <li>
-        <a href="ad_users.php">
-          <i class="fas fa-users-rectangle"></i>
-          <span>Users</span>
-        </a>
-      </li>
-      <li class="active">
-        <a href="ad_products.php">
-          <i class="fas fa-rectangle-list"></i>
-          <span>Products</span>
-        </a>
-      </li>
-      <li>
-        <a href="ad_comments.php">
-          <i class="fas fa-comment-dots"></i>
-          <span>Comments</span>
-        </a>
-      </li>
-      <li>
-        <a href="ad_orders.php">
-          <i class="fas fa-shopping-cart"></i>
-          <span>Orders</span>
-        </a>
-      </li>
-      <li>
-        <a href="ad_vourchers.php">
-          <i class="fas fa-ticket"></i>
-          <span>Vourchers</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="main--content">
+<div class="main--content">
     <div class="header--wrapper">
-      <div class="header--title">
-        <span>Primary</span>
-        <h2>Products</h2>
-      </div>
-
+        <div class="header--title">
+            <span>Primary</span>
+            <h2>Product</h2>
+        </div>
     </div>
-
     <div class="tabular--wrapper">
-      <h3 class="main--add" onclick="document.getElementById('id01').style.display='block'">Add product<i class="fa-solid fa-square-plus"></i></h3>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Discount ID</th>
-              <th>Category ID ID</th>
-              <th>Product Name</th>
-              <th>Description</th>
-              <th>Price</th>
-              <th>Size</th>
-              <th>Image 1</th>
-              <th>Image 2</th>
-              <th>Image 3</th>
-              <th>Image 4</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody class="" id="tbody"></tbody>
+        <h3 >
+        <a href="?controller=product&action=getCreate&page=Admin" class="btn btn-primary">Add product</a>
+        </h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Discount_id</th>
+                        <th>Name</th>
+                        <th>category_id</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Color</th>
+                        <th>Material</th>
+                        <th>Size</th>
+                        <th>Image1</th>
+                        <th>Image2</th>
+                        <th>Image3</th>
+                        <th>Image4</th>
+                        <th>Created_at</th>
+                        <th>Updated_at</th>
+                        <th>Create</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
 
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="12">Total: <span id="total--details"></span> products</td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
+                <tbody id="tbody">
+                    <?php foreach ($products as $product) : ?>
+                        <tr>
+                            <td> <?php echo  $product['id']; ?></td>
+                            <td> <?php echo  $product['discount_id']; ?></td>
+                            <td> <?php echo  $product['name']; ?></td>
+                            <td> <?php echo  $product['category_id']; ?></td>
+                            <td> <?php echo  $product['description']; ?></td>
+                            <td> <?php echo  $product['price']; ?></td>
+                            <td> <?php echo  $product['color']; ?></td>
+                            <td> <?php echo  $product['material']; ?></td>
+                            <td> <?php echo  $product['size']; ?></td>
+                            <td> <?php echo  $product['image1']; ?></td>
+                            <td> <?php echo  $product['image2']; ?></td>
+                            <td> <?php echo  $product['image3']; ?></td>
+                            <td> <?php echo  $product['image4']; ?></td>
+                            <td> <?php echo  $product['created_at']; ?></td>
+                            <td> <?php echo  $product['updated_at']; ?></td>
+                            <td> <a href="?controller=product&action=edit&page=admin&id=<?php echo $product['id'] ?>" class="btn btn-primary btn-sm mr-2"><i class="fa fa-pencil"></i></a></td>
+                            <td> <a href="?controller=product&action=delete&page=admin&id=<?php echo $product['id'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+
+                <tfoot>
+
+                    <tr>
+                        <td colspan="7">Total: <span id="total--users"></span> users</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
     </div>
+
+</div>

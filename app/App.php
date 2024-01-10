@@ -53,7 +53,7 @@ class App
             }
 
             // Include file controller của 'page' và 'controller'
-            include 'app/Controllers/' . $page . '/' . $controller . 'Controller.php';
+            include_once 'app/Controllers/' . $page . '/' . $controller . 'Controller.php';
 
             // Tạo đối tượng controller và gọi phương thức 'action'
             $controller_name = $controller . 'Controller';

@@ -2,7 +2,7 @@
     <div class="backtoHome"><i class="fa-solid fa-arrow-left"></i></div>
     <ul class="menu">
         <li>
-            <a href="ad_details.php">
+            <a href="?controller=category&action=index&page=admin">
                 <i class="fas fa-rectangle-list"></i>
                 <span>Categories</span>
             </a>
@@ -26,7 +26,7 @@
             </a>
         </li>
         <li>
-            <a href="ad_order.php">
+            <a href="?controller=order&action=index&page=admin">
                 <i class="fas fa-shopping-cart"></i>
                 <span>Orders</span>
             </a>

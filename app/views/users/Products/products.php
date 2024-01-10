@@ -141,7 +141,7 @@
                                             <div class="products">
                                                 <div class="product">
                                                     <div class="product-image">
-                                                        <div class="image"> <a href="detail.html"><img src="https://product.hstatic.net/1000136076/product/img_6780_076d07ac93784bd6a49519fdf9fa69fa_master.jpeg" alt=""></a> </div>
+                                                        <div class="image"> <a href="detail.html"><img src="<?= $product['Image1']; ?>" alt=""></a> </div>
                                                         <!-- /.image -->
 
                                                         <div class="tag new"><span>new</span></div>
