@@ -179,7 +179,6 @@ CREATE TABLE vourchers (
     vourcher_code VARCHAR(255) NOT NULL,
     expiration_date DATE,
     discount_amount DECIMAL(10, 2),
-    user_id INT(7) NOT NULL,
     status VARCHAR(50),
     applicable_products TEXT,
     usage_history TEXT,
@@ -189,13 +188,13 @@ CREATE TABLE vourchers (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Insert sample data into the vourchers table
-INSERT INTO vourchers (vourcher_code, expiration_date, discount_amount, user_id, status, applicable_products, usage_history, description)
+INSERT INTO vourchers (vourcher_code, expiration_date, discount_amount, status, applicable_products, usage_history, description)
 VALUES
-('MaVoucher123', '2024-01-31', 20.00, 1, 'Hoạt động', 'Sản PhẩmA, Sản PhẩmB', 'Đã sử dụng vào ngày 2024-01-05', 'Ưu đãi cho Chương trình Giảm giá tháng 1'),
-('MaVoucher456', '2024-02-28', 15.50, 2, 'Ngưng hoạt động', 'Sản PhẩmC', 'Chưa sử dụng', 'Ưu đãi đặc biệt cho Sản PhẩmC'),
-('MaVoucher789', '2024-03-15', 30.00, 3, 'Hoạt động', 'Tất cả Sản Phẩm', 'Đã sử dụng vào ngày 2024-01-10', 'Ưu đãi tổng quát'),
-('MaVoucherABC', '2024-04-30', 25.00, 4, 'Hoạt động', 'Sản PhẩmD, Sản PhẩmE', 'Chưa sử dụng', 'Ưu đãi cho sản phẩm mới'),
-('MaVoucherXYZ', '2024-05-31', 10.00, 5, 'Hoạt động', 'Sản PhẩmF', 'Chưa sử dụng', 'Ưu đãi có hạn thời gian');
+('MaVoucher123', '2024-01-31', 20.00, 'Hoạt động', 'Sản PhẩmA, Sản PhẩmB', 'Đã sử dụng vào ngày 2024-01-05', 'Ưu đãi cho Chương trình Giảm giá tháng 1'),
+('MaVoucher456', '2024-02-28', 15.50, 'Ngưng hoạt động', 'Sản PhẩmC', 'Chưa sử dụng', 'Ưu đãi đặc biệt cho Sản PhẩmC'),
+('MaVoucher789', '2024-03-15', 30.00, 'Hoạt động', 'Tất cả Sản Phẩm', 'Đã sử dụng vào ngày 2024-01-10', 'Ưu đãi tổng quát'),
+('MaVoucherABC', '2024-04-30', 25.00, 'Hoạt động', 'Sản PhẩmD, Sản PhẩmE', 'Chưa sử dụng', 'Ưu đãi cho sản phẩm mới'),
+('MaVoucherXYZ', '2024-05-31', 10.00, 'Hoạt động', 'Sản PhẩmF', 'Chưa sử dụng', 'Ưu đãi có hạn thời gian');
 
 
 -- Add foreign key constraints
