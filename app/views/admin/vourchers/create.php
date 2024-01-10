@@ -1,8 +1,5 @@
 <div class="container p-4">
-    <form action="?controller=user&action=create&page=Admin" method="post">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="User ID" name="user_id">
-        </div>
+    <form action="?controller=vourcher&action=create&page=Admin" method="post">
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Code" name="vourcher_code">
         </div>

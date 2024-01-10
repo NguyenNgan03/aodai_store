@@ -25,7 +25,7 @@ class VourcherController extends AdminController
     public function create()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $requiredFields = ['user_id', 'vourcher_code', 'discount_amount', 'status', 'description', 'expiration_date'];
+            $requiredFields = ['vourcher_code', 'discount_amount', 'description', 'expiration_date'];
 
             foreach ($requiredFields as $field) {
                 if (!isset($_POST[$field]) || empty($_POST[$field])) {
@@ -34,14 +34,13 @@ class VourcherController extends AdminController
                 }
             }
 
-            $user_id = $_POST['user_id'];
             $code = $_POST['vourcher_code'];
             $discount_amount = $_POST['discount_amount'];
             $status = $_POST['status'];
             $description = $_POST['description'];
             $expiration_date = $_POST['expiration_date'];
 
-            $result = $this->vourcher->create($user_id, $code, $discount_amount, $status, $description, $expiration_date);
+            $result = $this->vourcher->create($code, $discount_amount, $status, $description, $expiration_date);
             if ($result) {
                 header('location:?controller=vourcher&action=index&page=admin');
             } else {
@@ -64,7 +63,7 @@ class VourcherController extends AdminController
     public function update()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $requiredFields = ['user_id', 'vourcher_code', 'discount_amount', 'status', 'description', 'expiration_date'];
+            $requiredFields = ['vourcher_code', 'discount_amount', 'description', 'expiration_date'];
 
             foreach ($requiredFields as $field) {
                 if (!isset($_POST[$field]) || empty($_POST[$field])) {
@@ -73,14 +72,13 @@ class VourcherController extends AdminController
                 }
             }
             $id = $_POST['id'];
-            $user_id = $_POST['user_id'];
             $code = $_POST['vourcher_code'];
             $discount_amount = $_POST['discount_amount'];
             $status = $_POST['status'];
             $description = $_POST['description'];
             $expiration_date = $_POST['expiration_date'];
 
-            $result = $this->vourcher->update($id, $user_id, $code, $discount_amount, $status, $description, $expiration_date);
+            $result = $this->vourcher->update($id, $code, $discount_amount, $status, $description, $expiration_date);
             if ($result) {
                 header('location:?controller=vourcher&action=index&page=admin');
             } else {

@@ -1,5 +1,8 @@
 <?php
 
+// namespace aodai_store\app\models;
+// use Database;
+
 class User extends Database
 {
     public function __construct()
@@ -17,38 +20,48 @@ class User extends Database
         $tableName = $this->model();
         $data = $this->getAll($tableName);
         $result = [];
-        foreach ($data as $row) {
+        foreach($data as $row){
             $result[] = $row;
         }
         return $result;
     }
 
-    public function create($name, $email, $phone, $role)
+    // public function getAllProducts()
+    // {
+    //     $sql = 'SELECT * FROM products';
+    //     $result = $this->query($sql);
+    //     return $result;
+    // }
+
+    
+    public function create ($name, $email, $phone, $role)
     {
         $tableName = $this->model();
-        $params = [
-            'username' => $name,
+        $params = [ 
+            'username' => $name, 
             'email' => $email,
             'phone' => $phone,
             'role' => $role,
         ];
-        return $this->insertData($tableName, $params);
+        return $this->insertData($tableName,$params);
     }
 
-    public function getUserById($user_id)
-    {
+    ///
+
+    public function getUserById($user_id){
         $tableName = $this->model();
         $sql = "SELECT * FROM $tableName WHERE id = :user_id";
         $params = [':user_id' => $user_id];
         $data = $this->getDataByQuery($sql, $params);
         return $data;
+       
     }
 
     public function update($id, $name, $email, $phone, $role)
     {
-        $tableName = $this->model();
+        $tableName = $this -> model();
         $data = [
-            'username' => $name,
+            'username' => $name, 
             'email' => $email,
             'phone' => $phone,
             'role' => $role,
@@ -57,8 +70,9 @@ class User extends Database
         $params = [':id' => (int)$id];
 
         return $this->updateData($tableName, $data, $condition, $params);
-    }
 
+    }
+    
     public function delete($id)
     {
         $tableName = $this->model();

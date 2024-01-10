@@ -23,11 +23,10 @@ class Vourcher extends Database
         return $result;
     }
 
-    public function create($user_id, $code, $discount_amount, $status, $description, $expiration_date)
+    public function create($code, $discount_amount, $status, $description, $expiration_date)
     {
         $tableName = $this->model();
         $params = [
-            'user_id' => $user_id,
             'vourcher_code' => $code,
             'discount_amount' => $discount_amount,
             'status' => $status,
@@ -36,6 +35,8 @@ class Vourcher extends Database
         ];
         return $this->insertData($tableName, $params);
     }
+
+    ///
 
     public function getVourcherById($vourcher_id)
     {
@@ -46,11 +47,10 @@ class Vourcher extends Database
         return $data;
     }
 
-    public function update($id, $user_id, $code, $discount_amount, $status, $description, $expiration_date)
+    public function update($id, $code, $discount_amount, $status, $description, $expiration_date)
     {
         $tableName = $this->model();
         $data = [
-            'user_id' => $user_id,
             'vourcher_code' => $code,
             'discount_amount' => $discount_amount,
             'status' => $status,
@@ -71,4 +71,5 @@ class Vourcher extends Database
 
         return $this->deleteData($tableName, $condition, $params);
     }
+
 }
