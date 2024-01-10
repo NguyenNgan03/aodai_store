@@ -1,6 +1,6 @@
 <?php
+include 'app\models\User.php';
 
-use app\models\User;
 
 class UserController extends AdminController
 {
@@ -8,54 +8,96 @@ class UserController extends AdminController
 
     public function __construct()
     {
-        $this->user = new User;
+        $this->user = new user;
     }
 
     public function index()
     {
-        $data['users'] = $this->user->all();
-        parent::template('app\views\admin\customer\index.php', $data);
+        $data['users'] = $this->user->index();
+        parent::template('app\views\admin\customers\index.php', $data);
     }
 
     public function getCreate()
     {
-        parent::template('app\views\admin\customer\create.php');
+        parent::template("app/views/admin/customers/create.php");
     }
 
     public function create()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-            header('Location: /admin/customer');
-            exit();
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $requiredFields = ['username', 'email', 'phone', 'role'];
+
+            foreach ($requiredFields as $field) {
+                if (!isset($_POST[$field]) || empty($_POST[$field])) {
+                    echo "Trường $field không được để trống";
+                    return;
+                }
+            }
+
+            $name = $_POST['username'];
+            $email = $_POST['email'];
+            $phone = $_POST['phone'];
+            $role = $_POST['role'];
+
+            $result = $this->user->create($name, $email, $phone, $role);
+            if ($result) {
+                header('location:?controller=user&action=index&page=admin');
+            } else {
+                echo "Thêm sản phẩm không thành công";
+            }
         } else {
-            parent::template('app\views\admin\customer\create.php');
+            echo 'yêu cầu lỗi';
         }
     }
 
-    public function edit($userId)
+    public function edit()
     {
-        $data['user'] = $this->user->find($userId);
-        parent::template('app\views\admin\customer\edit.php', $data);
-    }
-
-    public function update($userId)
-    {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-            header('Location: /admin/customer');
-            exit();
-        } else {
-            $data['user'] = $this->user->find($userId);
-            parent::template('views/admin/users/edit.php', $data);
+        if (isset($_GET['id'])) {
+            $user = new user();
+            $data['users'] = $this->user->getUserById($_GET['id']);
+            parent::template("app/views/admin/customers/edit.php", $data);
         }
     }
 
-    public function delete($userId)
+    public function update()
     {
-        header('Location: /admin/customer');
-        exit();
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $requiredFields = ['username', 'email', 'phone', 'role'];
+
+            foreach ($requiredFields as $field) {
+                if (!isset($_POST[$field]) || empty($_POST[$field])) {
+                    echo "Trường $field không được để trống";
+                    return;
+                }
+            }
+            $id = $_POST['id'];
+            $name = $_POST['username'];
+            $email = $_POST['email'];
+            $phone = $_POST['phone'];
+            $role = $_POST['role'];
+
+            $result = $this->user->update($id, $name, $email, $phone, $role);
+            if ($result) {
+                header('location:?controller=user&action=index&page=admin');
+            } else {
+                echo "cập nhật thành công";
+            }
+        } else {
+            echo 'yêu cầu lỗi';
+        }
+    }
+
+    public function delete()
+    {
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $result = $this->user->delete($id);
+            if ($result) {
+                header('location:?controller=user&action=index&page=admin');
+            } else {
+                echo "<script> alert('Xóa không thành công');
+					window.location.href('?controller=user&action=index&page=admin');</script>";
+            }
+        }
     }
 }

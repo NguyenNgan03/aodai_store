@@ -1,7 +1,7 @@
 <?php
 
 include 'app\models\Category.php';
-include dirname(__DIR__) . '/AdminController.php';
+
 class CategoryController extends AdminController
 {
     private $category;

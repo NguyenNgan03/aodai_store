@@ -1,7 +1,7 @@
 <?php
 
 include 'app\models\Discount.php';
-include dirname(__DIR__) . '/AdminController.php';
+
 class DiscountController extends AdminController
 {
     private $discount;

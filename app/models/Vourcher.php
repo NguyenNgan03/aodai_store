@@ -1,6 +1,6 @@
 <?php
 
-class User extends Database
+class Vourcher extends Database
 {
     public function __construct()
     {
@@ -9,7 +9,7 @@ class User extends Database
 
     public function model()
     {
-        return "users";
+        return "vourchers";
     }
 
     public function index()
@@ -23,35 +23,39 @@ class User extends Database
         return $result;
     }
 
-    public function create($name, $email, $phone, $role)
+    public function create($user_id, $code, $discount_amount, $status, $description, $expiration_date)
     {
         $tableName = $this->model();
         $params = [
-            'username' => $name,
-            'email' => $email,
-            'phone' => $phone,
-            'role' => $role,
+            'user_id' => $user_id,
+            'vourcher_code' => $code,
+            'discount_amount' => $discount_amount,
+            'status' => $status,
+            'description' => $description,
+            'expiration_date' => $expiration_date,
         ];
         return $this->insertData($tableName, $params);
     }
 
-    public function getUserById($user_id)
+    public function getVourcherById($vourcher_id)
     {
         $tableName = $this->model();
-        $sql = "SELECT * FROM $tableName WHERE id = :user_id";
-        $params = [':user_id' => $user_id];
+        $sql = "SELECT * FROM $tableName WHERE id = :vourcher_id";
+        $params = [':vourcher_id' => $vourcher_id];
         $data = $this->getDataByQuery($sql, $params);
         return $data;
     }
 
-    public function update($id, $name, $email, $phone, $role)
+    public function update($id, $user_id, $code, $discount_amount, $status, $description, $expiration_date)
     {
         $tableName = $this->model();
         $data = [
-            'username' => $name,
-            'email' => $email,
-            'phone' => $phone,
-            'role' => $role,
+            'user_id' => $user_id,
+            'vourcher_code' => $code,
+            'discount_amount' => $discount_amount,
+            'status' => $status,
+            'description' => $description,
+            'expiration_date' => $expiration_date,
         ];
         $condition = "id = :id";
         $params = [':id' => (int)$id];
