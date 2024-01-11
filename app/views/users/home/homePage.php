@@ -5,7 +5,7 @@
 
   <?php foreach ($products as $product) : ?>
     <div class="flex-row-a">
-      <img class="img-master" src="<?= $product['image1']; ?>" />
+      <img class="imgl-master" src="<?= $product['image1']; ?>" />
       <img class="img-master" src="<?= $product['image1']; ?>" />
       <img class="mgm-master" src="<?= $product['image1']; ?>" />
       <img class="mgl-master" src="<?= $product['image1']; ?>" />
@@ -18,32 +18,32 @@
       <div class="frame-c"><span class="text-8"><?= $product['price']; ?> VNĐ </span></div>
       <div class="frame-d"><span class="text-9"><?= $product['price']; ?> VNĐ </span></div>
     </div>
-    <?php endforeach; ?>
-    <div class="flex-row-b">
-      <img class="mgl-master-c" src="app\views\public\Images\image5.png" />
-      <img class="mgm-master-d" src="app\views\public\Images\image6.png" />
-      <img class="mgm-master-e" src="app\views\public\Images\image7.png" />
-      <img class="mgl-master-f" src="app\views\public\Images\image8.png" />
-      <span class="text-a">Áo dài Dáng xưa Yên Phương 2024 - Đỏ</span>
-      <span class="text-b">Áo dài Dáng xưa Yên Phương 2024 - Xanh lục bảo<br /></span>
-      <span class="text-c">Áo dài Truyền thống Tinh Khôi - Hồng</span>
-      <span class="text-d">Áo dài Truyền thống Tinh Khôi - Hồng</span>
-      <div class="frame-13"><span class="vnd-14">750.000 VNĐ</span></div>
-      <div class="frame-15"><span class="vnd-16">750.000 VNĐ</span></div>
-      <div class="frame-17"><span class="vnd-18">750.000 VNĐ</span></div>
-      <div class="frame-19"><span class="vnd-1a">750.000 VNĐ</span></div>
-    </div>
-  
+  <?php endforeach; ?>
+  <div class="flex-row-b">
+    <img class="mgl-master-c" src="app\views\public\Images\image5.png" />
+    <img class="mgm-master-d" src="app\views\public\Images\image6.png" />
+    <img class="mgm-master-e" src="app\views\public\Images\image7.png" />
+    <img class="mgl-master-f" src="app\views\public\Images\image8.png" />
+    <span class="text-a">Áo dài Dáng xưa Yên Phương 2024 - Đỏ</span>
+    <span class="text-b">Áo dài Dáng xưa Yên Phương 2024 - Xanh lục bảo<br /></span>
+    <span class="text-c">Áo dài Truyền thống Tinh Khôi - Hồng</span>
+    <span class="text-d">Áo dài Truyền thống Tinh Khôi - Hồng</span>
+    <div class="frame-13"><span class="vnd-14">750.000 VNĐ</span></div>
+    <div class="frame-15"><span class="vnd-16">750.000 VNĐ</span></div>
+    <div class="frame-17"><span class="vnd-18">750.000 VNĐ</span></div>
+    <div class="frame-19"><span class="vnd-1a">750.000 VNĐ</span></div>
+  </div>
+
   <h1 class="service">DỊCH VỤ</h1>
   <div class="flex-row-cd">
+    <img class="shipping" src="app\views\public\Images\shipping.png" />
     <img class="refund" src="app\views\public\Images\refund.png" />
     <img class="support" src="app\views\public\Images\support.png" />
-    <img class="shipping" src="app\views\public\Images\shipping.png" />
   </div>
   <div class="flex-row-bf">
     <span class="free-shipping">MIỄN PHÍ VẬN CHUYỂN</span>
-    <span class="support-24-7">HỖ TRỢ 24/7</span>
     <span class="refund-100">HOÀN TIỀN 100%</span>
+    <span class="support-24-7">HỖ TRỢ 24/7</span>
   </div>
   <div class="flex-row-d-1e">
     <span class="lorem-ipsum-printing">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
@@ -65,9 +65,9 @@
     <div class="frame-2f"><span class="text-23">750.000 VNĐ</span></div>
     <div class="frame-30"><span class="text-24">750.000 VNĐ</span></div>
   </div>
-  <div class="base">
+  <!-- <div class="page">
     <span class="text-25">1</span>
     <span class="text-26">2</span>
     <span class="text-27">3</span>
-  </div>
+  </div> -->
 </div>
