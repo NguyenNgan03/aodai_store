@@ -38,9 +38,17 @@
             <ul class="links">
                 <li><a href="cart.php"><i class="fa fa-shopping-cart"></i></a></li>
             </ul>
-            <ul class="links">
-                <li><a href="?controller=home&action=profile&page=customer"><i class="fa fa-user"></i></a></li>
-            </ul>
+            <div class="dropdown">
+                <button class="dropbtn">
+                <a href="?controller=home&action=profile&page=customer">
+                    <img src="app\views\public\Images\avatar.jpg" alt="Avatar">
+                </a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Sign Up</a>
+                    <a href="#">Log In</a>
+                </div>
+            </div>
             <div class="dropdown_menu">
                 <li><a href="?controller=home&action=index&page=customer">Trang Chủ</a></li>
                 <li><a href="?controller=home&action=index&page=customer">Trang Chủ</a></li>

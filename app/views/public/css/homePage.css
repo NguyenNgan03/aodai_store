@@ -10,7 +10,6 @@
 .main-container {
   position: relative;
   width: 100%;
-  height: 100%;
   margin: 0 auto;
   font-size: 0px;
   background: #ffffff;
@@ -25,58 +24,52 @@
   display: block;
   position: relative;
   height: 54px;
-  margin: 20px 0 0;
+  margin: 25px 0 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #22262a;
   font-size: 35px;
-  /* font-weight: 600;
-  line-height: 52.5px; */
+  font-weight: 600;
+  line-height: 52.5px;
   text-align: center;
   white-space: nowrap;
-  z-index: 12;
 }
 .flex-row-a {
   position: relative;
   width: 100%;
   height: 658.781px;
   justify-content: space-between;
-  z-index: 72;
 }
 .imgl-master {
   position: absolute;
   width: 20%;
-  height: 80%;
-  top: 0.17px;
-  left: 50px;
-  background-size: cover;
-  z-index: 65;
+  height: 95%;
+  top: 5%;
+  left: 6%;
 }
 .img-master {
   position: absolute;
   width: 20%;
-  height: 80%;
-  top: 0.17px;
-  left: 300px;
+  height: 95%;
+  top: 5%;
+  left: 29%;
   background-size: cover;
-  z-index: 66;
 }
 .mgm-master {
   position: absolute;
   width: 20%;
-  height: 80%;
-  top: 0.17px;
-  left: 550px;
+  height: 95%;
+  top: 5%;
+  left: 52%;
   background-size: cover;
-  z-index: 67;
 }
 .mgl-master {
   position: absolute;
   width: 20%;
-  height: 80%;
-  top: 1.172px;
-  left: 800px;
+  height: 95%;
+  top: 5%;
+  left: 75%;
+  right: 5%;
   background-size: cover;
-  z-index: 68;
 }
 .text-1 {
   display: flex;
@@ -85,8 +78,8 @@
   position: absolute;
   width: 20%;
   height: 54px;
-  top: 450px;
-  left: 50px;
+  top: 100%;
+  left: 6%;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -97,7 +90,6 @@
   line-height: 27px;
   text-align: center;
   letter-spacing: 0.5px;
-  z-index: 56;
 }
 .text-2 {
   display: flex;
@@ -106,8 +98,8 @@
   position: absolute;
   width: 20%;
   height: 54px;
-  top: 450px;
-  left: 300px;
+  top: 100%;
+  left: 29%;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -118,7 +110,6 @@
   line-height: 27px;
   text-align: center;
   letter-spacing: 0.5px;
-  z-index: 57;
 }
 .text-3 {
   display: flex;
@@ -127,8 +118,8 @@
   position: absolute;
   width: 20%;
   height: 54px;
-  top: 450px;
-  left: 550px;
+  top: 100%;
+  left: 52%;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -139,7 +130,6 @@
   line-height: 27px;
   text-align: center;
   letter-spacing: 0.5px;
-  z-index: 54;
 }
 .text-4 {
   display: flex;
@@ -148,8 +138,9 @@
   position: absolute;
   width: 20%;
   height: 54px;
-  top: 450px;
-  left: 800px;
+  top: 100%;
+  left: 75%;
+  right: 5%;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -160,7 +151,6 @@
   line-height: 27px;
   text-align: center;
   letter-spacing: 0.5px;
-  z-index: 71;
 }
 .frame-a {
   display: flex;
@@ -171,9 +161,8 @@
   position: absolute;
   width: 20%;
   height: 32px;
-  top: 520px;
-  left: 100px;
-  z-index: 63;
+  top: 108%;
+  left: 13%;
   overflow: hidden;
 }
 .text-6 {
@@ -191,7 +180,6 @@
   text-align: center;
   white-space: nowrap;
   letter-spacing: 0.5px;
-  z-index: 64;
 }
 .frame-b{
   display: flex;
@@ -202,9 +190,8 @@
   position: absolute;
   width: 20%;
   height: 32px;
-  top: 520px;
-  left: 350px;
-  z-index: 58;
+  top: 108%;
+  left: 36%;
   overflow: hidden;
 }
 .text-7 {
@@ -222,7 +209,6 @@
   text-align: center;
   white-space: nowrap;
   letter-spacing: 0.5px;
-  z-index: 59;
 }
 .frame-c {
   display: flex;
@@ -233,9 +219,8 @@
   position: absolute;
   width: 20%;
   height: 32px;
-  top: 520px;
-  left: 600px;
-  z-index: 55;
+  top: 108%;
+  left: 59%;
   overflow: hidden;
 }
 .text-8 {
@@ -253,7 +238,6 @@
   text-align: center;
   white-space: nowrap;
   letter-spacing: 0.5px;
-  z-index: 56;
 }
 .frame-d {
   display: flex;
@@ -264,9 +248,8 @@
   position: absolute;
   width: 20%;
   height: 32px;
-  top: 520px;
-  left: 850px;
-  z-index: 72;
+  top: 108%;
+  left: 82%;
   overflow: hidden;
 }
 .text-9 {
@@ -284,50 +267,45 @@
   text-align: center;
   white-space: nowrap;
   letter-spacing: 0.5px;
-  z-index: 73;
 }
 .flex-row-b {
   position: relative;
   width: 100%;
   height: 658.781px;
   justify-content: space-between;
-  z-index: 123;
 }
 .mgl-master-c {
   position: absolute;
   width: 20%;
-  height: 80%;
-  top: 0.17px;
-  left: 50px;
+  height: 95%;
+  top: 20%;
+  left: 6%;
   background-size: cover;
-  z-index: 120;
 }
 .mgm-master-d {
   position: absolute;
   width: 20%;
-  height: 80%;
-  top: 0.17px;
-  left: 300px;
+  height: 95%;
+  top: 20%;
+  left: 29%;
   background-size: cover;
-  z-index: 121;
 }
 .mgm-master-e {
   position: absolute;
   width: 20%;
-  height: 80%;
-  top: 0.17px;
-  left: 550px;
+  height: 95%;
+  top: 20%;
+  left: 52%;
   background-size: cover;
-  z-index: 122;
 }
 .mgl-master-f {
   position: absolute;
   width: 20%;
-  height: 80%;
-  top: 1.172px;
-  left: 800px;
+  height: 95%;
+  top: 20%;
+  left: 75%;
+  right: 5%;
   background-size: cover;
-  z-index: 123;
 }
 .text-a {
   display: flex;
@@ -336,8 +314,8 @@
   position: absolute;
   width: 20%;
   height: 54px;
-  top: 450px;
-  left: 50px;
+  top: 120%;
+  left: 6%;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -348,7 +326,6 @@
   line-height: 27px;
   text-align: center;
   letter-spacing: 0.5px;
-  z-index: 102;
 }
 .text-b {
   display: flex;
@@ -357,8 +334,8 @@
   position: absolute;
   width: 20%;
   height: 54px;
-  top: 450px;
-  left: 300px;
+  top: 120%;
+  left: 29%;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -369,7 +346,6 @@
   line-height: 27px;
   text-align: center;
   letter-spacing: 0.5px;
-  z-index: 107;
 }
 .text-c {
   display: flex;
@@ -378,8 +354,8 @@
   position: absolute;
   width: 20%;
   height: 54px;
-  top: 450px;
-  left: 550px;
+  top: 120%;
+  left: 52%;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -390,7 +366,6 @@
   line-height: 27px;
   text-align: center;
   letter-spacing: 0.5px;
-  z-index: 112;
 }
 .text-d {
   display: flex;
@@ -399,8 +374,9 @@
   position: absolute;
   width: 20%;
   height: 54px;
-  top: 450px;
-  left: 800px;
+  top: 120%;
+  left: 75%;
+  right: 5%;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -411,7 +387,6 @@
   line-height: 27px;
   text-align: center;
   letter-spacing: 0.5px;
-  z-index: 117;
 }
 .frame-13 {
   display: flex;
@@ -422,9 +397,8 @@
   position: absolute;
   width: 20%;
   height: 32px;
-  top: 520px;
-  left: 100px;
-  z-index: 103;
+  top: 128%;
+  left: 13%;
   overflow: hidden;
 }
 .vnd-14 {
@@ -442,7 +416,6 @@
   text-align: center;
   white-space: nowrap;
   letter-spacing: 0.5px;
-  z-index: 104;
 }
 .frame-15 {
   display: flex;
@@ -453,9 +426,8 @@
   position: absolute;
   width: 20%;
   height: 32px;
-  top: 520px;
-  left: 350px;
-  z-index: 108;
+  top: 128%;
+  left: 36%;
   overflow: hidden;
 }
 .vnd-16 {
@@ -473,7 +445,6 @@
   text-align: center;
   white-space: nowrap;
   letter-spacing: 0.5px;
-  z-index: 109;
 }
 .frame-17 {
   display: flex;
@@ -484,9 +455,8 @@
   position: absolute;
   width: 20%;
   height: 32px;
-  top: 520px;
-  left: 600px;
-  z-index: 113;
+  top: 128%;
+  left: 59%;
   overflow: hidden;
 }
 .vnd-18 {
@@ -504,7 +474,6 @@
   text-align: center;
   white-space: nowrap;
   letter-spacing: 0.5px;
-  z-index: 114;
 }
 .frame-19 {
   display: flex;
@@ -515,9 +484,8 @@
   position: absolute;
   width: 20%;
   height: 32px;
-  top: 520px;
-  left: 850px;
-  z-index: 118;
+  top: 128%;
+  left: 82%;
   overflow: hidden;
 }
 .vnd-1a {
@@ -535,45 +503,42 @@
   text-align: center;
   white-space: nowrap;
   letter-spacing: 0.5px;
-  z-index: 119;
 }
-/* .removebg-preview {
-  position: absolute;
-  width: 800px;
-  height: 817.257px;
-  top: 0;
-  left: 920px;
-  background-size: cover;
-  z-index: 26;
-} */
 .service {
   display: block;
   position: relative;
   height: 54px;
-  margin: 20px 0 0;
+  margin: 15% 0 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #22262a;
   font-size: 35px;
+  font-weight: 600;
+  line-height: 52.5px;
   text-align: center;
   white-space: nowrap;
-  z-index: 1;
 }
 .flex-row-cd {
   position: relative;
-  width: 977.126px;
+  width: 60%;
   height: 91.302px;
-  /* margin: 10px 0 0 238.704px; */
+  margin: 5% 20% 1% 20%;
   justify-content: space-between;
-  z-index: 36;
+}
+.shipping {
+  position: absolute;
+  width: 10.31%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: 100% 100%;
 }
 .refund {
   position: absolute;
   width: 7.04%;
-  height: 87.99%;
+  height: 100%;
   top: 0;
   left: 48.05%;
   background-size: 100% 100%;
-  z-index: 30;
 }
 .support {
   position: absolute;
@@ -582,23 +547,13 @@
   top: 0;
   left: 93.07%;
   background-size: 100% 100%;
-  z-index: 33;
-}
-.shipping {
-  position: absolute;
-  width: 10.31%;
-  height: 74.14%;
-  top: 9.79%;
-  left: 0;
-  background-size: 100% 100%;
-  z-index: 36;
 }
 .flex-row-bf {
   position: relative;
-  width: 1147.226px;
+  width: 60%;
   height: 48px;
-  margin: 34.698px 0 0 141px;
-  z-index: 35;
+  margin: 0% 15% 1% 15%;
+  justify-content: space-between;
 }
 .free-shipping {
   display: flex;
@@ -606,7 +561,6 @@
   justify-content: flex-start;
   position: absolute;
   height: 89.58%;
-  top: 0;
   left: 0;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
@@ -618,27 +572,6 @@
   line-height: 40.5px;
   text-align: left;
   white-space: nowrap;
-  z-index: 35;
-}
-.support-24-7 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  height: 88.83%;
-  top: 0.27%;
-  left: 83.42%;
-  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
-  color: #22262a;
-  font-size: 27px;
-  font-weight: 500;
-  line-height: 40.5px;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 32;
 }
 .refund-100 {
   display: flex;
@@ -646,8 +579,7 @@
   justify-content: flex-start;
   position: absolute;
   height: 87.5%;
-  top: 12.5%;
-  left: 42.89%;
+  left: 50%;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -658,17 +590,33 @@
   line-height: 40.5px;
   text-align: left;
   white-space: nowrap;
-  z-index: 29;
+}
+.support-24-7 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 88.83%;
+  left: 97%;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #22262a;
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 40.5px;
+  text-align: left;
+  white-space: nowrap;
 }
 .flex-row-d-1e {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  width: 1101.765px;
+  width: 60%;
   height: 98.989px;
-  margin: 13px 0 0 193px;
-  z-index: 43;
+  margin: 0% 15% 1% 15%;
 }
 .lorem-ipsum-printing {
   display: flex;
@@ -678,6 +626,8 @@
   position: relative;
   width: 197.555px;
   height: 98.989px;
+  left: 0;
+  left: 3%;
   font-family: Proxima Nova, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -687,7 +637,6 @@
   font-weight: 400;
   line-height: 21.924px;
   text-align: center;
-  z-index: 41;
 }
 .lorem-ipsum-printing-1f {
   display: flex;
@@ -697,6 +646,7 @@
   position: relative;
   width: 197.555px;
   height: 98.989px;
+  left: 9%;
   font-family: Proxima Nova, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -706,7 +656,6 @@
   font-weight: 400;
   line-height: 21.924px;
   text-align: center;
-  z-index: 42;
 }
 .lorem-ipsum-printing-20 {
   display: flex;
@@ -716,6 +665,7 @@
   position: relative;
   width: 197.555px;
   height: 98.989px;
+  left: 13%;
   font-family: Proxima Nova, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -725,61 +675,57 @@
   font-weight: 400;
   line-height: 21.924px;
   text-align: center;
-  z-index: 43;
 }
 .selling-products {
   display: block;
   position: relative;
   height: 54px;
-  margin: 20px 0 0;
+  margin: 25px 0 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #22262a;
   font-size: 35px;
+  font-weight: 600;
+  line-height: 52.5px;
   text-align: center;
   white-space: nowrap;
-  z-index: 38;
 }
 .flex-row-c {
   position: relative;
   width: 100%;
   height: 658.781px;
-  z-index: 98;
 }
 .imgl-master-21 {
   position: absolute;
   width: 20%;
-  height: 80%;
-  top: 0.17px;
-  left: 50px;
+  height: 95%;
+  top: 10%;
+  left: 6%;
   background-size: cover;
-  z-index: 95;
 }
 .img-master-22 {
   position: absolute;
   width: 20%;
-  height: 80%;
-  top: 0.17px;
-  left: 300px;
+  height: 95%;
+  top: 10%;
+  left: 29%;
   background-size: cover;
-  z-index: 96;
 }
 .mgm-master-23 {
   position: absolute;
   width: 20%;
-  height: 80%;
-  top: 0.17px;
-  left: 550px;
+  height: 95%;
+  top: 10%;
+  left: 52%;
   background-size: cover;
-  z-index: 97;
 }
 .mgl-master-24 {
   position: absolute;
   width: 20%;
-  height: 80%;
-  top: 1.172px;
-  left: 800px;
+  height: 95%;
+  top: 10%;
+  left: 75%;
+  right: 5%;
   background-size: cover;
-  z-index: 98;
 }
 .text-e {
   display: flex;
@@ -788,8 +734,8 @@
   position: absolute;
   width: 20%;
   height: 54px;
-  top: 450px;
-  left: 50px;
+  top: 108%;
+  left: 6%;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -800,7 +746,6 @@
   line-height: 27px;
   text-align: center;
   letter-spacing: 0.5px;
-  z-index: 77;
 }
 .text-f {
   display: flex;
@@ -809,8 +754,8 @@
   position: absolute;
   width: 20%;
   height: 54px;
-  top: 450px;
-  left: 300px;
+  top: 108%;
+  left: 29%;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -821,7 +766,6 @@
   line-height: 27px;
   text-align: center;
   letter-spacing: 0.5px;
-  z-index: 82;
 }
 .text-g {
   display: flex;
@@ -830,8 +774,8 @@
   position: absolute;
   width: 20%;
   height: 54px;
-  top: 450px;
-  left: 550px;
+  top: 108%;
+  left: 52%;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -842,7 +786,6 @@
   line-height: 27px;
   text-align: center;
   letter-spacing: 0.5px;
-  z-index: 87;
 }
 .text-h {
   display: flex;
@@ -851,8 +794,9 @@
   position: absolute;
   width: 20%;
   height: 54px;
-  top: 450px;
-  left: 800px;
+  top: 108%;
+  left: 75%;
+  right: 5%;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
@@ -863,7 +807,6 @@
   line-height: 27px;
   text-align: center;
   letter-spacing: 0.5px;
-  z-index: 92;
 }
 .frame-2d {
   display: flex;
@@ -874,9 +817,8 @@
   position: absolute;
   width: 20%;
   height: 32px;
-  top: 520px;
-  left: 100px;
-  z-index: 78;
+  top: 116%;
+  left: 13%;
   overflow: hidden;
 }
 .text-21 {
@@ -894,7 +836,6 @@
   text-align: center;
   white-space: nowrap;
   letter-spacing: 0.5px;
-  z-index: 79;
 }
 .frame-2e {
   display: flex;
@@ -905,9 +846,8 @@
   position: absolute;
   width: 20%;
   height: 32px;
-  top: 520px;
-  left: 350px;
-  z-index: 83;
+  top: 116%;
+  left: 36%;
   overflow: hidden;
 }
 .text-22 {
@@ -925,7 +865,6 @@
   text-align: center;
   white-space: nowrap;
   letter-spacing: 0.5px;
-  z-index: 84;
 }
 .frame-2f {
   display: flex;
@@ -936,9 +875,8 @@
   position: absolute;
   width: 20%;
   height: 32px;
-  top: 520px;
-  left: 600px;
-  z-index: 88;
+  top: 116%;
+  left: 59%;
   overflow: hidden;
 }
 .text-23 {
@@ -956,7 +894,6 @@
   text-align: center;
   white-space: nowrap;
   letter-spacing: 0.5px;
-  z-index: 89;
 }
 .frame-30 {
   display: flex;
@@ -967,9 +904,8 @@
   position: absolute;
   width: 20%;
   height: 32px;
-  top: 520px;
-  left: 850px;
-  z-index: 93;
+  top: 116%;
+  left: 82%;
   overflow: hidden;
 }
 .text-24 {
@@ -987,60 +923,4 @@
   text-align: center;
   white-space: nowrap;
   letter-spacing: 0.5px;
-  z-index: 94;
-}
-.base {
-  position: relative;
-  width: 189px;
-  height: 56px;
-  margin: 37px 0 0 1178px;
-  z-index: 125;
-}
-.text-25 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  height: 39.29%;
-  top: 28.57%;
-  left: 40.56%;
-  color: #22262a;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.924px;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 129;
-}
-.text-26 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  height: 39.29%;
-  top: 28.57%;
-  left: 40.56%;
-  color: #22262a;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.924px;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 126;
-}
-.text-27 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  height: 39.29%;
-  top: 28.57%;
-  left: 64.53%;
-  color: #000000;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.924px;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 128;
 }
