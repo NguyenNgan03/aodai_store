@@ -25,7 +25,7 @@
                             <td> <?php echo  $comment['product_id']; ?></td>
                             <td> <?php echo  $comment['user_id']; ?></td>
                             <td> <?php echo  $comment['content']; ?></td>
-                            <td> <a href="?controller=comment&action=delete&page=admin&id=<?php echo $user['id'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a></td>
+                            <td> <a href="?controller=comment&action=delete&page=admin&id=<?php echo $comment['id'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a></td>
                         </tr>
                         </tr>
                     <?php endforeach; ?>

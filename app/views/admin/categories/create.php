@@ -10,7 +10,7 @@
         <form class="col-12" action="?controller=category&page=Admin&action=CreatePost" method="post" class="row">
             <div cl ass="border p-3">
                 <div class="form-group form-floating py-2 col-12">
-                    <label class="ms-2" style="">Name</label>
+                    <label class="ms-2">Name</label>
                     <input class="form-control border-0 shadow" name="name" require/>
                     <span style="color: red">
                         <?php
