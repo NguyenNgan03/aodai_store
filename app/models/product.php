@@ -25,14 +25,6 @@ class Product extends Database
         }
         return $result;
     }
-
-    // public function getAllProducts()
-    // {
-    //     $sql = 'SELECT * FROM products';
-    //     $result = $this->query($sql);
-    //     return $result;
-    // }
-
     
     public function create ($name, $discount_id, $category_id, $description, $price, $color, $material, $size, $image1, $image2, $image3, $image4)
     {
