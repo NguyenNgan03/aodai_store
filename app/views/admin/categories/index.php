@@ -9,7 +9,7 @@
   <div class="row pb-3">
     <div class="col-6"></div>
     <div class="col-6 text-end" style="text-align:right">
-      <a href=<?= "/?page=Admin&controller=Category&action=Create" ?> class="btn btn-primary">
+      <a href=<?= "?page=Admin&controller=Category&action=create" ?> class="btn btn-primary">
         <i class="bi bi-plus-circle"></i> Create New Category
       </a>
     </div>
@@ -32,10 +32,10 @@
             <td><?= $category['name'] ?></td>
             <td>
               <div class="w-75 btn-group" role="group">
-                <a href=<?= "/?page=Admin&controller=Category&action=Edit&id=" . $category["id"] ?> class="btn btn-primary mx-2">
+                <a href=<?= "?controller=category&action=edit&page=admin&id=" . $category["id"] ?> class="btn btn-primary mx-2">
                   <i class="bi bi-pencil-square"></i> Edit
                 </a>
-                <a href="<?= "/?controller=category&action=Delete&page=admin&id=" . $category['id'] ?>" class="btn btn-danger mx-2">
+                <a href="<?= "?controller=category&action=delete&page=admin&id=" . $category['id'] ?>" class="btn btn-danger mx-2">
                   <i class="bi bi-trash-fill"></i> Delete
                 </a>
               </div>

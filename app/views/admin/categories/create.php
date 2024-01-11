@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="card-body p-4">
-        <form class="col-12" action="/?controller=category&page=Admin&action=CreatePost" method="post" class="row">
+        <form class="col-12" action="?controller=category&page=Admin&action=CreatePost" method="post" class="row">
             <div cl ass="border p-3">
                 <div class="form-group form-floating py-2 col-12">
                     <label class="ms-2" style="">Name</label>
@@ -25,7 +25,7 @@
                         <button type="submit" class="btn btn-primary form-control">Create</button>
                     </div>
                     <div class="col-6 col-md-3">
-                        <a href=<?= "/?controller=category&action=index&page=Admin" ?> class="btn btn-info btn-outline-primary border form-control">
+                        <a href=<?= "?controller=category&action=index&page=Admin" ?> class="btn btn-info btn-outline-primary border form-control">
                             Back to List
                         </a>
                     </div>
