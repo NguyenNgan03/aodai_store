@@ -1,26 +1,31 @@
 <?php
 include 'app\models\Product.php';
-
+include 'app\models\Category.php';
+include 'app\models\Discount.php';
 class ProductController extends AdminController
 {
     private $product;
+    public $category;
+    public $discount;
 
     public function __construct()
     {
         $this->product = new Product;
+        $this->category = new Category;
+        $this->discount = new Discount;
     }
 
     public function index()
-    {
+    {  
         $data['products'] = $this->product->index();
         parent::template('app\views\admin\products\index.php', $data);
     }
 
     public function getCreate()
     {
-        // $data['categories'] = $this->product->getAllCategories();
-        // $data['discounts'] = $this->product->getAllDiscounts();
-        parent::template("app/views/admin/products/create.php");
+        $data['categories'] = $this->category->getAllCategories();
+        $data['discounts'] = $this->discount->getAllDiscounts();
+        parent::template("app/views/admin/products/create.php",$data);
     }
 
     public function create()
@@ -39,7 +44,7 @@ class ProductController extends AdminController
             $imageFields = ['image1', 'image2', 'image3', 'image4'];
             foreach ($imageFields as $imageField) {
                 if (isset($_FILES[$imageField]) && $_FILES[$imageField]['error'] === UPLOAD_ERR_OK) {
-                    $uploadDir = 'uploads/'; // Thay đổi đường dẫn tùy vào cấu hình của bạn
+                    $uploadDir = 'app\views\public\Images/'; // Thay đổi đường dẫn tùy vào cấu hình của bạn
                     $uploadFile = $uploadDir . basename($_FILES[$imageField]['name']);
 
                     $imageFileType = strtolower(pathinfo($uploadFile, PATHINFO_EXTENSION));
