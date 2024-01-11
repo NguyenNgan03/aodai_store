@@ -1,4 +1,5 @@
 -- Create the database
+DROP DATABASE IF EXISTS aodaistore_sql;
 CREATE DATABASE IF NOT EXISTS aodaistore_sql;
 USE aodaistore_sql;
 

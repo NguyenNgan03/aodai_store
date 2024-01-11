@@ -33,8 +33,8 @@
                             <td> <?php echo  $vourcher['status']; ?></td>
                             <td> <?php echo  $vourcher['description']; ?></td>
                             <td> <?php echo  $vourcher['expiration_date']; ?></td>
-                            <td> <a href="?controller=vourcher&action=edit&page=admin&id=<?php echo $user['id'] ?>" class="btn btn-primary btn-sm mr-2"><i class="fa fa-pencil"></i></a></td>
-                            <td> <a href="?controller=vourcher&action=delete&page=admin&id=<?php echo $user['id'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a></td>
+                            <td> <a href="?controller=vourcher&action=edit&page=admin&id=<?php echo $vourcher['id'] ?>" class="btn btn-primary btn-sm mr-2"><i class="fa fa-pencil"></i></a></td>
+                            <td> <a href="?controller=vourcher&action=delete&page=admin&id=<?php echo $vourcher['id'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a></td>
                         </tr>
                         </tr>
                     <?php endforeach; ?>

@@ -14,12 +14,12 @@ class UserController extends AdminController
     public function index()
     {
         $data['users'] = $this->user->index();
-        parent::template('app\views\admin\customers\index.php', $data);
+        parent::template('app\views\admin\customer\index.php', $data);
     }
 
     public function getCreate()
     {
-        parent::template("app/views/admin/customers/create.php");
+        parent::template('app\views\admin\customer\create.php');
     }
 
     public function create()
@@ -57,7 +57,7 @@ class UserController extends AdminController
         if (isset($_GET['id'])) {
             $user = new user();
             $data['users'] = $this->user->getUserById($_GET['id']);
-            parent::template("app/views/admin/customers/edit.php", $data);
+            parent::template('app\views\admin\customer\edit.php', $data);
         }
     }
 
