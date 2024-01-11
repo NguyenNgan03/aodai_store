@@ -68,7 +68,7 @@ class CategoryController extends AdminController
             ":name" =>  $category_name,
         ];
         $this->category->updateCategory($params);
-        header("location: /?page=Admin&controller=Category");
+        header("location: ?controller=category&action=index&page=Admin");
     }
 
     public function delete()
@@ -84,11 +84,4 @@ class CategoryController extends AdminController
             }
         }
     }
-        // $id = isset($_GET['id']) ?  $_GET['id'] : "";
-        // $params = [
-        //     ":id" =>  $id,
-        // ];
-        // $this->category->deleteCategory($params);
-        // header("location: /?page=Admin&controller=Category");
-    
 }
