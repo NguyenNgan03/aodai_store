@@ -39,71 +39,51 @@
   position: relative;
   width: 100%;
   height: 658.781px;
-  /* margin: 0 0 0 93px; */
+  justify-content: space-between;
   z-index: 72;
 }
 .imgl-master {
   position: absolute;
-  width: 220px;
-  height: 432px;
+  width: 20%;
+  height: 80%;
   top: 0.17px;
   left: 50px;
-  background: url(./assets/images/fbb983a4e87953d9626db95b4455faf8945dc6c7.png)
-    no-repeat center;
   background-size: cover;
   z-index: 65;
 }
 .img-master {
   position: absolute;
-  width: 220px;
-  height: 432px;
+  width: 20%;
+  height: 80%;
   top: 0.17px;
   left: 300px;
-  background: url(./assets/images/c6064d6f565c052bfa8abec20c004e4a138ca6aa.png)
-    no-repeat center;
   background-size: cover;
   z-index: 66;
 }
 .mgm-master {
   position: absolute;
-  width: 220px;
-  height: 432px;
+  width: 20%;
+  height: 80%;
   top: 0.17px;
   left: 550px;
-  background: url(./assets/images/9ff2b75bc1a03da3be98df1cf6913782d4babf50.png)
-    no-repeat center;
   background-size: cover;
   z-index: 67;
 }
 .mgl-master {
   position: absolute;
-  width: 220px;
-  height: 432px;
+  width: 20%;
+  height: 80%;
   top: 1.172px;
   left: 800px;
-  background: url(./assets/images/4bb491252d6844a6f941255ef0852a2f83ee1ca2.png)
-    no-repeat center;
   background-size: cover;
   z-index: 68;
 }
-/* .img-3 {
-  position: absolute;
-  width: 23.53%;
-  height: 31.36%;
-  top: 68.64%;
-  left: 25.67%;
-  font-size: 0px;
-  background: url(./assets/images/5f0cf131-7536-41f9-b853-738a8d406bd3.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 10;
-} */
 .text-1 {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   position: absolute;
-  width: 220px;
+  width: 20%;
   height: 54px;
   top: 450px;
   left: 50px;
@@ -124,7 +104,7 @@
   align-items: flex-start;
   justify-content: center;
   position: absolute;
-  width: 220px;
+  width: 20%;
   height: 54px;
   top: 450px;
   left: 300px;
@@ -145,7 +125,7 @@
   align-items: flex-start;
   justify-content: center;
   position: absolute;
-  width: 220px;
+  width: 20%;
   height: 54px;
   top: 450px;
   left: 550px;
@@ -166,7 +146,7 @@
   align-items: flex-start;
   justify-content: center;
   position: absolute;
-  width: 220px;
+  width: 20%;
   height: 54px;
   top: 450px;
   left: 800px;
@@ -189,7 +169,7 @@
   flex-wrap: nowrap;
   gap: 4px;
   position: absolute;
-  width: 123px;
+  width: 20%;
   height: 32px;
   top: 520px;
   left: 100px;
@@ -198,6 +178,7 @@
 }
 .text-6 {
   justify-content: center;
+  width: 20%;
   height: 32px;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
@@ -219,7 +200,7 @@
   flex-wrap: nowrap;
   gap: 4px;
   position: absolute;
-  width: 123px;
+  width: 20%;
   height: 32px;
   top: 520px;
   left: 350px;
@@ -228,6 +209,7 @@
 }
 .text-7 {
   justify-content: center;
+  width: 20%;
   height: 32px;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
@@ -249,7 +231,7 @@
   flex-wrap: nowrap;
   gap: 4px;
   position: absolute;
-  width: 123px;
+  width: 20%;
   height: 32px;
   top: 520px;
   left: 600px;
@@ -258,6 +240,7 @@
 }
 .text-8 {
   justify-content: center;
+  width: 20%;
   height: 32px;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
@@ -279,7 +262,7 @@
   flex-wrap: nowrap;
   gap: 4px;
   position: absolute;
-  width: 123px;
+  width: 20%;
   height: 32px;
   top: 520px;
   left: 850px;
@@ -288,6 +271,7 @@
 }
 .text-9 {
   justify-content: center;
+  width: 20%;
   height: 32px;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
@@ -306,65 +290,51 @@
   position: relative;
   width: 100%;
   height: 658.781px;
+  justify-content: space-between;
   z-index: 123;
 }
 .mgl-master-c {
   position: absolute;
-  width: 220px;
-  height: 432px;
+  width: 20%;
+  height: 80%;
   top: 0.17px;
   left: 50px;
-  background: url(./assets/images/c6d72a0b02d1ad73e01a38106f293817c31ceab3.png)
-    no-repeat center;
   background-size: cover;
   z-index: 120;
 }
 .mgm-master-d {
   position: absolute;
-  width: 220px;
-  height: 432px;
+  width: 20%;
+  height: 80%;
   top: 0.17px;
   left: 300px;
-  background: url(./assets/images/cdaeb7c9d98f2d9f588d76697e35984eafe81c27.png)
-    no-repeat center;
   background-size: cover;
   z-index: 121;
 }
 .mgm-master-e {
   position: absolute;
-  width: 220px;
-  height: 432px;
+  width: 20%;
+  height: 80%;
   top: 0.17px;
   left: 550px;
-  background: url(./assets/images/9ff2b75bc1a03da3be98df1cf6913782d4babf50.png)
-    no-repeat center;
   background-size: cover;
   z-index: 122;
 }
 .mgl-master-f {
   position: absolute;
-  width: 220px;
-  height: 432px;
+  width: 20%;
+  height: 80%;
   top: 1.172px;
   left: 800px;
-  background: url(./assets/images/4bb491252d6844a6f941255ef0852a2f83ee1ca2.png)
-    no-repeat center;
   background-size: cover;
   z-index: 123;
 }
-/* .flex-row-c {
-  position: relative;
-  width: 1226.331px;
-  height: 81px;
-  margin: 11px 0 0 141px;
-  z-index: 117;
-} */
 .text-a {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   position: absolute;
-  width: 220px;
+  width: 20%;
   height: 54px;
   top: 450px;
   left: 50px;
@@ -385,7 +355,7 @@
   align-items: flex-start;
   justify-content: center;
   position: absolute;
-  width: 220px;
+  width: 20%;
   height: 54px;
   top: 450px;
   left: 300px;
@@ -406,7 +376,7 @@
   align-items: flex-start;
   justify-content: center;
   position: absolute;
-  width: 220px;
+  width: 20%;
   height: 54px;
   top: 450px;
   left: 550px;
@@ -427,7 +397,7 @@
   align-items: flex-start;
   justify-content: center;
   position: absolute;
-  width: 220px;
+  width: 20%;
   height: 54px;
   top: 450px;
   left: 800px;
@@ -443,13 +413,6 @@
   letter-spacing: 0.5px;
   z-index: 117;
 }
-/* .flex-row-bdb {
-  position: relative;
-  width: 1130px;
-  height: 32px;
-  margin: -5px 0 0 192px;
-  z-index: 118;
-} */
 .frame-13 {
   display: flex;
   flex-direction: column;
@@ -457,7 +420,7 @@
   flex-wrap: nowrap;
   gap: 4px;
   position: absolute;
-  width: 123px;
+  width: 20%;
   height: 32px;
   top: 520px;
   left: 100px;
@@ -466,6 +429,7 @@
 }
 .vnd-14 {
   justify-content: center;
+  width: 20%;
   height: 32px;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
@@ -487,7 +451,7 @@
   flex-wrap: nowrap;
   gap: 4px;
   position: absolute;
-  width: 123px;
+  width: 20%;
   height: 32px;
   top: 520px;
   left: 350px;
@@ -496,6 +460,7 @@
 }
 .vnd-16 {
   justify-content: center;
+  width: 20%;
   height: 32px;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
@@ -517,7 +482,7 @@
   flex-wrap: nowrap;
   gap: 4px;
   position: absolute;
-  width: 123px;
+  width: 20%;
   height: 32px;
   top: 520px;
   left: 600px;
@@ -526,6 +491,7 @@
 }
 .vnd-18 {
   justify-content: center;
+  width: 20%;
   height: 32px;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
@@ -547,7 +513,7 @@
   flex-wrap: nowrap;
   gap: 4px;
   position: absolute;
-  width: 123px;
+  width: 20%;
   height: 32px;
   top: 520px;
   left: 850px;
@@ -556,6 +522,7 @@
 }
 .vnd-1a {
   justify-content: center;
+  width: 20%;
   height: 32px;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
@@ -570,91 +537,15 @@
   letter-spacing: 0.5px;
   z-index: 119;
 }
-.flex-row-d {
-  position: relative;
-  width: 1920px;
-  height: 817.257px;
-  margin: 0.08px 0 0 -219px;
-  z-index: 26;
-}
-.removebg-preview {
+/* .removebg-preview {
   position: absolute;
   width: 800px;
   height: 817.257px;
   top: 0;
   left: 920px;
-  background: url(./assets/images/7dfc5332-20bf-4e97-95e3-8b50d474fa76.png)
-    no-repeat center;
   background-size: cover;
   z-index: 26;
-}
-.rectangle-copy-1b {
-  position: absolute;
-  width: 100%;
-  height: 75.45%;
-  top: 24.54%;
-  left: 0;
-  background: url(./assets/images/f3331c0d-eb6d-4527-832a-1c7a79ada625.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 17;
-}
-.rectangle-copy-1c {
-  position: relative;
-  width: 1920px;
-  height: 1.028px;
-  margin: 0 0 0 0;
-  background: url(./assets/images/36cf38c3-e421-425b-bc8a-77111e6f3b24.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 18;
-}
-.bo-suu-tap-ao-cuoi {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: relative;
-  width: 571px;
-  height: 170.605px;
-  margin: 166.263px 0 0 320.5px;
-  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
-  color: #ffffff;
-  font-size: 55px;
-  font-weight: 500;
-  line-height: 82.5px;
-  text-align: left;
-  z-index: 20;
-}
-.san-pham {
-  display: block;
-  position: relative;
-  height: 30.832px;
-  margin: 73.431px 0 0 320.5px;
-  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 30px;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 22;
-}
-.rectangle-1d {
-  position: relative;
-  width: 75px;
-  height: 3.083px;
-  margin: 4.111px 0 0 320.5px;
-  background: url(./assets/images/2c6d5fa4-4b8d-4477-8405-fa215a465be6.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 23;
-}
+} */
 .service {
   display: block;
   position: relative;
@@ -671,7 +562,8 @@
   position: relative;
   width: 977.126px;
   height: 91.302px;
-  margin: 10px 0 0 238.704px;
+  /* margin: 10px 0 0 238.704px; */
+  justify-content: space-between;
   z-index: 36;
 }
 .refund {
@@ -680,8 +572,6 @@
   height: 87.99%;
   top: 0;
   left: 48.05%;
-  background: url(./assets/images/2d188088-f7c9-4005-a98c-3aea9bfe2de0.png)
-    no-repeat center;
   background-size: 100% 100%;
   z-index: 30;
 }
@@ -691,8 +581,6 @@
   height: 100%;
   top: 0;
   left: 93.07%;
-  background: url(./assets/images/978616a1-485d-4e70-b5f3-bdaa94282f2a.png)
-    no-repeat center;
   background-size: 100% 100%;
   z-index: 33;
 }
@@ -702,8 +590,6 @@
   height: 74.14%;
   top: 9.79%;
   left: 0;
-  background: url(./assets/images/a523d767-9563-44dd-bf0e-c1a458f37d91.png)
-    no-repeat center;
   background-size: 100% 100%;
   z-index: 36;
 }
@@ -861,45 +747,37 @@
 }
 .imgl-master-21 {
   position: absolute;
-  width: 220px;
-  height: 432px;
+  width: 20%;
+  height: 80%;
   top: 0.17px;
   left: 50px;
-  background: url(./assets/images/fbb983a4e87953d9626db95b4455faf8945dc6c7.png)
-    no-repeat center;
   background-size: cover;
   z-index: 95;
 }
 .img-master-22 {
   position: absolute;
-  width: 220px;
-  height: 432px;
+  width: 20%;
+  height: 80%;
   top: 0.17px;
   left: 300px;
-  background: url(./assets/images/c6064d6f565c052bfa8abec20c004e4a138ca6aa.png)
-    no-repeat center;
   background-size: cover;
   z-index: 96;
 }
 .mgm-master-23 {
   position: absolute;
-  width: 220px;
-  height: 432px;
+  width: 20%;
+  height: 80%;
   top: 0.17px;
   left: 550px;
-  background: url(./assets/images/9ff2b75bc1a03da3be98df1cf6913782d4babf50.png)
-    no-repeat center;
   background-size: cover;
   z-index: 97;
 }
 .mgl-master-24 {
   position: absolute;
-  width: 220px;
-  height: 432px;
+  width: 20%;
+  height: 80%;
   top: 1.172px;
   left: 800px;
-  background: url(./assets/images/4bb491252d6844a6f941255ef0852a2f83ee1ca2.png)
-    no-repeat center;
   background-size: cover;
   z-index: 98;
 }
@@ -908,7 +786,7 @@
   align-items: flex-start;
   justify-content: center;
   position: absolute;
-  width: 220px;
+  width: 20%;
   height: 54px;
   top: 450px;
   left: 50px;
@@ -929,7 +807,7 @@
   align-items: flex-start;
   justify-content: center;
   position: absolute;
-  width: 220px;
+  width: 20%;
   height: 54px;
   top: 450px;
   left: 300px;
@@ -950,7 +828,7 @@
   align-items: flex-start;
   justify-content: center;
   position: absolute;
-  width: 220px;
+  width: 20%;
   height: 54px;
   top: 450px;
   left: 550px;
@@ -971,7 +849,7 @@
   align-items: flex-start;
   justify-content: center;
   position: absolute;
-  width: 220px;
+  width: 20%;
   height: 54px;
   top: 450px;
   left: 800px;
@@ -994,7 +872,7 @@
   flex-wrap: nowrap;
   gap: 4px;
   position: absolute;
-  width: 123px;
+  width: 20%;
   height: 32px;
   top: 520px;
   left: 100px;
@@ -1003,6 +881,7 @@
 }
 .text-21 {
   justify-content: center;
+  width: 20%;
   height: 32px;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
@@ -1024,7 +903,7 @@
   flex-wrap: nowrap;
   gap: 4px;
   position: absolute;
-  width: 123px;
+  width: 20%;
   height: 32px;
   top: 520px;
   left: 350px;
@@ -1033,6 +912,7 @@
 }
 .text-22 {
   justify-content: center;
+  width: 20%;
   height: 32px;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
@@ -1054,7 +934,7 @@
   flex-wrap: nowrap;
   gap: 4px;
   position: absolute;
-  width: 123px;
+  width: 20%;
   height: 32px;
   top: 520px;
   left: 600px;
@@ -1063,6 +943,7 @@
 }
 .text-23 {
   justify-content: center;
+  width: 20%;
   height: 32px;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
@@ -1084,7 +965,7 @@
   flex-wrap: nowrap;
   gap: 4px;
   position: absolute;
-  width: 123px;
+  width: 20%;
   height: 32px;
   top: 520px;
   left: 850px;
@@ -1093,6 +974,7 @@
 }
 .text-24 {
   justify-content: center;
+  width: 20%;
   height: 32px;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
@@ -1120,9 +1002,9 @@
   justify-content: flex-start;
   position: absolute;
   height: 39.29%;
-  top: 30.36%;
-  left: 44.57%;
-  color: #fcfdff;
+  top: 28.57%;
+  left: 40.56%;
+  color: #22262a;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.924px;

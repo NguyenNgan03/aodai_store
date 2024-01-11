@@ -23,7 +23,7 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 0 5%;
    
   }
@@ -31,11 +31,11 @@
   
   .header-navbar .navbar .links li a {
     text-decoration: none;
-    color: black;
+    color: white;
   }
   
   .header-navbar .navbar .links li a:hover {
-    color: orangered;
+    color: white;
   }
   
   .header-navbar .navbar .links li {
@@ -48,7 +48,7 @@
     content: '';
     width: 0%;
     height: 2px;
-    background: orangered;
+    background: rgb(233, 248, 157);
     margin: auto;
     display: flex;
     transition: 0.5s;
@@ -167,6 +167,7 @@
   
   
   .navbar .links {
+    font-size: 20px;
     display: flex;
     gap: 2rem;
   }
@@ -308,7 +309,6 @@
         width: 94px;
         position: absolute;
         top: 16px;
-        left: 128px;
     }
   
     .user-pic {
@@ -325,7 +325,7 @@
   
   .logo {
     display: block;  
-    margin-left: auto;
+    /* margin-left: auto; */
   }
   .sbox {
     position: relative;

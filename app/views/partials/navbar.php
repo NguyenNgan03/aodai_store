@@ -25,20 +25,30 @@
             </div>
             <ul class="links">
                 <li><a href="?controller=home&action=index&page=customer">Trang Chủ</a></li>
+            </ul>
+            <ul class="links">
                 <li><a href="?controller=product&action=index&page=customer">Sản Phẩm</a></li>
+            </ul>
+            <ul class="links">
                 <li><a href="?controller=home&action=information&page=customer">Thông Tin</a></li>
+            </ul>
+            <ul class="links">
                 <li><a href="?controller=home&action=contact&page=customer">Liên Hệ</a></li>
-                <li><a href="cart.php"><i class="fal fa-shopping-cart"></i></a></li>
-                <li><a href="?controller=home&action=profile&page=customer"><i class="fa-regular fa-user"></i></a></li>
+            </ul>
+            <ul class="links">
+                <li><a href="cart.php"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+            <ul class="links">
+                <li><a href="?controller=home&action=profile&page=customer"><i class="fa fa-user"></i></a></li>
             </ul>
             <div class="dropdown_menu">
-            <li><a href="?controller=home&action=index&page=customer">Trang Chủ</a></li>
-            <li><a href="?controller=home&action=index&page=customer">Trang Chủ</a></li>
+                <li><a href="?controller=home&action=index&page=customer">Trang Chủ</a></li>
+                <li><a href="?controller=home&action=index&page=customer">Trang Chủ</a></li>
                 <li><a href="?controller=product&action=index&page=customer">Sản Phẩm</a></li>
                 <li><a href="?controller=home&action=information&page=customer">Thông Tin</a></li>
                 <li><a href="?controller=home&action=contact&page=customer">Liên Hệ</a></li>
-                <li><a href="cart.php"><i class="fal fa-shopping-cart"></i></a></li>
-                <li><a href="?controller=home&action=profile&page=customer"><i class="fa-regular fa-user"></i></a></li>
+                <li><a href="cart.php"><i class="fa fa-shopping-cart"></i></a></li>
+                <li><a href="?controller=home&action=profile&page=customer"><i class="fa fa-user"></i></a></li>
             </div>
     </section>
 </body>
