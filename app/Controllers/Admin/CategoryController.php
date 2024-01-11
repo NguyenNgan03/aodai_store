@@ -35,13 +35,13 @@ class CategoryController extends AdminController
     {
         $errors = $this->validateForm($_POST);
         if (!empty($errors)) {
-            parent::template("/views/admin/categories/create.php", compact("errors"));
+            parent::template("app/views/admin/categories/create.php", compact("errors"));
         } else {
             $params = [
                 ":name" =>  $_POST['name'],
             ];
             $this->category->addCategory($params);
-            header("location: /?page=Admin&controller=Category");
+            header("location:?page=Admin&controller=Category&&action=index");
         }
     }
 
