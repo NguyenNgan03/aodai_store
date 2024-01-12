@@ -6,8 +6,8 @@
         </div>
     </div>
     <div class="tabular--wrapper">
-        <h3 >
-        <a href="?controller=product&action=getCreate&page=Admin" class="btn btn-primary">Add product</a>
+        <h3>
+            <a href="?controller=product&action=getCreate&page=Admin" class="btn btn-primary">Add product</a>
         </h3>
         <div class="table-container">
             <table>
@@ -26,8 +26,6 @@
                         <th>Image2</th>
                         <th>Image3</th>
                         <th>Image4</th>
-                        <th>Created_at</th>
-                        <th>Updated_at</th>
                         <th>Create</th>
                         <th>Delete</th>
                     </tr>
@@ -49,8 +47,6 @@
                             <td> <?php echo  $product['image2']; ?></td>
                             <td> <?php echo  $product['image3']; ?></td>
                             <td> <?php echo  $product['image4']; ?></td>
-                            <td> <?php echo  $product['created_at']; ?></td>
-                            <td> <?php echo  $product['updated_at']; ?></td>
                             <td> <a href="?controller=product&action=edit&page=admin&id=<?php echo $product['id'] ?>" class="btn btn-primary btn-sm mr-2"><i class="fa fa-pencil"></i></a></td>
                             <td> <a href="?controller=product&action=delete&page=admin&id=<?php echo $product['id'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a></td>
                         </tr>

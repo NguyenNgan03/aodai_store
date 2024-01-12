@@ -8,7 +8,7 @@ class OrderController extends AdminController
 
     public function __construct()
     {
-        $this->order= new order;
+        $this->order = new order;
     }
 
     public function index()
@@ -25,7 +25,7 @@ class OrderController extends AdminController
     public function create()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $requiredFields = ['user_id', 'order_date', 'shipping_address', 'shipping_date','notes','payment_status','shipping_status','created_at','updated_at'];
+            $requiredFields = ['user_id', 'order_date', 'shipping_address', 'shipping_date', 'notes', 'payment_status', 'shipping_status'];
 
             // Kiểm tra xem tất cả các trường cần thiết đã được gửi hay không
             foreach ($requiredFields as $field) {
@@ -42,9 +42,7 @@ class OrderController extends AdminController
             $notes = $_POST['notes'];
             $payment_status = $_POST['payment_status'];
             $shipping_status = $_POST['shipping_status'];
-            $created_at = $_POST['created_at'];
-            $updated_at = $_POST['updated_at'];
-            $result = $this->order->create($user_id, $order_date, $shipping_address, $shipping_date, $notes, $payment_status, $shipping_status, $created_at, $updated_at);
+            $result = $this->order->create($user_id, $order_date, $shipping_address, $shipping_date, $notes, $payment_status, $shipping_status);
             if ($result) {
                 header('location:?controller=order&action=index&page=admin');
             } else {
@@ -54,7 +52,6 @@ class OrderController extends AdminController
             echo 'yêu cầu lỗi';
         }
     }
-    //
 
     public function edit()
     {
@@ -68,7 +65,7 @@ class OrderController extends AdminController
     public function update()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $requiredFields = ['user_id', 'order_date', 'shipping_address', 'shipping_date', 'notes', 'payment_status', 'shipping_status', 'created_at', 'updated_at'];
+            $requiredFields = ['user_id', 'order_date', 'shipping_address', 'shipping_date', 'notes', 'payment_status', 'shipping_status'];
 
             // Kiểm tra xem tất cả các trường cần thiết đã được gửi hay không
             foreach ($requiredFields as $field) {
@@ -85,10 +82,7 @@ class OrderController extends AdminController
             $notes = $_POST['notes'];
             $payment_status = $_POST['payment_status'];
             $shipping_status = $_POST['shipping_status'];
-            $created_at = $_POST['created_at'];
-            $updated_at = $_POST['updated_at'];
-
-            $result = $this->order->update($id, $user_id, $order_date, $shipping_address, $shipping_date, $notes, $payment_status, $shipping_status, $created_at, $updated_at);
+            $result = $this->order->update($id, $user_id, $order_date, $shipping_address, $shipping_date, $notes, $payment_status, $shipping_status);
             if ($result) {
                 header('location:?controller=order&action=index&page=admin');
             } else {
@@ -98,8 +92,6 @@ class OrderController extends AdminController
             echo 'yêu cầu lỗi';
         }
     }
-
-    //
 
     public function delete()
     {

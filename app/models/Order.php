@@ -26,20 +26,18 @@ class Order extends Database
         return $result;
     }
 
-    public function create($user_id, $order_date, $shipping_address, $shipping_date, $notes, $payment_status, $shipping_status, $created_at, $updated_at)
+    public function create($user_id, $order_date, $shipping_address, $shipping_date, $notes, $payment_status, $shipping_status)
     {
         $tableName = $this->model();
         $params = [
-            
+
             'user_id' => $user_id,
             'order_date' => $order_date,
             'shipping_address' => $shipping_address,
             'shipping_date' => $shipping_date,
             'notes' => $notes,
             'payment_status' => $payment_status,
-            'shipping_status' => $shipping_status,
-            'created_at' => $created_at,
-            'updated_at' => $updated_at,
+            'shipping_status' => $shipping_status
         ];
         return $this->insertData($tableName, $params);
     }
@@ -53,19 +51,17 @@ class Order extends Database
         return $data;
     }
 
-    public function update($id, $user_id, $order_date, $shipping_address, $shipping_date, $notes, $payment_status, $shipping_status, $created_at, $updated_at)
+    public function update($id, $user_id, $order_date, $shipping_address, $shipping_date, $notes, $payment_status, $shipping_status)
     {
         $tableName = $this->model();
         $data = [
-            'user_id' => $user_id,  
+            'user_id' => $user_id,
             'order_date' => $order_date,
             'shipping_address' => $shipping_address,
             'shipping_date' => $shipping_date,
             'notes' => $notes,
             'payment_status' => $payment_status,
-            'shipping_status' => $shipping_status,
-            'created_at' => $created_at,
-            'updated_at' => $updated_at,
+            'shipping_status' => $shipping_status
         ];
         $condition = "id = :id";
         $params = [':id' => (int)$id];
