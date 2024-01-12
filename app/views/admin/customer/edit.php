@@ -6,6 +6,9 @@
                 <input type="text" class="form-control" placeholder="Name" name="username" value="<?php echo $user['username']; ?>">
             </div>
             <div class="form-group">
+                <input type="password" class="form-control" placeholder="Name" name="password" value="<?php echo $user['password']; ?>">
+            </div>
+            <div class="form-group">
                 <input type="email" class="form-control" placeholder="Email" name="email" value="<?php echo $user['email']; ?>">
             </div>
             <div class="form-group">

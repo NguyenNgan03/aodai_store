@@ -15,6 +15,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>Pass</th>
                         <th>Email</th>
                         <th>Phone Number</th>
                         <th>Role</th>
@@ -30,6 +31,7 @@
                         <tr>
                             <td> <?php echo  $user['id']; ?></td>
                             <td> <?php echo  $user['username']; ?></td>
+                            <td> <?php echo  $user['password']; ?></td>
                             <td> <?php echo  $user['email']; ?></td>
                             <td> <?php echo  $user['phone']; ?></td>
                             <td> <?php echo  $user['role']; ?></td>

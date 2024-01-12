@@ -15,6 +15,25 @@ class User extends Database
         return "users";
     }
 
+    public function getUser($username, $password)
+    {
+        $tableName = $this->model();
+        $params = [
+            "username" => $username
+        ];
+
+        $data = $this->getData($tableName, $params);
+        $result = array();
+        foreach ($data as $row) {
+            $result = $row;
+        }
+        if ($result && password_verify($password, $result['password'])) {
+            return $result;
+        } else {
+            return null;
+        }
+    }
+
     public function index()
     {
         $tableName = $this->model();
@@ -34,11 +53,13 @@ class User extends Database
     // }
 
     
-    public function create ($name, $email, $phone, $role)
+    public function create ($name,$password, $email, $phone, $role)
     {
         $tableName = $this->model();
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
         $params = [ 
             'username' => $name, 
+            'password' => $hashedPassword,
             'email' => $email,
             'phone' => $phone,
             'role' => $role,
@@ -57,11 +78,13 @@ class User extends Database
        
     }
 
-    public function update($id, $name, $email, $phone, $role)
+    public function update($id, $name,$password, $email, $phone, $role)
     {
         $tableName = $this -> model();
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
         $data = [
             'username' => $name, 
+            'password'=>$hashedPassword,
             'email' => $email,
             'phone' => $phone,
             'role' => $role,
