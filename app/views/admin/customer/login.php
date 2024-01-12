@@ -14,7 +14,7 @@
             <div id="formContent">
                 <div class="fadeIn first">
                     <img src=" " id="icon" alt="User Icon" />
-                </div> 
+                </div>
                 <form method="POST" action="?controller=Login&action=login&page=admin">
                     <input type="text" id="login" class="fadeIn second" name="username" placeholder="username">
                     <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
