@@ -5,6 +5,7 @@
 
 class User extends Database
 {
+    private $user;
     public function __construct()
     {
         parent::__construct();
@@ -76,6 +77,19 @@ class User extends Database
         $data = $this->getDataByQuery($sql, $params);
         return $data;
        
+    }
+
+    public function getUserByUsername($username)
+    {
+        $stmt = $this->user->getConnection()->prepare("SELECT * FROM users WHERE username = ?");
+        $stmt->bind_param("s", $username);
+
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $user = $result->fetch_assoc();
+
+        return $user;
     }
 
     public function update($id, $name,$password, $email, $phone, $role)

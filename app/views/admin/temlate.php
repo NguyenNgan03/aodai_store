@@ -15,7 +15,7 @@
 </head>
 <body>
     <?php 
-    include 'app\views\partials\sitebarAdmin.php';
+        include 'app\views\partials\sitebarAdmin.php';
     ?>
     <?php
     echo $content;

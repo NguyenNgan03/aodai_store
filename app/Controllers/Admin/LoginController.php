@@ -13,7 +13,7 @@ class LoginController extends AdminController
 
     public function getLogin()
     {
-        parent::template('app\views\admin\customer\login.php');
+        parent::template('app\views\partials\form\loginForm.php');
     }
 
     public function login()
