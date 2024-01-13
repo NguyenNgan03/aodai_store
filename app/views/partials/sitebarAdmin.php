@@ -2,6 +2,12 @@
     <div class="backtoHome"><i class="fa-solid fa-arrow-left"></i></div>
     <ul class="menu">
         <li>
+            <a href="?controller=dashboard&action=index&page=admin">
+                <i class="fa fa-dashboard"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li>
             <a href="?controller=category&action=index&page=admin">
                 <i class="fas fa-rectangle-list"></i>
                 <span>Categories</span>

@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Volkhov:ital,wght@0,350;0,500;1,500&family=Yesteryear&display=swap");
 
-* {
+/* * {
     margin: 0;
     padding: 0;
     border: none;
     outline: none;
     box-sizing: border-box;
     font-family: "Volkhov", sans-serif;
-}
+} */
 
 body {
     width: 100%;
@@ -458,3 +458,201 @@ hr {
         width: 100%;
     }
 }
+/****************************************************************/
+.header-main {
+    background:#fff;
+    padding: 1em 2em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  }
+  .header-right {
+    float: right;
+    width: 50%;
+  }
+  .header-left {
+    float: left;
+    width: 45%;
+  }
+  .logo-name {
+    float: left;
+    width: 30%;
+    margin: 0% 3% 0% 2%;
+  }
+  .logo-name h1 {
+    font-size: 2.5em;
+    color: #FC8213;
+    margin: 0em;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .logo-name  h1 a{
+    color: #910048;
+  }
+  .logo-name a {
+    display:inline-block;
+  }
+  .nav > li > a:hover, .nav > li > a:focus {
+    background: none !important;
+  }
+  span.logo-clr{
+      color:#fdbb30;
+  }
+  .page-container.sidebar-collapsed-back #menu span.fa.fa-angle-right{
+      position: absolute;
+    top: 0px;
+    right: 20px;
+  }
+/*--nav strip start here--*/
+.header-main {
+    background:#fff;
+    padding: 1em 2em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  }
+  .header-right {
+    float: right;
+    width: 50%;
+  }
+  .header-left {
+    float: left;
+    width: 45%;
+  }
+  .logo-name {
+    float: left;
+    width: 30%;
+    margin: 0% 3% 0% 2%;
+  }
+  .logo-name h1 {
+    font-size: 2.5em;
+    color: #FC8213;
+    margin: 0em;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .logo-name  h1 a{
+    color: #910048;
+  }
+  .logo-name a {
+    display:inline-block;
+  }
+  .nav > li > a:hover, .nav > li > a:focus {
+    background: none !important;
+  }
+  span.logo-clr{
+      color:#fdbb30;
+  }
+  .page-container.sidebar-collapsed-back #menu span.fa.fa-angle-right{
+      position: absolute;
+    top: 0px;
+    right: 20px;
+  }
+  /*start search*/
+  .search-box {
+    float: left;
+    width:40%;
+    margin-top: 0.5em;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    border:2px solid rgb(197, 197, 197);
+  }
+  .search-box input[type="text"] {
+    outline: none;
+    background: #fff;
+    width: 86%;
+    margin: 0;
+    z-index: 10;
+    font-size: 0.9em;
+    color: #7A7B78;
+    padding: 0.5em 0.5em;
+    border: none;
+    -webkit-appearance: none;
+    display: inline-block;
+  }
+  .search-box input[type="submit"] {
+    background: url(../images/search.png)no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: text-top;
+    border: none;
+    outline: none;
+  }
+  ::-webkit-input-placeholder{
+   color:#7A7B78 !important;
+  }
+  /*--//search-ends --*/
+  /*--Progress bars--*/
+/********* profile details **********/
+ul.dropdown-menu.drp-mnu i.fa {
+    margin-right: 0.5em;
+  }
+  ul.dropdown-menu {
+    padding: 0;
+    min-width: 230px;
+    top:101%;
+  }
+  .dropdown-menu > li > a {
+    padding: 3px 15px;
+    font-size: 1em;
+  }
+  .profile_details {
+    float: right;
+  }
+  .profile_details_drop .fa.fa-angle-up{
+      display:none;
+  }
+  .profile_details_drop.open .fa.fa-angle-up{
+    display:block;
+  }
+  .profile_details_drop.open .fa.fa-angle-down{
+      display:none;
+  }
+  .profile_details_drop a.dropdown-toggle {
+    display:block;
+    padding:0em 3em 0 1em;
+  }
+  .profile_img span.prfil-img{
+      float:left;
+  }
+  .user-name{
+    float:left;
+    margin-top:7px;
+    margin-left:11px;
+    height:35px;
+  }
+  .profile_details ul li{
+      list-style-type:none;
+      position:relative;
+  }
+  .profile_details li a i.fa.lnr {
+    position: absolute;
+    top: 34%;
+    right: 8%;
+    color: #68AE00;
+    font-size: 1.6em;
+  }
+  .profile_details ul li ul.dropdown-menu.drp-mnu {
+    padding: 1em;
+    min-width: 190px;
+    top: 122%;
+    left:0%;
+  }
+  ul.dropdown-menu.drp-mnu li {
+    list-style-type: none;
+    padding: 3px 0;
+  }
+  .user-name p{
+      font-size:1em;
+      color:#FC8213;
+      line-height:1em;
+      font-weight:700;
+  }
+  .user-name span {
+    font-size: .75em;
+    font-style: italic;
+    color: #424f63;
+    font-weight: normal;
+    margin-top: .3em;
+  }
+  .profile_details ul {
+    padding: 0px;
+  }
