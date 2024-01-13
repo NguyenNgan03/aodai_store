@@ -4,9 +4,7 @@
         <div class="container">
             <h1>Update Order</h1>
             <p>Please fill in this form to update Order.</p>
-
             <hr />
-
             <label for="user_id-update"><b>User ID</b></label>
             <input name="user_id-update" id="user_id-update" type="text" placeholder="Enter User ID" required />
 

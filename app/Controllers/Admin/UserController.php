@@ -25,7 +25,7 @@ class UserController extends AdminController
     public function create()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $requiredFields = ['username', 'email', 'phone', 'role'];
+            $requiredFields = ['username','password','email', 'phone', 'role'];
 
             // Kiểm tra xem tất cả các trường cần thiết đã được gửi hay không
             foreach ($requiredFields as $field) {
@@ -36,11 +36,12 @@ class UserController extends AdminController
             }
 
             $name = $_POST['username'];
+            $password = $_POST['password'];
             $email = $_POST['email'];
             $phone = $_POST['phone'];
             $role = $_POST['role'];
 
-            $result = $this->user->create($name, $email, $phone, $role);
+            $result = $this->user->create($name,$password, $email, $phone, $role);
             if ($result) {
                 header('location:?controller=user&action=index&page=admin');
             } else {
@@ -64,7 +65,7 @@ class UserController extends AdminController
     public function update()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $requiredFields = ['username', 'email', 'phone', 'role'];
+            $requiredFields = ['username','password', 'email', 'phone', 'role'];
 
             // Kiểm tra xem tất cả các trường cần thiết đã được gửi hay không
             foreach ($requiredFields as $field) {
@@ -75,11 +76,12 @@ class UserController extends AdminController
             }
             $id = $_POST['id'];
             $name = $_POST['username'];
+            $password = $_POST['password'];
             $email = $_POST['email'];
             $phone = $_POST['phone'];
             $role = $_POST['role'];
 
-            $result = $this->user->update($id, $name, $email, $phone, $role);
+            $result = $this->user->update($id, $name,$password, $email, $phone, $role);
             if ($result) {
                 header('location:?controller=user&action=index&page=admin');
             } else {

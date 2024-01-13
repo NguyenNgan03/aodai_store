@@ -1,25 +1,28 @@
 <div class="container p-4">
-    <form action="?controller=product&action=create&page=Admin" method="post">
+    <form action="?controller=product&action=create&page=Admin" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Name" name="name">
         </div>
         <div class="form-group">
-        <label for="category_id">Category:</label>
-        <select name="category_id" id="category_id" class="form-control">
-            <?php foreach ($categories as $category): ?>
-                <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
-            <?php endforeach; ?>
-        </select>
-    </div>
+    <label for="category_id">Category:</label>
+    <select name="category_id" id="category_id" class="form-control">
+        <option value="">Chọn</option> <!-- Giá trị mặc định -->
+        <?php foreach ($categories as $category) : ?>
+            <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+        <?php endforeach; ?>
+    </select>
+</div>
 
-    <div class="form-group">
-        <label for="discount_id">Discount:</label>
-        <select name="discount_id" id="discount_id" class="form-control">
-            <?php foreach ($discounts as $discount): ?>
-                <option value="<?php echo $discount['id']; ?>"><?php echo $discount['name']; ?></option>
-            <?php endforeach; ?>
-        </select>
-    </div>
+<div class="form-group">
+    <label for="discount_id">Discount:</label>
+    <select name="discount_id" id="discount_id" class="form-control">
+        <option value="">Chọn</option> <!-- Giá trị mặc định -->
+        <?php foreach ($discounts as $discount) : ?>
+            <option value="<?php echo $discount['id']; ?>"><?php echo $discount['name']; ?></option>
+        <?php endforeach; ?>
+    </select>
+</div>
+
         <div class="form-group">
             <textarea class="form-control" placeholder="Description" name="description"></textarea>
         </div>
