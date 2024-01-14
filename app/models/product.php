@@ -20,35 +20,36 @@ class Product extends Database
         $tableName = $this->model();
         $data = $this->getAll($tableName);
         $result = [];
-        foreach($data as $row){
+        foreach ($data as $row) {
             $result[] = $row;
         }
         return $result;
     }
-    
-    public function create ($name, $discount_id, $category_id, $description, $price, $color, $material, $size, $image1, $image2, $image3, $image4)
+
+    public function create($name, $discount_id, $category_id, $description, $price, $color, $material, $size, $image1, $image2, $image3, $image4)
     {
         $tableName = $this->model();
         $params = [
-            'name' => $name, 
-            'discount_id' => $discount_id, 
-            'category_id' => $category_id, 
-            'description' => $description, 
-            'price' => $price, 
-            'color' => $color, 
-            'material' => $material, 
-            'size' => $size, 
-            'image1' => $image1, 
-            'image2' => $image2, 
-            'image3' => $image3, 
+            'name' => $name,
+            'discount_id' => $discount_id,
+            'category_id' => $category_id,
+            'description' => $description,
+            'price' => $price,
+            'color' => $color,
+            'material' => $material,
+            'size' => $size,
+            'image1' => $image1,
+            'image2' => $image2,
+            'image3' => $image3,
             'image4' => $image4,
         ];
-        return $this->insertData($tableName,$params);
+        return $this->insertData($tableName, $params);
     }
 
     ///
 
-    public function getProductById($product_id){
+    public function getProductById($product_id)
+    {
         $tableName = $this->model();
         $sql = "SELECT * FROM $tableName WHERE id = :product_id";
         $params = [':product_id' => $product_id];
@@ -56,21 +57,39 @@ class Product extends Database
         return $data;
     }
 
+    public function getProductByCategoryId($categoryId)
+    {
+        $tableName = $this->model();
+        $sql = "SELECT * FROM $tableName WHERE category_id = :categoryId";
+        $params = [':categoryId' => $categoryId];
+        $data = $this->getDataByQuery($sql, $params);
+        return $data;
+    }
+    
+    public function getProductByPrice($price)
+    {
+        $tableName = $this->model();
+        $sql = "SELECT * FROM $tableName WHERE price >= :price Order by price";
+        $params = [':price' => $price];
+        $data = $this->getDataByQuery($sql, $params);
+        return $data;
+    }
+
     public function update($id, $name, $discount_id, $category_id, $description, $price, $color, $material, $size, $image1, $image2, $image3, $image4)
     {
-        $tableName = $this -> model();
+        $tableName = $this->model();
         $data = [
-            'name' => $name, 
-            'discount_id' => $discount_id, 
-            'category_id' => $category_id, 
-            'description' => $description, 
-            'price' => $price, 
-            'color' => $color, 
-            'material' => $material, 
-            'size' => $size, 
-            'image1' => $image1, 
-            'image2' => $image2, 
-            'image3' => $image3, 
+            'name' => $name,
+            'discount_id' => $discount_id,
+            'category_id' => $category_id,
+            'description' => $description,
+            'price' => $price,
+            'color' => $color,
+            'material' => $material,
+            'size' => $size,
+            'image1' => $image1,
+            'image2' => $image2,
+            'image3' => $image3,
             'image4' => $image4,
         ];
         $condition = "id = :id";
