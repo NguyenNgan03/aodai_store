@@ -5,6 +5,7 @@
 
 class User extends Database
 {
+    private $user;
     public function __construct()
     {
         parent::__construct();
@@ -51,6 +52,33 @@ class User extends Database
     //     $result = $this->query($sql);
     //     return $result;
     // }
+    public function registerUse ($name,$password,$firt_name,$last_name, $email, $role)
+    {
+        $tableName = $this->model();
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $params = [ 
+            'username' => $name, 
+            'password' => $hashedPassword,
+            'firt_name' => $firt_name,
+            'last_name' => $last_name,
+            'email' => $email,
+            'role' => $role,
+        ];
+       
+        try {
+            $result = $this->insertData($tableName, $params);
+            
+            if (!$result) {
+                echo "Có lỗi khi thêm dữ liệu vào cơ sở dữ liệu.";
+                var_dump($this->getConnection()->errorInfo());
+                // Hoặc sử dụng var_dump để in ra chi tiết lỗi
+                // var_dump($this->user->getConnection()->errorInfo());
+            }
+        } catch (Exception $e) {
+            echo "Có lỗi xảy ra: " . $e->getMessage();
+        }
+        return $this->insertData($tableName,$params);
+    }
 
     
     public function create ($name,$password, $email, $phone, $role)
@@ -76,6 +104,19 @@ class User extends Database
         $data = $this->getDataByQuery($sql, $params);
         return $data;
        
+    }
+
+    public function getUserByUsername($username)
+    {
+        $stmt = $this->user->getConnection()->prepare("SELECT * FROM users WHERE username = ?");
+        $stmt->bind_param("s", $username);
+
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $user = $result->fetch_assoc();
+
+        return $user;
     }
 
     public function update($id, $name,$password, $email, $phone, $role)

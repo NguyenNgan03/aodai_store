@@ -34,7 +34,6 @@ class UserController extends AdminController
                     return;
                 }
             }
-
             $name = $_POST['username'];
             $password = $_POST['password'];
             $email = $_POST['email'];

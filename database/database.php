@@ -83,7 +83,6 @@ class Database
             $values = ":" . implode(", :", array_keys($data));
 
             $query = "INSERT INTO $tableName ($fields) VALUES ($values)";
-
             $stmt = $this->connection->prepare($query);
 
             foreach ($data as $key => $value) {
