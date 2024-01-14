@@ -1,15 +1,4 @@
-    <!DOCTYPE html>
-    <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login Admin</title>
-        <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/logins/login-4/assets/css/login-4.css">
-       
-    </head>
-        <!-- Login 4 - Bootstrap Brain Component -->
 <section class="p-3 p-md-4 p-xl-5" style="justify-content: center;">
   <div class="container">
     <div class="card border-light-subtle shadow-sm">
@@ -26,7 +15,7 @@
                 </div>
               </div>
             </div>
-            <form  method="POST" action="?controller=Login&action=login&page=admin">
+            <form  method="POST" action="?controller=user&action=login&page=customer">
               <div class="row gy-3 gy-md-4 overflow-hidden">
                 <div class="col-12">
                   <label for="name" class="form-label">User Name <span class="text-danger">*</span></label>
@@ -55,7 +44,7 @@
               <div class="col-12">
                 <hr class="mt-5 mb-4 border-secondary-subtle">
                 <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-end">
-                  <a href="#!" class="link-secondary text-decoration-none">Create new account</a>
+                  <a href="?controller=user&action=getRegister&page=customer" class="link-secondary text-decoration-none">Create new account</a>
                   <a href="#!" class="link-secondary text-decoration-none">Forgot password</a>
                 </div>
               </div>
@@ -91,7 +80,3 @@
     </div>
   </div>
 </section>
-
-    </body>
-
-    </html>

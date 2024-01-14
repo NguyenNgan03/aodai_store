@@ -43,7 +43,12 @@ INSERT INTO categories (`name`,`created_at`,`updated_at`) VALUES
     ('Áo dài truyền thống','2023-01-13 14:20:00', '2023-01-13 14:20:00'),
     ('Áo dài cho bé', '2023-01-14 16:00:00', '2023-01-14 16:00:00'),
     ('Áo dài nam', '2023-01-15 18:30:00', '2023-01-15 18:30:00' );
-
+    
+INSERT INTO categories (`name`, `created_at`, `updated_at`) VALUES
+    ('Bán Chạy', '2023-01-16 09:00:00', '2023-01-16 09:00:00'),
+    ('Nổi Bật', '2023-01-17 10:30:00', '2023-01-17 10:30:00');
+    
+select * from categories;
 -- Create the comments table
 CREATE TABLE comments (
     id INT(7) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -153,9 +158,18 @@ CREATE TABLE products (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Insert sample data into the products table
-INSERT INTO products (`discount_id`, `name`, `category_id`, `description`, `price`, `color`, `material`, `size`,`image1`, `image2`, `image3`, `image4`, `created_at`, `updated_at`) VALUES
-    (2,'Áo dài truyền thống nam', 1, 'Áo dài truyền thống nam chất liệu lụa', 1500000, 'Hồng', 'Lụa', 'L, XL', 'ao_dai_nam_1.jpg', 'ao_dai_nam_2.jpg', 'ao_dai_nam_3.jpg', 'ao_dai_nam_4.jpg','2023-01-14 12:15:00', '2023-01-14 12:15:00'),
-    (1,'Áo dài cách tân nữ', 2, 'Áo dài cách tân nữ thiết kế hiện đại', 1200000, 'Trắng', 'Cotton', 'S, M, L', 'ao_dai_nu_1.jpg', 'ao_dai_nu_2.jpg', 'ao_dai_nu_3.jpg', 'ao_dai_nu_4.jpg', '2023-01-18 16:00:00', '2023-01-18 16:00:00');
+
+
+INSERT INTO products (`discount_id`, `name`, `category_id`, `description`, `price`, `color`, `material`, `size`, `image1`, `image2`, `image3`, `image4`, `created_at`, `updated_at`) VALUES
+    (1, 'Áo dài Bách Hoa Xuân - Đỏ hoa vàng rơi', 1, 'Áo dài truyền thống nam chất liệu lụa', 1000000, 'Đen', 'Lụa', 'M, L, XL', 'https://product.hstatic.net/1000136076/product/_mgm3309_c02461f4701847dba4811896160f51a8_master.png', 'image2.jpg', 'image3.jpg', 'image4.jpg', '2023-01-20 08:30:00', '2023-01-20 08:30:00'),
+    (2, 'Áo dài cách tân nữ', 2, 'Áo dài cách tân nữ thiết kế hiện đại', 1200000, 'Trắng', 'Cotton', 'S, M, L', 'https://product.hstatic.net/1000136076/product/fon_3751_1c551e7a4faa4c49a8d72313fcb1dfb6_master.png', 'image6.jpg', 'image7.jpg', 'image8.jpg', '2023-01-21 10:45:00', '2023-01-21 10:45:00'),
+    (1, 'Áo dài Organza Khuê Đình', 1, 'Mô tả cho Áo dài mẫu 3', 800000, 'Đỏ', 'Silk', 'S, L', 'https://product.hstatic.net/1000136076/product/4_cover_xanh_la_df5682e3afa0447ba71be7c5402beb13_master.png', 'image10.jpg', 'https://product.hstatic.net/1000136076/product/fon_3785_480744f0afc64c34b0d26a61e3d420c2_master.png', 'image12.jpg', '2023-01-22 12:15:00', '2023-01-22 12:15:00'),
+    (2, 'Áo dài Bách Hoa Xuân - Tím hoa phong lan', 3, 'Mô tả cho Áo dài mẫu 4', 1500000, 'Vàng', 'Velvet', 'M, XL', 'https://product.hstatic.net/1000136076/product/_mgm4976_1343f926c2f844a1924b1ef7a1e399d2_master.png', 'image14.jpg', 'image15.jpg', 'image16.jpg', '2023-01-23 14:20:00', '2023-01-23 14:20:00'),
+    (1, 'Áo dài Bách Hoa Xuân - Xanh thông hoa rơi', 2, 'Mô tả cho Áo dài mẫu 5', 1100000, 'Xanh', 'Linen', 'S, M', 'https://product.hstatic.net/1000136076/product/_mgm4736_9787218964014c638cdeca1f4dab08cc_master.png', 'image18.jpg', 'image19.jpg', 'image20.jpg', '2023-01-24 16:00:00', '2023-01-24 16:00:00'),
+	(1, 'Áo dài Bách Hoa Xuân - Xanh thông hoa rơi', 2, 'Mô tả cho Áo dài mẫu 5', 1100000, 'Xanh', 'Linen', 'S, M', 'https://product.hstatic.net/1000136076/product/_mgm4736_9787218964014c638cdeca1f4dab08cc_master.png', 'image18.jpg', 'image19.jpg', 'image20.jpg', '2023-01-24 16:00:00', '2023-01-24 16:00:00'),
+	(1, 'Áo dài Bách Hoa Xuân - Xanh thông hoa rơi', 2, 'Mô tả cho Áo dài mẫu 5', 1100000, 'Xanh', 'Linen', 'S, M', 'https://product.hstatic.net/1000136076/product/_mgm4736_9787218964014c638cdeca1f4dab08cc_master.png', 'image18.jpg', 'image19.jpg', 'image20.jpg', '2023-01-24 16:00:00', '2023-01-24 16:00:00'),
+	(1, 'Áo dài Bách Hoa Xuân - Xanh thông hoa rơi', 2, 'Mô tả cho Áo dài mẫu 5', 1100000, 'Xanh', 'Linen', 'S, M', 'https://product.hstatic.net/1000136076/product/_mgm4736_9787218964014c638cdeca1f4dab08cc_master.png', 'image18.jpg', 'image19.jpg', 'image20.jpg', '2023-01-24 16:00:00', '2023-01-24 16:00:00'),
+	(1, 'Áo dài Dáng xưa Yên Phương 2024 - Xanh ngọc', 1, 'Áo dài truyền thống nam chất liệu lụa', 1000000, 'Đen', 'Lụa', 'M, L, XL', 'https://product.hstatic.net/1000136076/product/_mgm3309_c02461f4701847dba4811896160f51a8_master.png', 'image2.jpg', 'image3.jpg', 'image4.jpg', '2023-01-20 08:30:00', '2023-01-20 08:30:00');
 
 -- Create the user_online table
 CREATE TABLE user_online (
