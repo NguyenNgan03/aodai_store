@@ -45,8 +45,8 @@
                 </a>
                 </button>
                 <div class="dropdown-content">
-                    <a href="#">Sign Up</a>
-                    <a href="#">Log In</a>
+                    <a href="?controller=user&action=getRegister&page=customer">Sign Up</a>
+                    <a href="?controller=user&action=getLogin&page=customer">Log In</a>
                 </div>
             </div>
             <div class="dropdown_menu">
