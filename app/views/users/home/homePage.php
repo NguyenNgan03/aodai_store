@@ -65,6 +65,7 @@
     <div class="frame-2f"><span class="text-23">750.000 VNĐ</span></div>
     <div class="frame-30"><span class="text-24">750.000 VNĐ</span></div>
   </div>
+  
   <!-- <div class="page">
     <span class="text-25">1</span>
     <span class="text-26">2</span>
