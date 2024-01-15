@@ -42,6 +42,11 @@ class HomeController extends CustomerController
     {
         parent::template('app\views\users\home\profile.php');
     }
+
+    public function cart()
+    {
+        parent::template('app\views\users\cart\cart.php');
+    }
     
     // public function search()
     // {
