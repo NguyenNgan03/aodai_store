@@ -16,9 +16,9 @@
                 <img src="app\views\public\Images\Logo.png" alt="Logo">
             </div>
             <div class="box">
-                <form class="sbox" action="/search" method="get">
-                    <input class="stext" type="text" name="q" placeholder="Tìm kiếm bài viết...">
-                    <a class="sbutton" type="submit" href="javascript:void(0);">
+                <form class="sbox" action="?controller=search&page=Customer&action=index" method="get">
+                    <input class="stext" type="text" name="q" placeholder="Tìm kiếm...">
+                    <a class="sbutton" type="submit" href="?controller=search&action=index&page=customer">
                         <i class="fa fa-search"></i>
                     </a>
                 </form>
@@ -36,7 +36,7 @@
                 <li><a href="?controller=home&action=contact&page=customer">Liên Hệ</a></li>
             </ul>
             <ul class="links">
-                <li><a href="cart.php"><i class="fa fa-shopping-cart"></i></a></li>
+            <li><a href="?controller=home&action=cart&page=customer"><i class="fa fa-shopping-cart"></i></a></li>
             </ul>
             <div class="dropdown">
                 <button class="dropbtn">
