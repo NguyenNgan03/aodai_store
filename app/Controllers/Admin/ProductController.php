@@ -21,7 +21,7 @@ class ProductController extends AdminController
         parent::template('app\views\admin\products\index.php', $data);
     }
 
-    public function getCreate()
+    public function getCreate()    
     {
         $data['categories'] = $this->category->getAllCategories();
         $data['discounts'] = $this->discount->getAllDiscounts();

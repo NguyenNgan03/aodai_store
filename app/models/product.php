@@ -46,8 +46,6 @@ class Product extends Database
         return $this->insertData($tableName, $params);
     }
 
-    ///
-
     public function getProductById($product_id)
     {
         $tableName = $this->model();
@@ -64,6 +62,36 @@ class Product extends Database
         $params = [':categoryId' => $categoryId];
         $data = $this->getDataByQuery($sql, $params);
         return $data;
+    }
+
+    public function getProductDetail($product_id)
+    {
+        $sql = "SELECT  products.id,
+                        products.discount_id,
+                        products.name,
+                        products.category_id,
+                        products.description,
+                        products. price,
+                        products.color, 
+                        products.material,
+                        products.size,
+                        products.image1,
+                        products.image2,
+                        products.image3,
+                        products.image4,
+                        categories.name as category_name,
+                        discounts.name as discount_name
+                        FROM products
+                INNER JOIN categories ON products.category_id = categories.id
+                INNER JOIN discounts ON products.discount_id = discounts.id
+                WHERE products.id = :product_id
+                GROUP BY products.id";
+        $params = [':product_id' => $product_id];
+        $data = $this->getDataByQuery($sql, $params);
+        foreach ($data as $row)
+        {
+            return $row;
+        }
     }
     
     public function getProductByPrice($price)
