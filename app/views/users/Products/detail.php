@@ -1,59 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Details</title>
-  <link rel="stylesheet" href="app\views\public\css\detail.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <link rel="stylesheet" href="app\views\public\css\detail.css" />
 </head>
-
 <body>
-  <div class="main-container">
+<div class="main-container">
     <div class="group">
       <div class="wrapper">
-        <img class="pic" src="app\views\public\Images\image1.png" />
+        <img class="pic" src="<?= $products['image1']; ?>" />
         <div class="section">
-          <img class="pic-1" src="app\views\public\Images\image2.png" />
-          <img class="pic-2" src="app\views\public\Images\image3.png" />
-          <img class="pic-3" src="app\views\public\Images\image4.png" />
+          <img class="pic-1" src="<?= $products['image2']; ?>" />
+          <img class="pic-2" src="<?= $products['image3']; ?>" />
+          <img class="pic-3" src="<?= $products['image4']; ?>" />
         </div>
       </div>
       <div class="wrapper-2">
-        <span class="text">Áo dài Truyền thống Tinh Khôi - Hồng</span>
+        <span class="text"><?= $products['name']; ?></span>
         <div class="wrapper-3">
-          <!-- <div class="star">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div> -->
           <span class="text-2">0 đánh giá</span><span class="text-3">Gửi đánh giá</span>
           <div class="img-2"></div>
         </div>
         <div class="pic-4"></div>
-        <div class="wrapper-4"><span class="text-4">750.000 VNĐ</span></div>
+        <div class="wrapper-4"><span class="text-4"><?= $products['price'];?> VND</span></div>
         <div class="group-2">
           <div class="box">
-            <span class="text-5">Tình trạng:</span><span class="text-6">Phân loại: </span><span class="text-7">Miễn phí vận chuyển</span>
+            <span class="text-5">Tình trạng:</span><span class="text-6">Phân loại: </span><span class="text-7"><?= $products['discount_name']; ?></span>
           </div>
           <div class="box-2">
-            <span class="text-8">Còn hàng</span><span class="text-9">Áo dài tơ tằm</span>
+            <span class="text-8"><?= $products['']; ?></span><span class="text-9"><?= $products['category_name']; ?></span>
           </div>
         </div>
         <div class="pic-5"></div>
         <div class="wrapper-5">
           <select class="pic-6">
-            <option class="text-b" value="xs" selected>XS</option>
+            <option class="text-b" value="xs">L</option>
             <option class="text-b" value="m">M</option>
             <option class="text-b" value="m">XL</option>
           </select>
-          <!-- <div class="box-3">
-              <div class="pic-6"></div>
-              <span class="text-b">XS</span>
-              <div class="pic-7"></div>
-            </div> -->
         </div>
         <div class="img-4"></div>
         <div class="pic-8"></div>
@@ -139,5 +125,5 @@
     </div>
   </div>
 </body>
-
 </html>
+ 

@@ -4,18 +4,17 @@
 
 include 'app\models\Product.php';
 include 'app\models\Category.php';
-include_once dirname(__DIR__) . '/CustomerController.php';
-
+include 'app\models\Discount.php'; 
 
 class ProductController extends CustomerController
 {
-    // private $product;
+    private $product;
     // private $category;
 
-    // public function __construct() {
-    //     $this->product = new Product;
+    public function __construct() {
+        $this->product = new Product;
        
-    // }
+    }
     
     public function index()
     {
@@ -49,6 +48,11 @@ class ProductController extends CustomerController
 
     public function detail()
     {
-        parent::template('app\views\users\Products\detail.php');
+        if (isset($_GET['id'])) {
+        $data['products'] = $this->product->getProductDetail($_GET['id']);   
+        parent::template('app\views\users\products\detail.php', $data);
+        }else{
+            echo 'lỗi ko bắt đc id';
+        }
     }
 }

@@ -52,8 +52,8 @@ select * from categories;
 -- Create the comments table
 CREATE TABLE comments (
     id INT(7) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    product_id INT(7) DEFAULT NULL,
-    user_id INT(7) DEFAULT NULL,
+    product_id  INT(7) UNSIGNED DEFAULT NULL,
+    user_id  INT(7) UNSIGNED DEFAULT NULL,
     content TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -84,7 +84,7 @@ INSERT INTO discounts (name, discount_rate, start_date, end_date, created_at, up
 -- Create the contact_info table
 CREATE TABLE contact_info (
     id INT(7) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    user_id INT(7) NOT NULL,
+    user_id INT(7) UNSIGNED NOT NULL,
     address VARCHAR(100) NOT NULL,
     phone VARCHAR(20) NOT NULL,
     email VARCHAR(50) NOT NULL,
@@ -103,7 +103,7 @@ INSERT INTO contact_info (`user_id`, `address`, `phone`, `email`,`created_at`,`u
 -- Create the orders table
 CREATE TABLE orders (
     id INT(7) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    user_id INT(7) NOT NULL,
+    user_id INT(7) UNSIGNED NOT NULL,
     order_date DATE NOT NULL,
     shipping_address VARCHAR(200) NOT NULL,
     shipping_date DATE NOT NULL,
@@ -125,8 +125,8 @@ INSERT INTO orders (`user_id`,`order_date`, `shipping_address`, `shipping_date`,
 -- Create the order_detail table
 CREATE TABLE order_detail (
     id INT(7) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    order_id  INT(7) NOT NULL,
-    product_id  INT(7) NOT NULL,
+    order_id  INT(7) UNSIGNED NOT NULL,
+    product_id  INT(7) UNSIGNED NOT NULL,
     quantity INT(11) NOT NULL,
     price FLOAT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -141,9 +141,9 @@ INSERT INTO order_detail (`order_id`, `product_id`, `quantity`, `price`,`created
 -- Create the products table
 CREATE TABLE products (
     id INT(7) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    discount_id INT(7) NOT NULL,
+    discount_id INT(7) UNSIGNED NOT NULL,
     name VARCHAR(550) NOT NULL,
-    category_id INT(7) NOT NULL,
+    category_id INT(7) UNSIGNED NOT NULL,
     description LONGTEXT,
     price INT(11) NOT NULL,
     color VARCHAR(250) DEFAULT NULL,

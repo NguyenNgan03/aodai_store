@@ -36,7 +36,7 @@
                 <li><a href="?controller=home&action=contact&page=customer">Liên Hệ</a></li>
             </ul>
             <ul class="links">
-                <li><a href="cart.php"><i class="fa fa-shopping-cart"></i></a></li>
+            <li><a href="?controller=home&action=cart&page=customer"><i class="fa fa-shopping-cart"></i></a></li>
             </ul>
             <div class="dropdown">
                 <button class="dropbtn">
