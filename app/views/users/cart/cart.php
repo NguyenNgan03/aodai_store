@@ -11,7 +11,7 @@
                                         <th class="cart-romove item">Remove</th>
                                         <th class="cart-description item">Image</th>
                                         <th class="cart-product-name item">Product Name</th>
-                                        <th class="cart-edit item">Edit</th>
+                                        <!-- <th class="cart-edit item">Edit</th> -->
                                         <th class="cart-qty item">Quantity</th>
                                         <th class="cart-sub-total item">Subtotal</th>
                                         <th class="cart-total last-item">Grandtotal</th>
@@ -22,8 +22,7 @@
                                         <td colspan="7">
                                             <div class="shopping-cart-btn">
                                                 <span class="">
-                                                    <a href="#" class="btn btn-upper btn-primary outer-left-xs">Continue Shopping</a>
-                                                    <a href="#" class="btn btn-upper btn-primary pull-right outer-right-xs">Update shopping cart</a>
+                                                    <a href="?page=customer&controller=Product" class="btn btn-upper btn-primary pull-right outer-right-xs">Continue Shopping</a>
                                                 </span>
                                             </div>
                                         </td>
@@ -40,17 +39,14 @@
                                         <td class="cart-product-name-info">
                                             <h4 class='cart-product-description'><a href="detail.html">Áo dài Truyền thống Tinh khôi - Hồng</a></h4>
                                             <div class="cart-product-info">
-                                                <span class="product-color">COLOR:<span>Blue</span></span>
+                                                <span class="product-color">COLOR:<span>Blue</span></span></br>
+                                                <span class="product-color">SIZE:<span>xl</span></span>
                                             </div>
                                         </td>
-                                        <td class="cart-product-edit"><a href="#" class="product-edit">Edit</a></td>
+                                        <!-- <td class="cart-product-edit"><a href="#" class="product-edit">Edit</a></td> -->
                                         <td class="cart-product-quantity">
                                             <div class="quant-input">
-                                                <div class="arrows">
-                                                    <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
-                                                    <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
-                                                </div>
-                                                <input type="text" value="1">
+                                                <input type="number" value="1" min="1">
                                             </div>
                                         </td>
                                         <td class="cart-product-sub-total"><span class="cart-sub-total-price">750.000</span></td>
@@ -66,19 +62,14 @@
                                         <td class="cart-product-name-info">
                                             <h4 class='cart-product-description'><a href="detail.html">Áo dài Truyền thống Tinh khôi - Hồng</a></h4>
                                             <div class="cart-product-info">
-                                                <span class="product-color">COLOR:<span>Pink</span></span>
+                                                <span class="product-color">COLOR:<span>Pink</span></span></br>
+                                                <span class="product-color">SIZE:<span>m</span></span>
                                             </div>
                                         </td>
-                                        <td class="cart-product-edit"><a href="#" class="product-edit">Edit</a></td>
+                                        <!-- <td class="cart-product-edit"><a href="#" class="product-edit">Edit</a></td> -->
                                         <td class="cart-product-quantity">
-                                            <div class="cart-quantity">
-                                                <div class="quant-input">
-                                                    <div class="arrows">
-                                                        <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
-                                                        <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
-                                                    </div>
-                                                    <input type="text" value="1">
-                                                </div>
+                                            <div class="quant-input">
+                                                <input type="number" value="1" min="1">
                                             </div>
                                         </td>
                                         <td class="cart-product-sub-total"><span class="cart-sub-total-price">750.000</span></td>
