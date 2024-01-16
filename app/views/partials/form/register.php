@@ -45,17 +45,14 @@
                     </div>
                   </div>
                 </div>
-                <!-- Email input -->
                 <div class="form-outline mb-4">
                   <input type="email" id="form3Example3" name="email" class="form-control" />
                   <label class="form-label" for="form4Example3">Email address</label>
                 </div>
                 <input name="role" value="user" hidden>
-                <!-- Submit button -->
                 <button type="submit" name="sign_up" class="btn btn-primary btn-block mb-4">
                   Sign up
                 </button>
-                <!-- Register buttons -->
                 <div class="text-center">
                   <p>or sign up with:</p>
                   <button type="button" class="btn btn-link btn-floating mx-1">

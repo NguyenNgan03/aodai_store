@@ -16,23 +16,29 @@ class UserController extends CustomerController{
     }
 
     public function login()
-    {
-        if (isset($_POST['login'])) {
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-            if ($username != "" && $password != "") {
-                $user = $this->user->getUser($username, $password);
-                if ($user) {
-                    $_SESSION['usernameAdmin'] = $user['username'];
+{
+    if (isset($_POST['login'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        if ($username != "" && $password != "") {
+            $user = $this->user->getUser($username, $password);
+            if ($user) {
+                $_SESSION['username'] = $user['username'];
+
+                if ($user['role'] == 'admin') {
                     header('location: ?controller=dashboard&action=index&page=Admin');
                 } else {
-                    echo 'password sai';
+                    header('location: ?controller=home&action=index&page=customer');
                 }
             } else {
-                echo 'trường name và pass ko đuọc trống';
+                echo 'Mật khẩu sai';
             }
+        } else {
+            echo 'Trường name và pass không được trống';
         }
     }
+}   
+
 
     public function getRegister()
     {
@@ -43,7 +49,7 @@ class UserController extends CustomerController{
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = $_POST['username'];
-        $password =password_hash( $_POST['password'],PASSWORD_DEFAULT);
+        $password =$_POST['password'];
         $firt_name = $_POST['firt_name'];
         $last_name = $_POST['last_name'];
         $email = $_POST['email'];
@@ -51,7 +57,7 @@ class UserController extends CustomerController{
 
         // Lưu thông tin người dùng vào cơ sở dữ liệu
         
-        $result = $this->user->registerUse($username,$password,$firt_name,$last_name, $email, $role);
+        $result = $this->user->registerUser($username,$password,$firt_name,$last_name, $email, $role);
         // var_dump($result);
         // die;
         if ($result) {
