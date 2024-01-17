@@ -7,7 +7,7 @@
                     <nav class="yamm megamenu-horizontal">
                         <ul class="nav">
                             <?php foreach ($categories as $category) : ?>
-                                <li class="dropdown menu-item"> <a href=<?= "?page=customer&controller=Product&CategoryId=" . $category["id"] ?> class="dropdown-toggle" data-toggle="dropdown"><i class="" aria-hidden="true"></i><?= $category["name"] ?></a>
+                                <li class="dropdown menu-item"> <a href=<?= "?page=customer&controller=Product&CategoryId=" . $category["id"] ?> class="dropdown-toggle"><?= $category["name"] ?></a>
                                 <?php endforeach ?>
                         </ul>
                     </nav>
@@ -49,7 +49,25 @@
                                                             <div class="image"> <a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"><img src="<?= $product['image1']; ?>" alt=""></a> </div>
                                                             <!-- /.image -->
 
+<<<<<<< HEAD
                                                             <div class="tag new"><span>new</span></div>
+=======
+                                                    <div class="product-info text-left">
+                                                        <h3 class="name"><a href="?controller=product&action=detail&page=customer"><?= $product['name']; ?></a></h3>
+                                                        <div class="rating rateit-small"></div>
+                                                        <div class="description"></div>
+                                                        <div class="product-price"> <span class="price"> <?= $product['price']; ?> </span> <span class="price-before-discount">900.000</span> </div>
+
+                                                    </div>
+
+                                                    <div class="cart clearfix animate-effect">
+                                                        <div class="action">
+                                                            <ul class="list-unstyled">
+                                                                <li class="add-cart-button btn-group">
+                                                                    <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> Xem chi tiết <i class="fa fa-info-circle"></i> </button>
+                                                                </li>
+                                                            </ul>
+>>>>>>> main
                                                         </div>
 
                                                         <div class="product-info text-left">
