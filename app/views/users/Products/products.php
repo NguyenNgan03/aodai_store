@@ -62,8 +62,7 @@
                                                         <div class="action">
                                                             <ul class="list-unstyled">
                                                                 <li class="add-cart-button btn-group">
-                                                                    <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> Thêm vào giỏ hàng <i class="fa fa-shopping-cart"></i> </button>
-                                                                    <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                                                                    <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> Xem chi tiết <i class="fa fa-info-circle"></i> </button>
                                                                 </li>
                                                             </ul>
                                                         </div>
