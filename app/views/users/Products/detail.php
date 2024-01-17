@@ -28,7 +28,7 @@
           <h2 class="main_name_product"><?= $products['name']; ?></h2>
 
           <div class="infor">
-            <h2 class="highlight"><?= $products['price'];?> VNĐ</h2>
+            <h2 class="highlight"><?= $products['price']; ?> VNĐ</h2>
             <div class="status">
               <span>Tình trạng:</span>
               <span>Còn hàng</span>
@@ -89,43 +89,40 @@
 
     <div class="container mt-4">
       <div class="mainText">
-        <!-- Your product information content here -->
-        <!-- <h1>Thông tin sản phẩm</h1> -->
-        <span class="descriptions_product">air max are always very comfortable fit, clean and just perfect
-          in every way. just the box was too small and scrunched the
-          sneakers up a little bit, not sure if the box was always this
-          small but the 90s are and will always be one of my
-          favorites.</span>
+        <span class="descriptions_product"><?= $products['description']; ?></span>
       </div>
 
       <!-- Comment section -->
       <div class="comments" id="comments">
-        <ul class="list-unstyled" id="commentList">
-          <li>Comment 1</li>
-          <li>Comment 2</li>
-        </ul>
-        <!-- Thêm bình luận mới -->
         <div class="form-group">
           <textarea class="form-control" id="newComment" placeholder="Thêm bình luận"></textarea>
+          <button class="btn btn-primary" onclick="addComment()">Thêm bình luận</button>
         </div>
-        <button class="btn btn-primary" onclick="addComment()">Thêm bình luận</button>
-      </div>
-    </div>
 
-    <!-- Sugestion tour -->
-    <div class="sugestionTour">
-      <h1><Strong>RELATED PRODUCTS</Strong></h1>
-      <div class="row-product">
-        <div class="item-product">
-          <img class="img-product" src="../image/image5.png">
-          <div>
-            <h3 class="name-product"></h3>
-            <div class="price">
-              <span class="price-count">750.000 VNĐ</span>
+        <!-- Hiển thị danh sách bình luận -->
+        <ul class="list-unstyled" id="commentList">
+          <?php foreach ($comments as $comment) : ?>
+            <li>
+              <strong><?= $comment['content'] ?>:</strong>
+              <?= $comment['created_at'] ?>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+      <!-- Sugestion tour -->
+      <div class="sugestionTour">
+        <h1><Strong>RELATED PRODUCTS</Strong></h1>
+        <div class="row-product">
+          <div class="item-product">
+            <img class="img-product" src="<?= $products['image1']; ?>">
+            <div>
+              <h3 class="name-product"><?= $products['name']; ?></h3>
+              <div class="price">
+                <span class="price-count"><?= $products['price']; ?> VNĐ</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>

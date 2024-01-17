@@ -23,12 +23,10 @@ class Comment extends Database
         return $result;
     }
 
-    public function create($product_id, $user_id, $content)
+    public function create($content)
     {
         $tableName = $this->model();
         $params = [
-            'product_id' => $product_id,
-            'user_id' => $user_id,
             'content' => $content,
         ];
         return $this->insertData($tableName, $params);
