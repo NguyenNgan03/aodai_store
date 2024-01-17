@@ -20,12 +20,21 @@ function showDivs(n) {
 
 function addComment() {
     var newComment = document.getElementById("newComment").value;
-    var commentList = document.getElementById("commentList");
-    var newCommentElement = document.createElement("li");
-    newCommentElement.textContent = newComment;
-    commentList.appendChild(newCommentElement);
-    document.getElementById("newComment").value = "";
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "?controller=comment&action=create", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var commentList = document.getElementById("commentList");
+            commentList.innerHTML = xhr.responseText;
+        }
+    };
+
+    xhr.send("content=" + newComment);
 }
+
 
 function toggleContent(contentType) {
     document.querySelector('.mainText').style.display = (contentType === 'info') ? 'block' : 'none';

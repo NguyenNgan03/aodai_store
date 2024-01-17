@@ -7,7 +7,7 @@
                     <nav class="yamm megamenu-horizontal">
                         <ul class="nav">
                             <?php foreach ($categories as $category) : ?>
-                                <li class="dropdown menu-item"> <a href=<?= "?page=customer&controller=Product&CategoryId=" . $category["id"] ?> class="dropdown-toggle" data-toggle="dropdown"><i class="" aria-hidden="true"></i><?= $category["name"] ?></a>
+                                <li class="dropdown menu-item"> <a href=<?= "?page=customer&controller=Product&CategoryId=" . $category["id"] ?> class="dropdown-toggle"><?= $category["name"] ?></a>
                                 <?php endforeach ?>
                         </ul>
                     </nav>
