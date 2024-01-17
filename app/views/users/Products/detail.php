@@ -1,129 +1,173 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-   <link rel="stylesheet" href="app\views\public\css\detail.css" />
-</head>
-<body>
-<div class="main-container">
-    <div class="group">
-      <div class="wrapper">
-        <img class="pic" src="<?= $products['image1']; ?>" />
-        <div class="section">
-          <img class="pic-1" src="<?= $products['image2']; ?>" />
-          <img class="pic-2" src="<?= $products['image3']; ?>" />
-          <img class="pic-3" src="<?= $products['image4']; ?>" />
+<div class="container-fluid">
+  <!-- main -->
+  <div class="main1">
+    <div class="row_img">
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="w3-container">
+          <div class="w3-content" style="max-width:400px">
+            <img class="mySlides" src="../image/image1.png" style="width:90%">
+            <img class="mySlides" src="../image/image2.png" style="width:90%;display:none">
+            <img class="mySlides" src="../image/image3.png" style="width:90%;display:none">
+
+            <div class="w3-row-padding w3-section">
+              <div class="w3-col s4">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="../image/image1.png" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+              </div>
+              <div class="w3-col s4">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="../image/image2.png" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+              </div>
+              <div class="w3-col s4">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="../image/image3.png" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="wrapper-2">
-        <span class="text"><?= $products['name']; ?></span>
-        <div class="wrapper-3">
-          <span class="text-2">0 đánh giá</span><span class="text-3">Gửi đánh giá</span>
-          <div class="img-2"></div>
-        </div>
-        <div class="pic-4"></div>
-        <div class="wrapper-4"><span class="text-4"><?= $products['price'];?> VND</span></div>
-        <div class="group-2">
-          <div class="box">
-            <span class="text-5">Tình trạng:</span><span class="text-6">Phân loại: </span><span class="text-7"><?= $products['discount_name']; ?></span>
-          </div>
-          <div class="box-2">
-            <span class="text-8"><?= $products['']; ?></span><span class="text-9"><?= $products['category_name']; ?></span>
-          </div>
-        </div>
-        <div class="pic-5"></div>
-        <div class="wrapper-5">
-          <select class="pic-6">
-            <option class="text-b" value="xs">L</option>
-            <option class="text-b" value="m">M</option>
-            <option class="text-b" value="m">XL</option>
-          </select>
-        </div>
-        <div class="img-4"></div>
-        <div class="pic-8"></div>
-        <div class="box-4">
-          <div class="section-2">
-            <div class="wrapper-6">
-              <span class="text-d">Chia sẻ trên facebook</span>
-              <div class="pic-9"></div>
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="especialy">
+          <h2 class="main_name_product">Áo Dài Truyền Thống Tinh Khôi - Hồng</h2>
+
+          <div class="infor">
+            <h2 class="highlight">750.000 VNĐ</h2>
+            <div class="status">
+              <p>Tình trạng:</p>
+              <p>Còn hàng</p>
             </div>
-            <div class="img-5"></div>
-          </div>
-          <div class="wrapper-7">
-            <div class="group-4">
-              <span class="text-e">Chia sẽ trên Twitter</span>
-              <div class="img-6"></div>
+            <div class="category">
+              <p>Phân loại:</p>
+              <p>Áo dài tơ tằm</p>
             </div>
-            <div class="pic-a"></div>
+            <p>Miễn phí vận chuyển</p>
           </div>
-        </div>
-        <div class="box-5">
-          <div class="img-7"></div>
-          <div class="wrapper-8">
-            <span class="text-f">Bình luận </span><span class="text-10">0</span>
+
+          <div class="choose">
+            <div class="color">
+              <label>Chọn màu:</label>
+              <select>
+                <option value="color1" selected>Hồng</option>
+                <option value="color2">Đỏ</option>
+                <option value="color3">Đen</option>
+                <option value="color4">Vàng</option>
+              </select>
+            </div>
+            <div class="size">
+              <label>Kích cỡ:</label>
+              <select>
+                <option value="size1" selected>XS</option>
+                <option value="size2">M</option>
+                <option value="size3">L</option>
+                <option value="size4">XL</option>
+              </select>
+            </div>
           </div>
-          <div class="box-6">
-            <span class="text-11">Thông tin sản phẩm</span>
-            <div class="pic-b"></div>
-          </div>
-          <div class="wrapper-9">
-            <span class="text-12">Đánh giá</span><span class="text-13">0</span>
-          </div>
-          <div class="img-8"></div>
-          <span class="text-14">air max are always very comfortable fit, clean and just perfect
-            in every way. just the box was too small and scrunched the
-            sneakers up a little bit, not sure if the box was always this
-            small but the 90s are and will always be one of my
-            favorites.</span><span class="text-15">air max are always very comfortable fit, clean and just perfect
-            in every way. just the box was too small and scrunched the
-            sneakers up a little bit, not sure if the box was always this
-            small but the 90s are and will always be one of my
-            favorites.</span><span class="text-16">air max are always very comfortable fit, clean and just perfect
-            in every way. just the box was too small and scrunched the
-            sneakers up a little bit, not sure if the box was always this
-            small but the 90s are and will always be one of my
-            favorites.</span>
-        </div>
-        <div class="box-7">
-          <div class="pic-c"></div>
-          <span class="text-17">2</span>
-          <div class="img-9"></div>
-          <div class="pic-d"></div>
-        </div>
-        <div class="box-8">
-          <div class="section-3">
-            <div class="pic-e"></div>
-            <span class="text-18">Thêm vào giỏ hàng</span>
-            <img class="pic-f" src="app\views\public\Images\cart.png" />
+
+          <div class="text-a d-flex align-items-center justify-content-between">
+            <input type="text" class="quantity" placeholder="Nhập số lượng" name="quantity">
+            <button type="button" class="btn btn-outline-primary" id="primary"><i class="fa fa-shopping-cart"></i> Add to cart</button>
           </div>
         </div>
       </div>
     </div>
-    <span class="text-19">RELATED PRODUCTS</span>
-    <div class="group-5">
-      <img class="pic-10">
-      <img class="img-a">
-      <img class="img-b">
-      <img class="pic-11">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="toggleContent('info')">Thông tin sản phẩm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="toggleContent('comment')">Bình luận</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <div class="mainText">
+        <!-- Your product information content here -->
+        <!-- <h1>Thông tin sản phẩm</h1> -->
+        <p class="descriptions_product">air max are always very comfortable fit, clean and just perfect
+          in every way. just the box was too small and scrunched the
+          sneakers up a little bit, not sure if the box was always this
+          small but the 90s are and will always be one of my
+          favorites.</p>
+        <p class="descriptions_product">air max are always very comfortable fit, clean and just perfect
+          in every way. just the box was too small and scrunched the
+          sneakers up a little bit, not sure if the box was always this
+          small but the 90s are and will always be one of my
+          favorites.</p>
+        <p class="descriptions_product">air max are always very comfortable fit, clean and just perfect
+          in every way. just the box was too small and scrunched the
+          sneakers up a little bit, not sure if the box was always this
+          small but the 90s are and will always be one of my
+          favorites.</p>
+        <p class="descriptions_product">air max are always very comfortable fit, clean and just perfect
+          in every way. just the box was too small and scrunched the
+          sneakers up a little bit, not sure if the box was always this
+          small but the 90s are and will always be one of my
+          favorites.</p>
+      </div>
+
+      <!-- Comment section -->
+      <div class="comments" id="comments">
+        <ul class="list-unstyled" id="commentList">
+          <li>Comment 1</li>
+          <li>Comment 2</li>
+        </ul>
+        <!-- Thêm bình luận mới -->
+        <div class="form-group">
+          <textarea class="form-control" id="newComment" placeholder="Thêm bình luận"></textarea>
+        </div>
+        <button class="btn btn-primary" onclick="addComment()">Thêm bình luận</button>
+      </div>
     </div>
-    <div class="section-4">
-      <span class="text-1a">Áo dài Bách Hoa Xuân - Hồng đậm</span><span class="text-1b">Áo dài Truyền thống Tinh Khôi - Hồng</span><span class="text-1c">Áo dài Truyền thống Tinh Khôi - Hồng</span><span class="text-1d">Áo dài Truyền thống Tinh Khôi - Hồng</span>
-    </div>
-    <div class="section-5">
-      <div class="pic-12"></div>
-      <div class="pic-13"></div>
-      <div class="img-c"></div>
-      <div class="pic-14"></div>
-    </div>
-    <div class="wrapper-a">
-      <div class="wrapper-b"><span class="text-1e">750.000 VNĐ</span></div>
-      <div class="group-6"><span class="text-1f">750.000 VNĐ</span></div>
-      <div class="group-7"><span class="text-20">750.000 VNĐ</span></div>
-      <div class="wrapper-c"><span class="text-21">750.000 VNĐ</span></div>
+
+    <!-- Sugestion tour -->
+    <div class="sugestionTour">
+      <h1><Strong>RELATED PRODUCTS</Strong></h1>
+      <div class="row-product">
+        <div class="item-product">
+          <img class="img-product" src="../image/image5.png">
+          <div>
+            <h3 class="name-product"></h3>
+            <div class="price">
+              <span class="price-count">750.000 VNĐ</span>
+            </div>
+          </div>
+        </div>
+        <div class="item-product">
+          <img class="img-product" src="../image/image6.png">
+          <div>
+            <h3 class="name-product"></h3>
+            <div class="price">
+              <span class="price-count">750.000 VNĐ</span>
+            </div>
+          </div>
+        </div>
+        <div class="item-product">
+          <img class="img-product" src="../image/image7.png">
+          <div>
+            <h3 class="name-product"></h3>
+            <div class="price">
+              <span class="price-count">750.000 VNĐ</span>
+            </div>
+          </div>
+        </div>
+        <div class="item-product">
+          <img class="img-product" src="../image/image8.png">
+          <div>
+            <h3 class="name-product"></h3>
+            <div class="price">
+              <span class="price-count">750.000 VNĐ</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</body>
-</html>
- 
+</div>

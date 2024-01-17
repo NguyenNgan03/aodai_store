@@ -1,5 +1,20 @@
 <div class="main-container">
-  <img class="banner" src="app\views\public\Images\Banner-1.png" />
+<div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="app\views\public\Images\Banner-1.png" alt="Large Image"></div>
+            <div class="swiper-slide"><img src="app\views\public\Images\Banner-2.png" alt="Thumbnail 1"></div>
+            <div class="swiper-slide"><img src="app\views\public\Images\Banner-3.png" alt="Thumbnail 2"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <!-- <img class="banner" src="app\views\public\Images\Banner-1.png" /> -->
   <h1 class="outstanding-products">SẢN PHẨM NỔI BẬT</h1>
   <div class="row-product">
     <?php foreach ($products as $product) : ?>

@@ -1,1224 +1,793 @@
-.main-container {
-    overflow: hidden;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Volkhov';
+  padding: 0 24px 24px 24px;
+}
+
+.header-navbar {
+  background-color: #e7f4f6;
+  position: relative;
+}
+
+.navbar {
+  width: 100%;
+  min-height: 10vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.header-navbar .navbar .links li {
+  list-style: none;
+}
+
+.header-navbar .navbar .links li a {
+  /* Chổ chỉnh */
+  font-size: 19px;
+  text-decoration: none;
+  color: black;
+}
+.header-navbar .navbar .links li a:hover {
+  color: orangered;
+}
+
+.user-pic {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 2px;
+  background-color: #fff;
+}
+
+.sub-menu-wrap {
+  position: absolute;
+  top: 100%;
+  right: -4%;
+  width: 320px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.sub-menu-wrap.open-profile {
+  max-height: 400px;
+}
+
+.sub-menu {
+  background-color: #e7f4f6;
+  padding: 10px;
+  margin: 10px 50px;
+  border-radius: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info h3 {
+  font-weight: 500;
+}
+
+.user-info img {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 2px;
+  background-color: #fff;
+}
+
+.sub-menu hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+  margin: 15px 0 10px;
+}
+
+.sub-menu-links {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  margin: 18px 0;
+}
+
+.sub-menu-links p {
+  width: 100%;
+}
+
+.sub-menu-links .fa {
+  background-color: #e5e5e5;
+  border-radius: 50%;
+  padding: 8px 10px;
+  margin-right: 15px;
+}
+
+.sub-menu-links span {
+  font-size: 22px;
+  transition: transform 0.5s;
+}
+
+.sub-menu-links:hover span {
+  transform: translateX(5px);
+}
+
+.sub-menu-links:hover p {
+  font-weight: 600;
+}
+
+.sub-menu-links:hover {
+  color: orangered;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 0rem;
+  top: 70px;
+  width: 180px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+  border-radius: 10px;
+  height: 0;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  height: 206px;
+}
+
+.dropdown_menu li {
+  padding: 0.6rem 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu > li > a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.dropdown_menu li a:hover {
+  color: orangered;
+}
+
+
+
+.main1 {
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+
+
+.title {
+  display: flex;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.title iconify-icon {
+  font-size: 40px;
+}
+.title h3 {
+  margin-left: 30px;
+  font-size: 30px;
+  text-shadow: bold;
+}
+.col-6{
+  margin-right: 30px;
+}
+#product-img{
+  border: 1px ;
+  margin-left: 30%;
+}
+.small-img{
+  border-radius: 6px;
+}
+
+.small-img-row{
+margin-top: 10px;
+display: grid;
+grid-template-columns: auto auto auto auto;
+column-gap: 5px;
+}
+.small-img{
+border-radius: 6px;
+}
+.especialy {
+margin-right: 20px;
+margin-top: 20px;
+margin-bottom: 40%;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 60px;
+border-radius: 12px;
+background-color: rgba(231, 244, 246, 1);
+height: 600px;
+width: 100%;
+}
+.main_name_product{
+font-size: 30px;
+}
+.sub_name_product, .highlight_product, .descriptions_product{
+font-size: 18px;
+}
+.highlight, .priceTitle{
+font-size: 22px;
+font-weight: 700;
+margin-top: 20px;
+}
+
+.chooseTitle{
+font-size: 19px;
+font-weight: 700;
+}
+
+.sugestionTour h1{
+text-align: center;
+font-size: 30px;
+}
+
+.nav-item, .nav-link{
+font-size: 25px;
+margin-left: 15px;
+}
+.comments {
+display: none;
+}
+.name_product{
+font-size: 35px;
+font-style: italic;
+}
+.price{
+display: grid;
+gap: 25px;
+grid-template-columns: 60% 40%;
+}
+
+tr th {
+background-color: #fd661f;
+color: white;
+border: none;
+padding: 8px;
+}
+tr th ,tr td{
+
+text-align: center;
+font-size: 14px;
+}
+.chose{
+display: block;
+}
+#select{
+width: 150px;
+height: 30px;
+font-size: 14px;
+font-weight: 500;
+}
+#book-now-button{
+font-size: 23px;
+background-color: orangered;
+border-radius: 10px;
+color:#fff;
+outline: none;
+border: none;
+padding:10px 10px;
+width: 70%;
+font-weight: 540;
+margin-top: 30px;
+margin-left: 100px;
+}
+
+#book-now-button p {
+margin-left: 50px;
+font-size: 19px;
+margin-top: 3px;
+color: white;
+} 
+.col-lg-3 {
+  margin-bottom: 20px;
+  
+}
+.card-img-top {
+  height: 230px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0 0 !important;
+}
+
+#card-cmt{
+  border-radius: 12%;
+}
+.card-body {
+  background-color: rgba(231, 244, 246, 1);
+  border-radius: 0 0 12px 12px;
+  padding-bottom: 20px;
+ 
+}
+div.desc {
+padding: 15px;
+text-align: center;
+}
+
+#but{
+margin-left: 90px;
+margin-bottom: 20px;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 23px;
+}
+.card-text {
+  font-size: 18px;
+  padding: 6px;
+
+}
+.card-body a {
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+.cmt {
+  margin-top: 20px;
+  background-color: rgba(217, 217, 217, 1);
+  height: 500px;
+}
+.cmt h1,
+.cmt h3 {
+  text-align: center;
+  padding-top: 20px;
+}
+.itemCmt {
+  display: flex;
+}
+.cardComt {
+  margin: 26px;
+}
+.card-bodyComt {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 15px 15px 15px 15px;
+  background-color: white;
+}
+.user img {
+  position: absolute;
+  margin-top: -25px;
+  margin-left: 160px;
+  width: 65px;
+  height: 70px;
+}
+.sugestionTour{
+  margin-top: 50px;
+}
+.container {
+  margin-bottom: 30px;
+}
+
+
+
+.row div img{
+border: 1px;
+border-radius: 15px;
+}
+ /* foootttteeeer */
+
+ .footer {
+  background: #2e487a;
+  color: #f5f5f5;
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+
+
+.footer> .row{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.footer p {
+  color: #f5f5f5;
+  margin-left: 0px;
+}
+
+.footer h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-col-1 {
+  flex-basis: 30%;
+  padding-left: 5%;
+}
+
+.footer-col-1 img {
+  margin-right: 20px;
+}
+
+.footer-col-2 {
+  flex: 1;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.footer-col-2 img {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.footer-col-2 input {
+  color: black;
+  width: 90%;
+  outline: none;
+  padding: 15px 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  
+}
+.footer-col-2 input[type="submit"] {
+  background-color: #226fb7;
+  color: #fff;
+  font-weight: 500;
+
+}
+
+.footer-col-3,
+.footer-col-4 {
+  flex-basis: 12%;
+  margin-left: auto;
+}
+
+.footer h3 {
+  font-size: 20px;
+}
+.footer-col-4 i {
+  margin-right: 15px;
+}
+.footer-col-3 ul,
+.footer-col-4 ul {
+  list-style-type: none;
+}
+.footer-col-3 ul li,
+.footer-col-4 ul li {
+  margin-top: 5px;
+}
+
+.app-logo {
+  margin-top: 20px;
+}
+
+.app-logo img {
+  width: 130px;
+}
+
+.footer hr {
+  border: none;
+  background: #ffffff;
+  height: 1px;
+  margin: 20px 0;
+}
+.copyright {
+  text-align: center;
+}
+
+
+
+@media only screen and (min-width:580px) and (max-width: 992px) {
+  .navbar .links,
+  .navbar .action-btn {
+    display: none;
+  }
+  .name_product{
+    font-size: 30px;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+    font-weight: bold;
+  }
+
+  .mainText{
+    padding-top: 50px;
+  }
+  .mainText p{
+    font-size: 18px;
+  }
+  .title iconify-icon{
+    font-size: 30px;
   }
   
-  .main-container,
-  .main-container * {
-    box-sizing: border-box;
+  #book-now-button{
+    margin-left: 40px;
+    width: 40%;
+    font-size: 18px;
+    margin-left: 250px;
+    margin-top: -20px;
   }
+  .cmt{
+    height:890px ;
+  }
+  #idCard{
+    padding-top: 60px;
+  }
+  .cmt .user img {
+    margin-left: 130px;
+  }
+  .adult p {
+    margin-right: 70px;
+    font-size: 16px;
+  }
+  .children p {
+    margin-right: 48px;
+    font-size: 16px;
+  }
+  .row_img{
+    display: block;
+    margin: 5px 20px;
+  }
+  .especialy{
+    margin-top: 15px;
+  }
+  .card-text{
+    font-size: 17px;
+  }
+  .price{
+    display: block;
+  }
+  .chose{
+    margin-top: 30px;
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+  .navbar .links,
+  .navbar .action-btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+    font-weight: bold;
+  }
+  .title iconify-icon, .title h3{
+    font-size: 18px;
+  }
+#book-now-button{
+  margin-left: 70px;
+  font-size: 15px;
+  width: 100px;
+}
+.mainText{
+  margin-top: 50px;
+}
+.mainText h1{
+  font-size: 15px;
+}
+  .mainText p{
   
-  .main-container {
-    position: relative;
-    width: 1440px;
-    height: 1877px;
-    margin: 0 auto;
-    background: #ffffff;
-    overflow: hidden;
+  font-size: 13px;
+    
+}
+.sugestionTour h1{
+  font-size: 15px;
+}
+.cmt{
+  height:1000px ;
+}
+.cmt h1{
+  font-size: 15px;
+}
+.cmt h3{
+  font-size: 13px;
+}
+.card-text{
+  font-size: 13px;
+}
+
+  #idCard{
+    padding-top:50px;
   }
-  .group {
-    position: relative;
-    width: 1245px;
-    height: 999px;
-    margin: 60px 0 0 108px;
-    overflow: hidden;
+  .cmt .user img {
+    margin-left: 130px;
   }
-  .wrapper {
-    position: absolute;
-    width: 326px;
-    height: 630.073px;
-    top: -20.949px;
-    left: 1.098px;
-    z-index: 64;
-  }
-  .pic {
-    position: relative;
-    width: 326px;
-    height: 461px;
-    margin: 0 0 0 0;
-    background-size: 100% 100%;
-    z-index: 68;
-  }
-  .section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    width: 326px;
-    height: 150.073px;
-    margin: 19px 0 0 0;
-    z-index: 67;
-  }
-  .pic-1 {
-    flex-shrink: 0;
-    position: relative;
-    width: 100px;
-    height: 150.073px;
-    background-size: cover;
-    border: 1px solid #000000;
-    z-index: 67;
-  }
-  .pic-2 {
-    flex-shrink: 0;
-    position: relative;
-    width: 100px;
-    height: 150.073px;
-    background-size: cover;
-    z-index: 66;
-  }
-  .pic-3 {
-    flex-shrink: 0;
-    position: relative;
-    width: 100px;
-    height: 150.073px;
-    background-size: cover;
-    z-index: 65;
-  }
-  .wrapper-2 {
-    position: absolute;
-    width: 103.37%;
-    height: 97.9%;
-    top: -0.2%;
-    left: 0.12%;
-    font-size: 0px;
-    z-index: 1;
-  }
-  .text {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    width: 493px;
-    height: 36px;
-    margin: 0 0 0 403px;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #223263;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 36px;
-    text-align: center;
-    white-space: nowrap;
-    z-index: 63;
-  }
-  .wrapper-3 {
-    position: relative;
-    width: 315.81px;
-    height: 18px;
-    margin: 17px 0 0 425.19px;
-    z-index: 59;
-  }
-  .text-2 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 30.02%;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #c1c8ce;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 18px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 60;
-  }
-  .text-3 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 64.85%;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #33a0ff;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 18px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 61;
-  }
-  .img-2 {
-    position: absolute;
-    width: 24.37%;
-    height: 59.08%;
-    top: 25.35%;
-    left: 0;
-    background: url(./assets/images/02c946a6-0d23-4e73-8edc-81fa1d49f307.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 62;
-  }
-  .pic-4 {
-    position: relative;
-    width: 499.488px;
-    height: 2.127px;
-    margin: 18.725px 0 0 425.19px;
-    background: url(./assets/images/c2586d2b-aae7-43ab-b10f-76d9b7f7a3c7.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 58;
-  }
-  .wrapper-4 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    gap: 4px;
-    position: relative;
-    width: 123px;
-    margin: 21.148px 0 0 428px;
-    z-index: 56;
-    overflow: hidden;
-  }
-  .text-4 {
-    flex-shrink: 0;
-    flex-basis: auto;
-    position: relative;
-    height: 32px;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #009788;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 32px;
-    text-align: left;
-    white-space: nowrap;
-    letter-spacing: 0.5px;
-    z-index: 57;
-  }
-  .group-2 {
-    position: relative;
-    width: 245px;
-    height: 86.337px;
-    margin: 17.663px 0 0 425px;
-    z-index: 50;
-  }
-  .box {
-    position: absolute;
-    width: 60.82%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    font-size: 0px;
-    z-index: 53;
-  }
-  .text-5 {
+  .row_img{
     display: block;
-    position: relative;
-    height: 18.077px;
-    margin: 0 0 0 0.19px;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #262626;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18.077px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 51;
+    margin: 5px 20px;
   }
-  .text-6 {
-    display: block;
-    position: relative;
-    height: 18.077px;
-    margin: 15.95px 0 0 0.19px;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #262626;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18.077px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 52;
+  #product-img{
+    height: 250px;
   }
-  .text-7 {
-    display: block;
-    position: relative;
-    height: 18px;
-    margin: 16.234px 0 0 0;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #262626;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 53;
+  .small-img{
+    height: 50px;
   }
-  .box-2 {
-    position: absolute;
-    width: 39.18%;
-    height: 60.23%;
-    top: 0.39%;
-    left: 60.82%;
-    font-size: 0px;
-    z-index: 55;
-  }
-  .text-8 {
-    display: block;
-    position: relative;
-    height: 18px;
-    margin: 0 0 0 0;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #262626;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 54;
-  }
-  .text-9 {
-    display: block;
-    position: relative;
-    height: 18px;
-    margin: 16px 0 0 0;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #262626;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 55;
-  }
-  .pic-5 {
-    position: relative;
-    width: 499.488px;
-    height: 2.127px;
-    margin: 22.555px 0 0 425.19px;
-    background: url(./assets/images/87f1d30c-060a-4190-bd93-e68cc3c7dff4.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 49;
-  }
-  .wrapper-5 {
-    position: relative;
-    width: 259.499px;
-    height: 40.407px;
-    margin: 21.267px 0 0 425px;
-    z-index: 40;
-  }
-  .box-3 {
-    position: absolute;
-    width: 47.51%;
-    height: 100%;
-    top: 0;
-    left: 52.49%;
-    z-index: 42;
-  }
-  .pic-6 {
-    position: absolute;
+  .especialy{
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url(./assets/images/7ad5fb3b-6c62-409f-a804-763481f4186e.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 43;
+    height: 670px;
+    padding-left: 20px;
+    margin-top: 20px;
   }
-  .text-b {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 44.74%;
-    top: 26.32%;
-    left: 13.07%;
-    font-family: Proxima Nova, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #22262a;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17.052px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 44;
+  .especialy p{
+    font-size: 13px;
   }
-  .pic-7 {
-    position: absolute;
-    width: 5.75%;
-    height: 10.53%;
-    top: 44.74%;
-    left: 81.03%;
-    background: url(./assets/images/53b573d8-d38f-449a-9fe8-1e9ee74071d0.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 45;
+  .main_name_product{
+    font-size: 20px;
   }
-  .text-c {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 47.02%;
-    top: 25.25%;
-    left: 0;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #262626;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 41;
+  .sub_name_product{
+    font-size: 15px;
   }
-  .img-4 {
-    position: relative;
-    width: 499.488px;
-    height: 2.127px;
-    margin: 21.267px 0 0 425.19px;
-    background: url(./assets/images/06aa43cb-ccb8-4936-b9e9-2f81868b3ab1.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 39;
+  .highlight, .priceTitle{
+    font-size: 15px;
+    margin-top: 10px;
   }
-  .pic-8 {
-    position: relative;
-    width: 499.488px;
-    height: 2.127px;
-    margin: 91.447px 0 0 425.19px;
-    background: url(./assets/images/aaf7b70a-f01d-450f-a92e-1edee9599e3f.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 28;
-  }
-  .box-4 {
-    position: relative;
-    width: 499.488px;
-    height: 48.913px;
-    margin: 20.203px 0 0 425.19px;
-    z-index: 17;
-  }
-  .section-2 {
-    position: absolute;
-    width: 48.94%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 18;
-  }
-  .wrapper-6 {
-    position: relative;
-    width: 199.429px;
-    height: 18.413px;
-    margin: 13.626px 0 0 21.381px;
-    z-index: 20;
-  }
-  .text-d {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 97.76%;
-    top: 0;
-    left: 10.24%;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 18px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 22;
-  }
-  .pic-9 {
-    position: absolute;
-    width: 4.07%;
-    height: 87.38%;
-    top: 12.62%;
-    left: 0;
-    background: url(./assets/images/ef509df8-2020-40fc-9772-34ce8fe542d4.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 21;
-  }
-  .img-5 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url(./assets/images/dc4f8a6a-d87f-4ca8-ae29-10b9c5d9e111.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 19;
-  }
-  .wrapper-7 {
-    position: absolute;
-    width: 48.94%;
-    height: 100%;
-    top: 0%;
-    left: 51.06%;
-    z-index: 23;
-  }
-  .group-4 {
-    position: relative;
-    width: 191.421px;
-    height: 18.685px;
-    margin: 12.626px 0 0 27.332px;
-    z-index: 25;
-  }
-  .text-e {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 96.33%;
-    top: 0;
-    left: 16.41%;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 18px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 26;
-  }
-  .img-6 {
-    position: absolute;
-    width: 9.03%;
-    height: 67.67%;
-    top: 32.33%;
-    left: 0;
-    background: url(./assets/images/46612266-0c5c-4702-b11f-11fa8b2306c8.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 27;
-  }
-  .pic-a {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url(./assets/images/89544187-5062-425f-9105-4b545db654ca.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 24;
-  }
-  .box-5 {
-    position: relative;
-    width: 1287px;
-    height: 326px;
-    margin: 82.712px 0 0 0;
-    z-index: 2;
-  }
-  .img-7 {
-    position: absolute;
-    width: 96.5%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url(./assets/images/3782aa12-9e6c-4e0e-acfc-2a5d59a88d38.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 3;
-  }
-  .wrapper-8 {
-    position: absolute;
-    width: 9.72%;
-    height: 8.19%;
-    top: 3.68%;
-    left: 45.08%;
-    z-index: 11;
-  }
-  .text-f {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 78.68%;
-    top: 0;
-    left: 0;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #262626;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 12;
-  }
-  .text-10 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 75.7%;
-    top: 24.3%;
-    left: 69.13%;
-    font-family: Proxima Nova, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #262626;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19.488px;
-    text-align: left;
-    white-space: nowrap;
-    opacity: 0.25;
-    z-index: 13;
-  }
-  .box-6 {
-    position: absolute;
-    width: 19.65%;
-    height: 14.42%;
-    top: 3.68%;
-    left: 0%;
-    font-size: 0px;
-    z-index: 14;
-  }
-  .text-11 {
+  .price{
     display: block;
-    position: relative;
-    height: 21px;
-    margin: 0 0 0 27.547px;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #2e90e5;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 15;
   }
-  .pic-b {
-    position: relative;
-    width: 252.956px;
-    height: 5px;
-    margin: 21px 0 0 0;
-    background: url(./assets/images/831fabb4-03ce-4108-9859-f128aaaf4f54.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 16;
+  tr>th, tr>td{
+    font-size: 13px;
   }
-  .wrapper-9 {
-    position: absolute;
-    width: 9.72%;
-    height: 8.19%;
-    top: 4.29%;
-    left: 27.55%;
-    z-index: 8;
+  .chooseTitle{
+    font-size: 15px;
   }
-  .text-12 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 78.68%;
-    top: 0;
-    left: 0;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #262626;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 9;
+  .chose{
+    margin-top: 30px;
   }
-  .text-13 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 75.7%;
-    top: 24.3%;
-    left: 69.13%;
-    font-family: Proxima Nova, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #262626;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19.488px;
-    text-align: left;
-    white-space: nowrap;
-    opacity: 0.25;
-    z-index: 10;
+  #select{
+    font-size: 13px;
   }
-  .img-8 {
-    position: absolute;
-    width: 99.98%;
-    height: 1.53%;
-    top: 16.56%;
-    left: 0.02%;
-    background: url(./assets/images/7178a983-9b9f-450b-a9d2-41fa8dc08ded.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 7;
+  #but {
+    font-size: 13px;
   }
-  .text-14 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    width: 1092.585px;
-    height: 13.5%;
-    top: 24.42%;
-    left: 5.84%;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #9098b1;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 21.6px;
-    text-align: left;
-    letter-spacing: 0.5px;
-    z-index: 4;
-  }
-  .text-15 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    width: 1092.585px;
-    height: 13.5%;
-    top: 49.26%;
-    left: 5.67%;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #9098b1;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 21.6px;
-    text-align: left;
-    letter-spacing: 0.5px;
-    z-index: 5;
-  }
-  .text-16 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    width: 1092.585px;
-    height: 13.5%;
-    top: 73.5%;
-    left: 5.67%;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #9098b1;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 21.6px;
-    text-align: left;
-    letter-spacing: 0.5px;
-    z-index: 6;
-  }
-  .box-7 {
-    position: absolute;
-    width: 9.58%;
-    height: 5%;
-    top: 43.64%;
-    left: 33.04%;
-    z-index: 34;
-  }
-  .pic-c {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url(./assets/images/6afc3fcf-5001-460c-be6b-dbf811ff4cc1.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 35;
-  }
-  .text-17 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 41.3%;
-    top: 26.09%;
-    left: 45.94%;
-    font-family: Proxima Nova, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #262626;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19.488px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 36;
-  }
-  .img-9 {
-    position: absolute;
-    width: 6.9%;
-    height: 17.39%;
-    top: 41.3%;
-    left: 78.45%;
-    background: url(./assets/images/00aa50c3-b33c-4168-815c-03b6fb4b595a.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 37;
-  }
-  .pic-d {
-    position: absolute;
-    width: 6.9%;
-    height: 4.35%;
-    top: 47.83%;
-    left: 14.66%;
-    background: url(./assets/images/c3487161-b2c3-48bc-a28a-17d1e6f02dc8.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 38;
-  }
-  .box-8 {
-    position: absolute;
-    width: 15.85%;
-    height: 4.7%;
-    top: 43.87%;
-    left: 50.82%;
-    z-index: 29;
-  }
-  .section-3 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 30;
-  }
-  .pic-e {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url(./assets/images/1ae9f561-ea41-4c95-a566-25182c58b0b0.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 31;
-  }
-  .text-18 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 45.65%;
-    top: 29.35%;
-    left: 24.75%;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #33a0ff;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 33;
-  }
-  .pic-f {
-    position: absolute;
-    width: 7.82%;
-    height: 34.78%;
-    top: 32.61%;
-    left: 9.8%;
-    background: url(./assets/images/493666e4-75ec-44be-8592-420f649e3039.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 32;
-  }
-  .text-19 {
-    display: block;
-    position: relative;
-    height: 53px;
-    margin: 26px 0 0 562.836px;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #22262a;
-    font-size: 35px;
-    font-weight: 600;
-    line-height: 52.5px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 70;
-  }
-  .group-5 {
-    position: relative;
-    width: 1302px;
-    height: 512px;
-    margin: 49.538px 0 0 69px;
-    z-index: 95;
-  }
-  .pic-10 {
-    position: absolute;
-    width: 22.96%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url(./assets/images/fbb983a4e87953d9626db95b4455faf8945dc6c7.png)
-      no-repeat center;
-    background-size: cover;
-    z-index: 77;
-  }
-  .img-a {
-    position: absolute;
-    width: 22.96%;
-    height: 100%;
-    top: 0;
-    left: 25.27%;
-    background: url(./assets/images/c6064d6f565c052bfa8abec20c004e4a138ca6aa.png)
-      no-repeat center;
-    background-size: cover;
-    z-index: 83;
-  }
-  .img-b {
-    position: absolute;
-    width: 22.73%;
-    height: 99.8%;
-    top: 0;
-    left: 51.46%;
-    background: url(./assets/images/9ff2b75bc1a03da3be98df1cf6913782d4babf50.png)
-      no-repeat center;
-    background-size: cover;
-    z-index: 89;
-  }
-  .pic-11 {
-    position: absolute;
-    width: 22.96%;
-    height: 99.61%;
-    top: 0.2%;
-    left: 77.04%;
-    background: url(./assets/images/4bb491252d6844a6f941255ef0852a2f83ee1ca2.png)
-      no-repeat center;
-    background-size: cover;
-    z-index: 95;
-  }
-  .section-4 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    width: 1226.331px;
-    height: 54px;
-    margin: 10px 0 0 106px;
-    z-index: 92;
-  }
-  .text-1a {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-    width: 219.331px;
-    height: 54px;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #223263;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 27px;
-    text-align: center;
-    letter-spacing: 0.5px;
-    z-index: 74;
-  }
-  .text-1b {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-    width: 219.331px;
-    height: 54px;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #223263;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 27px;
-    text-align: center;
-    letter-spacing: 0.5px;
-    z-index: 80;
-  }
-  .text-1c {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-    width: 219.331px;
-    height: 54px;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #223263;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 27px;
-    text-align: center;
-    letter-spacing: 0.5px;
-    z-index: 86;
-  }
-  .text-1d {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-    width: 219.331px;
-    height: 54px;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #223263;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 27px;
-    text-align: center;
-    letter-spacing: 0.5px;
-    z-index: 92;
-  }
-  .section-5 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    width: 1130.597px;
-    height: 15.565px;
-    margin: 6px 0 0 156px;
-    z-index: 91;
-  }
-  .pic-12 {
-    flex-shrink: 0;
-    position: relative;
-    width: 123.597px;
-    height: 15.565px;
-    background: url(./assets/images/af0b348e-d901-4734-9907-c45333e07ece.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 73;
-  }
-  .pic-13 {
-    flex-shrink: 0;
-    position: relative;
-    width: 123.597px;
-    height: 15.565px;
-    background: url(./assets/images/a5efa6e6-b467-45db-b70e-48062dd7c955.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 79;
-  }
-  .img-c {
-    flex-shrink: 0;
-    position: relative;
-    width: 123.597px;
-    height: 15.565px;
-    background: url(./assets/images/2490b8a9-9fa0-4100-a780-7013bdd6ee23.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 85;
-  }
-  .pic-14 {
-    flex-shrink: 0;
-    position: relative;
-    width: 123.597px;
-    height: 15.565px;
-    background: url(./assets/images/7e9fbc48-16d3-43b0-ad72-bc455ea1093a.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 91;
-  }
-  .wrapper-a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    width: 1130px;
-    height: 32px;
-    margin: 0.44px 0 0 157px;
-    z-index: 93;
-  }
-  .wrapper-b {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    gap: 4px;
-    position: relative;
-    width: 123px;
-    z-index: 75;
-    overflow: hidden;
-  }
-  .text-1e {
-    flex-shrink: 0;
-    flex-basis: auto;
-    position: relative;
-    height: 32px;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #009788;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 32px;
-    text-align: left;
-    white-space: nowrap;
-    letter-spacing: 0.5px;
-    z-index: 76;
-  }
-  .group-6 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    gap: 4px;
-    position: relative;
-    width: 123px;
-    z-index: 81;
-    overflow: hidden;
-  }
-  .text-1f {
-    flex-shrink: 0;
-    flex-basis: auto;
-    position: relative;
-    height: 32px;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #009788;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 32px;
-    text-align: left;
-    white-space: nowrap;
-    letter-spacing: 0.5px;
-    z-index: 82;
-  }
-  .group-7 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    gap: 4px;
-    position: relative;
-    width: 123px;
-    z-index: 87;
-    overflow: hidden;
-  }
-  .text-20 {
-    flex-shrink: 0;
-    flex-basis: auto;
-    position: relative;
-    height: 32px;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #009788;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 32px;
-    text-align: left;
-    white-space: nowrap;
-    letter-spacing: 0.5px;
-    z-index: 88;
-  }
-  .wrapper-c {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    gap: 4px;
-    position: relative;
-    width: 123px;
-    z-index: 93;
-    overflow: hidden;
-  }
-  .text-21 {
-    flex-shrink: 0;
-    flex-basis: auto;
-    position: relative;
-    height: 32px;
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-    color: #009788;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 32px;
-    text-align: left;
-    white-space: nowrap;
-    letter-spacing: 0.5px;
-    z-index: 94;
-  }
-  
+}
+/*===================================================*/
+.infor{
+  font-size: 24px;
+  margin-top: 10px;
+}
+.choose{
+  font-size: 24px;
+  margin-top: 20px;
+  display: block;
+  justify-content: space-between;
+}
+.text-a{
+  margin-top: 20px;
+  display: flex;
+}
+.quantity{
+  font-size: 20px;
+}
+#primary{
+  font-size: 19px;
+}
+.status,
+.category {
+margin-top: 5px;
+display: flex;
+justify-content: space-between;
+}
+
+.color, .size{
+margin-top: 10px;
+}
+
+/*=====================================================*/
+.row-product {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+justify-content: center;
+align-items: center;
+
+}
+.item-product {
+flex-basis: calc(22%);
+background-color: white;
+margin:10px;
+/* border-radius: 12px;
+box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3)
+; */
+cursor: pointer;
+transition: transform 0.5s;
+}
+.item-product > div{
+ padding:  0 8px 10px 8px;
+}
+.item-product:hover{
+transform: translateY(-10px);
+}
+
+.img-product{
+border-radius: 12px;
+width: 100%;
+height: 95%;
+}
+
+@media only screen and (max-width: 769px)  {
+.row-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.item-product {
+  flex-basis: calc(40%);
+  margin-bottom: 30px;
+}
+}
+
+@media only screen and (max-width:439px) {
+.row-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.item-product {
+  flex-basis: 100%;
+  margin-bottom: 30px;
+}
+}
+.price{
+display: flex;
+}
+.price i{
+color: orangered;
+}
+.price i p{
+color:black
+}
+.price-count{
+margin:12px 0;
+font-size: 16px;
+}
+.name-product{
+margin:12px 0;
+}

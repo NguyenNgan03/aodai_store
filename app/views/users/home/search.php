@@ -5,10 +5,10 @@
                 <div class="side-menu animate-dropdown outer-bottom-xs">
                     <div class="head"><i class="icon fa fa-align-justify fa-fw"></i> Phân loại</div>
                     <nav class="yamm megamenu-horizontal">
-                        <ul class="nav">
+                        <!-- <ul class="nav">
                             <?php foreach ($categories as $category) : ?>
                                 <li class="dropdown menu-item"> <a href=<?= "?page=customer&controller=Product&CategoryId=" . $category["id"] ?> class="dropdown-toggle" data-toggle="dropdown"><i class="" aria-hidden="true"></i><?= $category["name"] ?></a>
-                                <?php endforeach ?>
+                                <?php endforeach ?> -->
                         </ul>
                     </nav>
                 </div>
@@ -36,52 +36,47 @@
             <div class='col-md-9'>
                 <div class="search-result-container ">
                     <div id="myTabContent" class="tab-content category-list">
-                        <div class="tab-pane active " id="grid-container">
-                            <div class="category-product">
-                            <?php if (!empty($searchResults)): ?>
-                                <div class="row">
-                                    <?php foreach ($searchResults as $product) : ?>
-                                    <?php foreach ($products as $product) : ?>
-                                        <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                            <div class="products">
-                                                <div class="product">
-                                                    <div class="product-image">
-                                                        <div class="image"> <a href="?controller=product&action=detail&page=customer"><img src="<?= $product['image1']; ?>" alt=""></a> </div>
-                                                        <!-- /.image -->
+                        <?php foreach ($searchResults as $product) : ?>
+                            <div class="tab-pane active " id="grid-container">
+                                <div class="category-product">
+                                    <div class="row">
+                                        <?php foreach ($products as $product) : ?>
+                                            <div class="col-sm-6 col-md-4 wow fadeInUp">
+                                                <div class="products">
+                                                    <div class="product">
+                                                        <div class="product-image">
+                                                            <div class="image"> <a href="?controller=product&action=detail&page=customer"><img src="<?= $product['image1']; ?>" alt=""></a> </div>
+                                                            <!-- /.image -->
 
-                                                        <div class="tag new"><span>new</span></div>
-                                                    </div>
+                                                            <div class="tag new"><span>new</span></div>
+                                                        </div>
 
-                                                    <div class="product-info text-left">
-                                                        <h3 class="name"><a href="?controller=product&action=detail&page=customer"><?= $product['description']; ?></a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="description"></div>
-                                                        <div class="product-price"> <span class="price"> <?= $product['price']; ?> </span> <span class="price-before-discount">900.000</span> </div>
+                                                        <div class="product-info text-left">
+                                                            <h3 class="name"><a href="?controller=product&action=detail&page=customer"><?= $product['description']; ?></a></h3>
+                                                            <div class="rating rateit-small"></div>
+                                                            <div class="description"></div>
+                                                            <div class="product-price"> <span class="price"> <?= $product['price']; ?> </span> <span class="price-before-discount">900.000</span> </div>
 
-                                                    </div>
+                                                        </div>
 
-                                                    <div class="cart clearfix animate-effect">
-                                                        <div class="action">
-                                                            <ul class="list-unstyled">
-                                                                <li class="add-cart-button btn-group">
-                                                                    <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> Thêm vào giỏ hàng <i class="fa fa-shopping-cart"></i> </button>
-                                                                    <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                                                </li>
-                                                            </ul>
+                                                        <div class="cart clearfix animate-effect">
+                                                            <div class="action">
+                                                                <ul class="list-unstyled">
+                                                                    <li class="add-cart-button btn-group">
+                                                                        <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> Thêm vào giỏ hàng <i class="fa fa-shopping-cart"></i> </button>
+                                                                        <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    <?php endforeach; ?>
+                                        <?php endforeach; ?>
+                                    </div>
                                 </div>
-                                <?php endforeach; ?>
-                                </div>
-                                <?php else: 
-                                    echo '<p>No results found.</p>';
-                                    ?>
-                                <?php endif; ?>
-                        </div>
+                            </div>
+                        <?php endforeach; ?>
                         <div class="tab-pane " id="list-container">
                             <div class="category-product">
                                 <div class="category-product-inner wow fadeInUp">
