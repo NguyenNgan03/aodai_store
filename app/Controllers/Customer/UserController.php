@@ -1,7 +1,8 @@
 <?php
 include 'app\models\User.php';
 
-class UserController extends CustomerController{
+class UserController extends CustomerController
+{
 
     private $user;
 
@@ -16,61 +17,98 @@ class UserController extends CustomerController{
     }
 
     public function login()
-{
-    if (isset($_POST['login'])) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        if ($username != "" && $password != "") {
-            $user = $this->user->getUser($username, $password);
-            if ($user) {
-                $_SESSION['username'] = $user['username'];
+    {
+        if (isset($_POST['login'])) {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            if ($username != "" && $password != "") {
+                $user = $this->user->getUser($username, $password);
+                if ($user) {
+                    $_SESSION['username'] = $user['username'];
 
-                if ($user['role'] == 'admin') {
-                    header('location: ?controller=dashboard&action=index&page=Admin');
+                    if ($user['role'] == 'admin') {
+                        header('location: ?controller=dashboard&action=index&page=Admin');
+                    } else {
+                        header('location: ?controller=home&action=index&page=customer');
+                    }
                 } else {
-                    header('location: ?controller=home&action=index&page=customer');
+                    echo 'Mật khẩu sai';
                 }
             } else {
-                echo 'Mật khẩu sai';
+                echo 'Trường name và pass không được trống';
             }
-        } else {
-            echo 'Trường name và pass không được trống';
         }
     }
-}   
 
 
     public function getRegister()
     {
-       parent::template('app\views\partials\form\register.php');
+        parent::template('app\views\partials\form\register.php');
     }
 
     public function register()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $username = $_POST['username'];
-        $password =$_POST['password'];
-        $firt_name = $_POST['firt_name'];
-        $last_name = $_POST['last_name'];
-        $email = $_POST['email'];
-        $role = $_POST['role'];
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $firt_name = $_POST['firt_name'];
+            $last_name = $_POST['last_name'];
+            $email = $_POST['email'];
+            $role = $_POST['role'];
 
-        // Lưu thông tin người dùng vào cơ sở dữ liệu
-        
-        $result = $this->user->registerUser($username,$password,$firt_name,$last_name, $email, $role);
-        // var_dump($result);
-        // die;
-        if ($result) {
-            header('Location: ?controller=user&action=getLogin&page=customer');
-            exit();
+            $result = $this->user->registerUser($username, $password, $firt_name, $last_name, $email, $role);
+           
+            if ($result) {
+                header('Location: ?controller=user&action=getLogin&page=customer');
+                exit();
+            } else {
+                echo 'theem khoong thanhf coong';
+             
+            }
         } else {
-            echo 'theem khoong thanhf coong';
-            // header('Location: ?controller=user&action=getRegister&page=customer');
+            echo 'yêu cầu lỗi';
         }
-    }else{
-        echo 'yêu cầu lỗi';
     }
+
+    public function addToCart()
+    {
+
+        if (!isset($_SESSION['user_id'])) {
+
+            echo "Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng.";
+            return;
+        }
+
+        $productInfo = [
+            'image1' => $_POST['image1'],
+            'name' => $_POST['name'],
+            'color' => $_POST['color'],
+            'size' => $_POST['size'],
+            'price' => $_POST['price'],
+        ];
+
+        $user_id = $_SESSION['user_id'];
+        $cartData = $this->user->addToCart($user_id, $productInfo);
+        header('Location: ?page=customer&controller=Product');
     }
+
+    public function getUserCart()
+    {
+        if (!isset($_SESSION['user_id'])) {
+           
+            echo "Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng.";
+            
+            return;
+        }
+    
+        // Người dùng đã đăng nhập, tiếp tục lấy thông tin giỏ hàng
+        $user_id = $_SESSION['user_id'];
+        $cartData = $this->user->getUserCart($user_id);
+    
+        // Tiếp tục xử lý dữ liệu giỏ hàng và hiển thị trên trang web
+        // ...
+    }
+    
 
     public function logout()
     {
@@ -84,4 +122,3 @@ class UserController extends CustomerController{
         parent::template('views/users/partials/pages/profile.php');
     }
 }
-?>

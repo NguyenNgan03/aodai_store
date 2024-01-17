@@ -6,9 +6,9 @@
       $product = $products_outstanding[$i]
     ?>
       <div class="item-product">
-        <img class="img-product" src="<?= $product['image1']; ?>">
+       <a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"><img class="img-product" src="<?= $product['image1']; ?>"></a> 
         <div>
-          <h3 class="name-product"><?= $product['name']; ?></h3>
+         <a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"> <h3 class="name-product"><?= $product['name']; ?></h3></a> 
           <div class="price">
             <span class="price-count"><?= $product['price']; ?> VNĐ</span>
           </div>
@@ -39,9 +39,9 @@
       $product = $products_selling[$i]
     ?>
       <div class="item-product">
-        <img class="img-product" src="<?= $product['image1']; ?>">
+      <a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"><img class="img-product" src="<?= $product['image1']; ?>"></a> 
         <div>
-          <h3 class="name-product"><?= $product['name']; ?></h3>
+         <a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"> <h3 class="name-product"><?= $product['name']; ?></h3></a> 
           <div class="price">
             <span class="price-count"><?= $product['price']; ?> VNĐ</span>
           </div>

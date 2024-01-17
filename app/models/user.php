@@ -58,19 +58,19 @@ class User extends Database
             'email' => $email,
             'role' => $role,
         ];
-// var_dump($params);
-// die;
+        // var_dump($params);
+        // die;
         try {
             $result = $this->insertData($tableName, $params);
-// var_dump($result);
-// die;
+            // var_dump($result);
+            // die;
             if (!$result) {
                 echo "Có lỗi khi thêm dữ liệu vào cơ sở dữ liệu.";
             }
         } catch (Exception $e) {
             echo "Có lỗi xảy ra: " . $e->getMessage();
         }
-        return $result; 
+        return $result;
     }
 
 
@@ -137,5 +137,46 @@ class User extends Database
         $params = [':id' => (int)$id];
 
         return $this->deleteData($tableName, $condition, $params);
+    }
+
+    public function addToCart($user_id, $productInfo)
+    {
+
+        $tableName = 'carts';
+
+        $params = [
+            'user_id' => $user_id,
+            'product_image' => $productInfo['image1'],
+            'product_name' => $productInfo['name'],
+            'color' => $productInfo['color'],
+            'size' => $productInfo['size'],
+            'product_price' => $productInfo['price'],
+        ];
+
+        $result = $this->insertData($tableName, $params);
+
+        return $result;
+    }
+
+
+    public function getUserCart($user_id)
+    {
+        if (!isset($_SESSION['user_id'])) {
+            return null;
+        }
+
+        $sql = "SELECT carts.*, 
+                   products.id AS product_id,
+                   products.name AS product_name,
+                   products.price AS product_price,
+                   products.image1 AS product_image
+            FROM carts
+            JOIN products ON carts.product_id = products.id
+            WHERE carts.user_id = :user_id";
+
+        $params = [':user_id' => $user_id];
+        $cartData = $this->getDataByQuery($sql, $params);
+
+        return $cartData;
     }
 }

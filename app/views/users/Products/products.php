@@ -43,31 +43,39 @@
                                         <div class="col-sm-6 col-md-4 wow fadeInUp">
                                             <div class="products">
                                                 <div class="product">
-                                                    <div class="product-image">
-                                                        <div class="image"> <a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"><img src="<?= $product['image1']; ?>" alt=""></a> </div>
-                                                        <!-- /.image -->
 
-                                                        <div class="tag new"><span>new</span></div>
-                                                    </div>
+                                                    <form action="?controller=user&action=addToCart&page=customer" method="POST">
+                                                        <div class="product-image">
+                                                            <div class="image"> <a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"><img src="<?= $product['image1']; ?>" alt=""></a> </div>
+                                                            <!-- /.image -->
 
-                                                    <div class="product-info text-left">
-                                                        <h3 class="name"><a href="?controller=product&action=detail&page=customer"><?= $product['name']; ?></a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="description"></div>
-                                                        <div class="product-price"> <span class="price"> <?= $product['price']; ?> </span> <span class="price-before-discount">900.000</span> </div>
-
-                                                    </div>
-
-                                                    <div class="cart clearfix animate-effect">
-                                                        <div class="action">
-                                                            <ul class="list-unstyled">
-                                                                <li class="add-cart-button btn-group">
-                                                                    <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> Thêm vào giỏ hàng <i class="fa fa-shopping-cart"></i> </button>
-                                                                    <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                                                </li>
-                                                            </ul>
+                                                            <div class="tag new"><span>new</span></div>
                                                         </div>
-                                                    </div>
+
+                                                        <div class="product-info text-left">
+                                                            <h3 class="name"><a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"><?= $product['name']; ?></a></h3>
+                                                            <div class="rating rateit-small"></div>
+                                                            <div class="description"></div>
+                                                            <div class="product-price"> <span class="price"> <?= $product['price']; ?> VNĐ </span> <span class="price-before-discount">900.000</span> </div>
+
+                                                        </div>
+
+                                                        <div class="cart clearfix animate-effect">
+                                                            <div class="action">
+                                                                <ul class="list-unstyled">
+                                                                    <li class="add-cart-button btn-group">
+                                                                        <a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"><button class="btn btn-primary icon" data-toggle="dropdown" type="button"> Thêm vào giỏ hàng <i class="fa fa-shopping-cart"></i> </button></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <input type="hidden" name="image1" value="<?= $product['image1']; ?>">
+                                                        <input type="hidden" name="name" value="<?= $product['name']; ?>">
+                                                        <input type="hidden" name="color" value="<?= $product['color']; ?>">
+                                                        <input type="hidden" name="size" value="<?= $product['size']; ?>">
+                                                        <input type="hidden" name="price" value="<?= $product['price']; ?>">
+                                                    </form>
+
                                                 </div>
                                             </div>
                                         </div>
