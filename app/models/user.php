@@ -40,70 +40,64 @@ class User extends Database
         $tableName = $this->model();
         $data = $this->getAll($tableName);
         $result = [];
-        foreach($data as $row){
+        foreach ($data as $row) {
             $result[] = $row;
         }
         return $result;
     }
 
-    // public function getAllProducts()
-    // {
-    //     $sql = 'SELECT * FROM products';
-    //     $result = $this->query($sql);
-    //     return $result;
-    // }
-    public function registerUse ($name,$password,$firt_name,$last_name, $email, $role)
+    public function registerUser($name, $password, $firt_name, $last_name, $email, $role)
     {
         $tableName = $this->model();
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        $params = [ 
-            'username' => $name, 
+        $params = [
+            'username' => $name,
             'password' => $hashedPassword,
-            'firt_name' => $firt_name,
+            'first_name' => $firt_name,
             'last_name' => $last_name,
             'email' => $email,
             'role' => $role,
         ];
-       
+// var_dump($params);
+// die;
         try {
             $result = $this->insertData($tableName, $params);
-            
+// var_dump($result);
+// die;
             if (!$result) {
                 echo "Có lỗi khi thêm dữ liệu vào cơ sở dữ liệu.";
-                var_dump($this->getConnection()->errorInfo());
-                // Hoặc sử dụng var_dump để in ra chi tiết lỗi
-                // var_dump($this->user->getConnection()->errorInfo());
             }
         } catch (Exception $e) {
             echo "Có lỗi xảy ra: " . $e->getMessage();
         }
-        return $this->insertData($tableName,$params);
+        return $result; 
     }
 
-    
-    public function create ($name,$password, $email, $phone, $role)
+
+
+    public function create($name, $password, $email, $phone, $role)
     {
         $tableName = $this->model();
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        $params = [ 
-            'username' => $name, 
+        $params = [
+            'username' => $name,
             'password' => $hashedPassword,
             'email' => $email,
             'phone' => $phone,
             'role' => $role,
         ];
-        return $this->insertData($tableName,$params);
+        return $this->insertData($tableName, $params);
     }
 
     ///
 
-    public function getUserById($user_id){
+    public function getUserById($user_id)
+    {
         $tableName = $this->model();
         $sql = "SELECT * FROM $tableName WHERE id = :user_id";
         $params = [':user_id' => $user_id];
         $data = $this->getDataByQuery($sql, $params);
         return $data;
-       
     }
 
     public function getUserByUsername($username)
@@ -119,13 +113,13 @@ class User extends Database
         return $user;
     }
 
-    public function update($id, $name,$password, $email, $phone, $role)
+    public function update($id, $name, $password, $email, $phone, $role)
     {
-        $tableName = $this -> model();
+        $tableName = $this->model();
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
         $data = [
-            'username' => $name, 
-            'password'=>$hashedPassword,
+            'username' => $name,
+            'password' => $hashedPassword,
             'email' => $email,
             'phone' => $phone,
             'role' => $role,
@@ -134,9 +128,8 @@ class User extends Database
         $params = [':id' => (int)$id];
 
         return $this->updateData($tableName, $data, $condition, $params);
-
     }
-    
+
     public function delete($id)
     {
         $tableName = $this->model();
