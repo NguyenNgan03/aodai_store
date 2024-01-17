@@ -1,5 +1,6 @@
 <?php
 include 'app\models\Product.php';
+include 'app\models\Category.php';
 include_once dirname(__DIR__) . '/CustomerController.php';
 // use aodai_store\app\models\Product;
 
@@ -19,7 +20,8 @@ class HomeController extends CustomerController
     public function index()
     {
         $product = new Product();
-        $data['products'] =  $product->index();
+        $data['products_outstanding'] =  $product->getProductByCategoryId(8);
+        $data['products_selling'] =  $product->getProductByCategoryId(7);
         parent::template('app\views\users\home\homePage.php', $data);
     }
 

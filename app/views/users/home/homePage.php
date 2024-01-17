@@ -2,7 +2,9 @@
   <img class="banner" src="app\views\public\Images\Banner-1.png" />
   <h1 class="outstanding-products">SẢN PHẨM NỔI BẬT</h1>
   <div class="row-product">
-    <?php foreach ($products as $product) : ?>
+    <?php for ($i = 0; $i < 8; $i++) :
+      $product = $products_outstanding[$i]
+    ?>
       <div class="item-product">
         <img class="img-product" src="<?= $product['image1']; ?>">
         <div>
@@ -12,7 +14,7 @@
           </div>
         </div>
       </div>
-    <?php endforeach; ?>
+    <?php endfor; ?>
   </div>
 
   <h1 class="service">DỊCH VỤ</h1>
@@ -33,7 +35,9 @@
   </div>
   <h1 class="selling-products">SẢN PHẨM BÁN CHẠY</h1>
   <div class="row-product">
-    <?php foreach ($products as $product) : ?>
+    <?php for ($i = 0; $i < 8; $i++) :
+      $product = $products_selling[$i]
+    ?>
       <div class="item-product">
         <img class="img-product" src="<?= $product['image1']; ?>">
         <div>
@@ -43,5 +47,5 @@
           </div>
         </div>
       </div>
-    <?php endforeach; ?>
+    <?php endfor; ?>
   </div>
