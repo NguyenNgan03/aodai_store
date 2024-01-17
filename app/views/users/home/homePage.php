@@ -1,12 +1,12 @@
 <div class="main-container">
-<div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="app\views\public\Images\Banner-1.png" alt="Large Image"></div>
-            <div class="swiper-slide"><img src="app\views\public\Images\Banner-2.png" alt="Thumbnail 1"></div>
-            <div class="swiper-slide"><img src="app\views\public\Images\Banner-3.png" alt="Thumbnail 2"></div>
-        </div>
-        <div class="swiper-pagination"></div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="app\views\public\Images\Banner-1.png" alt="Large Image"></div>
+      <div class="swiper-slide"><img src="app\views\public\Images\Banner-2.png" alt="Thumbnail 1"></div>
+      <div class="swiper-slide"><img src="app\views\public\Images\Banner-3.png" alt="Thumbnail 2"></div>
     </div>
+    <div class="swiper-pagination"></div>
+  </div>
   <br>
 
   <div style="text-align:center">
@@ -64,3 +64,4 @@
       </div>
     <?php endfor; ?>
   </div>
+</div>

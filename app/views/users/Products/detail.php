@@ -5,19 +5,19 @@
       <div class="col-lg-6 col-md-12 col-sm-12">
         <div class="w3-container">
           <div class="w3-content" style="max-width:400px">
-            <img class="mySlides" src="../image/image1.png" style="width:90%">
-            <img class="mySlides" src="../image/image2.png" style="width:90%;display:none">
-            <img class="mySlides" src="../image/image3.png" style="width:90%;display:none">
+            <img class="mySlides" src="<?= $products['image1']; ?>" style="width:90%">
+            <img class="mySlides" src="<?= $products['image2']; ?>" style="width:90%;display:none">
+            <img class="mySlides" src="<?= $products['image3']; ?>" style="width:90%;display:none">
 
             <div class="w3-row-padding w3-section">
               <div class="w3-col s4">
-                <img class="demo w3-opacity w3-hover-opacity-off" src="../image/image1.png" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="<?= $products['image1']; ?>" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
               </div>
               <div class="w3-col s4">
-                <img class="demo w3-opacity w3-hover-opacity-off" src="../image/image2.png" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="<?= $products['image2']; ?>" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
               </div>
               <div class="w3-col s4">
-                <img class="demo w3-opacity w3-hover-opacity-off" src="../image/image3.png" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="<?= $products['image3']; ?>" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
               </div>
             </div>
           </div>
@@ -25,19 +25,19 @@
       </div>
       <div class="col-lg-6 col-md-12 col-sm-12">
         <div class="especialy">
-          <h2 class="main_name_product">Áo Dài Truyền Thống Tinh Khôi - Hồng</h2>
+          <h2 class="main_name_product"><?= $products['name']; ?></h2>
 
           <div class="infor">
-            <h2 class="highlight">750.000 VNĐ</h2>
+            <h2 class="highlight"><?= $products['price'];?> VNĐ</h2>
             <div class="status">
-              <p>Tình trạng:</p>
-              <p>Còn hàng</p>
+              <span>Tình trạng:</span>
+              <span>Còn hàng</span>
             </div>
             <div class="category">
-              <p>Phân loại:</p>
-              <p>Áo dài tơ tằm</p>
+              <span>Phân loại:</span>
+              <span><?= $products['category_name']; ?></span>
             </div>
-            <p>Miễn phí vận chuyển</p>
+            <span><?= $products['discount_name']; ?></span>
           </div>
 
           <div class="choose">
@@ -91,26 +91,11 @@
       <div class="mainText">
         <!-- Your product information content here -->
         <!-- <h1>Thông tin sản phẩm</h1> -->
-        <p class="descriptions_product">air max are always very comfortable fit, clean and just perfect
+        <span class="descriptions_product">air max are always very comfortable fit, clean and just perfect
           in every way. just the box was too small and scrunched the
           sneakers up a little bit, not sure if the box was always this
           small but the 90s are and will always be one of my
-          favorites.</p>
-        <p class="descriptions_product">air max are always very comfortable fit, clean and just perfect
-          in every way. just the box was too small and scrunched the
-          sneakers up a little bit, not sure if the box was always this
-          small but the 90s are and will always be one of my
-          favorites.</p>
-        <p class="descriptions_product">air max are always very comfortable fit, clean and just perfect
-          in every way. just the box was too small and scrunched the
-          sneakers up a little bit, not sure if the box was always this
-          small but the 90s are and will always be one of my
-          favorites.</p>
-        <p class="descriptions_product">air max are always very comfortable fit, clean and just perfect
-          in every way. just the box was too small and scrunched the
-          sneakers up a little bit, not sure if the box was always this
-          small but the 90s are and will always be one of my
-          favorites.</p>
+          favorites.</span>
       </div>
 
       <!-- Comment section -->
@@ -133,33 +118,6 @@
       <div class="row-product">
         <div class="item-product">
           <img class="img-product" src="../image/image5.png">
-          <div>
-            <h3 class="name-product"></h3>
-            <div class="price">
-              <span class="price-count">750.000 VNĐ</span>
-            </div>
-          </div>
-        </div>
-        <div class="item-product">
-          <img class="img-product" src="../image/image6.png">
-          <div>
-            <h3 class="name-product"></h3>
-            <div class="price">
-              <span class="price-count">750.000 VNĐ</span>
-            </div>
-          </div>
-        </div>
-        <div class="item-product">
-          <img class="img-product" src="../image/image7.png">
-          <div>
-            <h3 class="name-product"></h3>
-            <div class="price">
-              <span class="price-count">750.000 VNĐ</span>
-            </div>
-          </div>
-        </div>
-        <div class="item-product">
-          <img class="img-product" src="../image/image8.png">
           <div>
             <h3 class="name-product"></h3>
             <div class="price">
