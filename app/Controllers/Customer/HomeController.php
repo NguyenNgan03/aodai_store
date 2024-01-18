@@ -42,7 +42,7 @@ class HomeController extends CustomerController
 
     public function profile()
     {
-        parent::template('app\views\users\home\profile.php');
+        parent::template('app\views\users\profile\index.php');
     }
 
     public function cart()
@@ -55,4 +55,8 @@ class HomeController extends CustomerController
     //     $keyword = $_GET["keyword"];
     //     echo "từ khóa cần tìm: " . $keyword;
     // }
+    public function editProfile()
+    {
+        parent::template('app\views\users\profile\editProfile.php');
+    }
 }
