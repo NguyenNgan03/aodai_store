@@ -76,7 +76,7 @@ class UserController extends CustomerController{
     {
         session_unset();
         session_destroy();
-        header('Location: index.php?controller=Home&action=index&page=Customer');
+        header('Location: ?controller=Home&action=index&page=Customer');
     }
 
     public function profile()
