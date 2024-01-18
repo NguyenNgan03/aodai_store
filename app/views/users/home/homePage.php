@@ -1,11 +1,24 @@
 <div class="main-container">
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="app\views\public\Images\Banner-1.png" alt="Large Image"></div>
-      <div class="swiper-slide"><img src="app\views\public\Images\Banner-2.png" alt="Thumbnail 1"></div>
-      <div class="swiper-slide"><img src="app\views\public\Images\Banner-3.png" alt="Thumbnail 2"></div>
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="app\views\public\Images\Banner-1.png" style="width:100%">
+      <div class="text">Caption Text</div>
     </div>
-    <div class="swiper-pagination"></div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="app\views\public\Images\Banner-2.png" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="app\views\public\Images\Banner-3.png" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+
   </div>
   <br>
 
