@@ -18,7 +18,7 @@
             <div class="box">
                 <form class="sbox" action="?controller=search&page=Customer&action=index" method="get">
                     <input class="stext" type="text" name="q" placeholder="Tìm kiếm...">
-                    <a class="sbutton" type="submit" href="?controller=search&action=index&page=customer">
+                    <a class="sbutton" type="submit" href="">
                         <i class="fa fa-search"></i>
                     </a>
                 </form>
