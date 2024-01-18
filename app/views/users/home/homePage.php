@@ -8,7 +8,6 @@
     <div class="swiper-pagination"></div>
   </div>
   <br>
-
   <div style="text-align:center">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
@@ -21,9 +20,10 @@
       $product = $products_outstanding[$i]
     ?>
       <div class="item-product">
-        <img class="img-product" src="<?= $product['image1']; ?>">
+        <a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"><img class="img-product" src="<?= $product['image1']; ?>"></a>
         <div>
-          <h3 class="name-product"><?= $product['name']; ?></h3>
+
+          <h3 class="name-product"><a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"><?= $product['name']; ?></a></h3>
           <div class="price">
             <span class="price-count"><?= $product['price']; ?> VNĐ</span>
           </div>
@@ -31,7 +31,6 @@
       </div>
     <?php endfor; ?>
   </div>
-
   <h1 class="service">DỊCH VỤ</h1>
   <div class="flex-row-cd">
     <img class="shipping" src="app\views\public\Images\shipping.png" />
@@ -54,9 +53,9 @@
       $product = $products_selling[$i]
     ?>
       <div class="item-product">
-        <img class="img-product" src="<?= $product['image1']; ?>">
+        <a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"><img class="img-product" src="<?= $product['image1']; ?>"></a>
         <div>
-          <h3 class="name-product"><?= $product['name']; ?></h3>
+          <h3 class="name-product"><a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"><?= $product['name']; ?></a></h3>
           <div class="price">
             <span class="price-count"><?= $product['price']; ?> VNĐ</span>
           </div>

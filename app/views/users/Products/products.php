@@ -51,7 +51,7 @@
                                                     </div>
 
                                                     <div class="product-info text-left">
-                                                        <h3 class="name"><a href="?controller=product&action=detail&page=customer"><?= $product['name']; ?></a></h3>
+                                                        <h3 class="name"><a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"><?= $product['name']; ?></a></h3>
                                                         <div class="rating rateit-small"></div>
                                                         <div class="description"></div>
                                                         <div class="product-price"> <span class="price"> <?= $product['price']; ?> </span> <span class="price-before-discount">900.000</span> </div>
@@ -62,7 +62,11 @@
                                                         <div class="action">
                                                             <ul class="list-unstyled">
                                                                 <li class="add-cart-button btn-group">
-                                                                    <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> Xem chi tiết <i class="fa fa-info-circle"></i> </button>
+                                                                    <a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>">
+                                                                        <button class="btn btn-primary icon" data-toggle="dropdown" type="button" onclick="return true;">
+                                                                            Xem chi tiết <i class="fa fa-info-circle"></i>
+                                                                        </button>
+                                                                    </a>
                                                                 </li>
                                                             </ul>
                                                         </div>

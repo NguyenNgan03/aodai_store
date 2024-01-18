@@ -62,8 +62,9 @@
           </div>
 
           <div class="text-a d-flex align-items-center justify-content-between">
+            <form action=""></form>
             <input type="text" class="quantity" placeholder="Nhập số lượng" name="quantity">
-            <button type="button" class="btn btn-outline-primary" id="primary"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+            <button type="button" class="btn btn-outline-primary" id="primary"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng </button>
           </div>
         </div>
       </div>
