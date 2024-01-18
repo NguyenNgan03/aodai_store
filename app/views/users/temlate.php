@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="app\views\public\css\slideshow.css">
 
 </head>
 
@@ -52,6 +53,7 @@
     include 'app\views\partials\footer.php'
     ?>
 
+    <script src="app\views\public\js\quantity.js"></script>
     <script src="app\views\public\js\detail.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="app\views\public\js\slideshow.js"></script>

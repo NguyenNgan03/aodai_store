@@ -220,11 +220,11 @@
 
 .especialy {
   margin-right: 20px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   margin-bottom: 20%;
   padding-left: 50px;
   padding-right: 50px;
-  padding-top: 60px;
+  /* padding-top: 60px; */
   border-radius: 12px;
   color: black;
   /* background-color: rgba(231, 244, 246, 1); */
@@ -787,26 +787,38 @@ div.desc {
   display: flex;
 }
 
-.quantity {
-  font-size: 20px;
-}
-
 #primary {
   font-size: 19px;
 }
 
-.status p,
-.category p {
-  color: black;
-  margin-top: 5px;
-  display: flex;
-  justify-content: space-between;
+.status{
+  margin-top: 5%;
+}
+.status-span {
+  margin-right: 28%;
+}
+.category{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.category-span{
+  margin-right: 30%;
 }
 
-.color,
-.size {
-  margin-top: 10px;
+.color{
+  margin-bottom: 5%;
 }
+.color-label,
+.size-label {
+  margin-right: 4%;
+  min-width: 40%;
+}
+
+.quantity-label{
+  font-size: 24px;
+  color: black;
+}
+
 
 /*=====================================================*/
 .row-product {
@@ -888,4 +900,19 @@ box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3)
 
 .name-product {
   margin: 12px 0;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-label {
+  margin-right: 5%;
+  min-width: 40%;
+}
+
+.input-quantity{
+  display:flex;
+  width: 22%;
 }

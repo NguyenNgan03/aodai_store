@@ -26,43 +26,55 @@
       <div class="col-lg-6 col-md-12 col-sm-12">
         <div class="especialy">
           <h2 class="main_name_product"><?= $products['name']; ?></h2>
-
-          <div class="infor">
-            <h2 class="highlight"><?= $products['price']; ?> VNĐ</h2>
-            <div class="status">
-              <span>Tình trạng:</span>
-              <span>Còn hàng</span>
-            </div>
-            <div class="category">
-              <span>Phân loại:</span>
-              <span><?= $products['category_name']; ?></span>
-            </div>
-            <span><?= $products['discount_name']; ?></span>
-          </div>
-
-          <div class="choose">
-            <div class="color">
-              <label>Chọn màu:</label>
-              <select>
-                <option value="color1" selected>Hồng</option>
-                <option value="color2">Đỏ</option>
-                <option value="color3">Đen</option>
-                <option value="color4">Vàng</option>
-              </select>
-            </div>
-            <div class="size">
-              <label>Kích cỡ:</label>
-              <select>
-                <option value="size1" selected>XS</option>
-                <option value="size2">M</option>
-                <option value="size3">L</option>
-                <option value="size4">XL</option>
-              </select>
+          <div class="container mt-5">
+            <div class="infor">
+              <h2 class="highlight"><?= $products['price']; ?> VNĐ</h2>
+              <div class="status">
+                <span class="status-span">Tình trạng:</span>
+                <span>Còn hàng</span>
+              </div>
+              <div class="category">
+                <span class="category-span">Phân loại:</span>
+                <span><?= $products['category_name']; ?></span>
+              </div>
+              <span><?= $products['discount_name']; ?></span>
             </div>
           </div>
-
+          <div class="container mt-5">
+            <div class="choose">
+              <div class="color">
+                <label class="color-label">Chọn màu:</label>
+                <select>
+                  <option value="color1" selected>Hồng</option>
+                  <option value="color2">Đỏ</option>
+                  <option value="color3">Đen</option>
+                  <option value="color4">Vàng</option>
+                </select>
+              </div>
+              <div class="size">
+                <label class="size-label">Kích cỡ:</label>
+                <select>
+                  <option value="size1" selected>XS</option>
+                  <option value="size2">M</option>
+                  <option value="size3">L</option>
+                  <option value="size4">XL</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-5">
+            <div class="row">
+              <div class="quantity-container">
+                <label class="quantity-label" for="quantity">Số lượng:</label>
+                <div class="input-quantity">
+                  <button class="btn btn-outline-secondary" type="button" id="decrementBtn">-</button>
+                  <input type="text" class="form-control text-center" id="quantity" value="1">
+                  <button class="btn btn-outline-secondary" type="button" id="incrementBtn">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="text-a d-flex align-items-center justify-content-between">
-            <input type="text" class="quantity" placeholder="Nhập số lượng" name="quantity">
             <button type="button" class="btn btn-outline-primary" id="primary"><i class="fa fa-shopping-cart"></i> Add to cart</button>
           </div>
         </div>
