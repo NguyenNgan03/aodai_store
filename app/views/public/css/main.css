@@ -1843,6 +1843,51 @@
     color: #fe5252;
     margin-top: 15px;
   }
+
+  .sidebar-widget-body {
+    width: 50px;
+    /* margin: 0 auto; */
+  }
+
+  .price-range-holder {
+    position: relative;
+    margin-top: 20px;
+  }
+
+  .min-max {
+    display: flex;
+    justify-content: space-between;
+    color: red;
+    font-weight: bold;
+  }
+
+  #amount {
+    border: 0;
+    color: #666666;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .price-slider {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .lnk {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+
   .sidebar .sidebar-module-container .sidebar-widget .sidebar-widget-body .list li {
     clear: both;
     display: block;

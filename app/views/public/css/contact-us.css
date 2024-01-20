@@ -1,5 +1,5 @@
-form {
-	min-width: 25rem;
+.form {
+	min-width: 15rem;
 	
 	.title {
 		font-family: 'Pacifico', cursive;
@@ -80,6 +80,7 @@ form {
 
 .contact-form div{
     padding: 20px;
+    min-width: 30rem;
 }
 
 .form-group.message {

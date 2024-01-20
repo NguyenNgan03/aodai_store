@@ -62,7 +62,7 @@
   <div class="flex-row-bf">
     <img class="refund" src="app\views\public\Images\refund.png" />
     <span class="refund-100">HOÀN TIỀN 100%</span>
-    <span class="lorem-ipsum-printing-1f">Chất lượng không phải là một lời hứa mà là cam kết chặt chẽ tại [Tên Trang Web]. Với cam kết hoàn tiền 100%, chúng tôi tin tưởng tuyệt đối vào mỗi sản phẩm mà chúng tôi cung cấp. Nếu không hài lòng, đơn giản là trải nghiệm mua sắm của bạn không có rủi ro.</span>
+    <span class="lorem-ipsum-printing-1f">Chất lượng không phải là một lời hứa mà là cam kết chặt chẽ tại AoDai Store. Với cam kết hoàn tiền 100%, chúng tôi tin tưởng tuyệt đối vào mỗi sản phẩm mà chúng tôi cung cấp. Nếu không hài lòng, đơn giản là trải nghiệm mua sắm của bạn không có rủi ro.</span>
   </div>
 
   <div class="flex-row-d-1e">
