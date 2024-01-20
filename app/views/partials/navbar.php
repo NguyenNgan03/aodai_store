@@ -18,9 +18,9 @@
             <div class="box">
                 <form class="sbox" action="?controller=search&page=Customer&action=index" method="get">
                     <input class="stext" type="text" name="q" placeholder="Tìm kiếm...">
-                    <a class="sbutton" type="submit" href="">
+                    <button class="sbutton" type="submit">
                         <i class="fa fa-search"></i>
-                    </a>
+                    </button>
                 </form>
             </div>
             <ul class="links">
@@ -30,7 +30,7 @@
                 <li><a href="?controller=product&action=index&page=customer">Sản Phẩm</a></li>
             </ul>
             <ul class="links">
-                <li><a href="?controller=home&action=information&page=customer">Thông Tin</a></li>
+                <li><a href="?controller=home&action=about&page=customer">Thông Tin</a></li>
             </ul>
             <ul class="links">
                 <li><a href="?controller=home&action=contact&page=customer">Liên Hệ</a></li>

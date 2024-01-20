@@ -19,9 +19,13 @@
                             <div class="widget-header">
                                 <h4 class="widget-title">Mức giá</h4>
                             </div>
-                            <div class="sidebar-widget-body m-t-10">
+                            <div class="form">
                                 <form action="/?page=customer&controller=Product" method="post">
-                                    <div class="price-range-holder"> <span class="min-max"> <span class="pull-left">500.000</span> <span class="pull-right">2.000.000</span> </span>
+                                    <div class="price-range-holder"> 
+                                        <span class="min-max"> 
+                                            <span class="pull-left">500.000</span>
+                                            <span class="pull-right">2.000.000</span>
+                                        </span>
                                         <input type="text" id="amount" style="border:0; color:#666666; font-weight:bold;text-align:center;">
                                         <input type="text" class="price-slider" name="price" value="">
                                     </div>

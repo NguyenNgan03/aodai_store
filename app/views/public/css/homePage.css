@@ -16,9 +16,6 @@
   overflow: hidden;
 }
 
-/* .banner{
-  width: 100%;
-} */
 .slider-container {
   position: relative;
 }
@@ -60,43 +57,45 @@
   text-align: center;
   white-space: nowrap;
 }
+
 .row-product {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   justify-content: center;
   align-items: center;
-  
+
 }
+
 .item-product {
   flex-basis: calc(22%);
   background-color: white;
-  margin:10px;
-  /* border-radius: 12px;
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3)
-  ; */
+  margin: 10px;
   cursor: pointer;
   transition: transform 0.5s;
 }
-.item-product > div{
-   padding:  0 8px 10px 8px;
+
+.item-product>div {
+  padding: 0 8px 10px 8px;
 }
-.item-product:hover{
+
+.item-product:hover {
   transform: translateY(-10px);
 }
 
-.img-product{
+.img-product {
   border-radius: 12px;
   width: 100%;
   height: 95%;
 }
 
-@media only screen and (max-width: 769px)  {
+@media only screen and (max-width: 769px) {
   .row-product {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
+
   .item-product {
     flex-basis: calc(40%);
     margin-bottom: 30px;
@@ -109,27 +108,34 @@
     flex-wrap: wrap;
     justify-content: space-around;
   }
+
   .item-product {
     flex-basis: 100%;
     margin-bottom: 30px;
   }
 }
-.price{
+
+.price {
   display: flex;
 }
-.price i{
+
+.price i {
   color: orangered;
 }
-.price i p{
-  color:black
+
+.price i p {
+  color: black
 }
-.price-count{
-  margin:12px 0;
+
+.price-count {
+  margin: 12px 0;
   font-size: 16px;
 }
-.name-product{
-  margin:12px 0;
+
+.name-product {
+  margin: 12px 0;
 }
+
 .service {
   display: block;
   position: relative;
@@ -142,165 +148,58 @@
   text-align: center;
   white-space: nowrap;
 }
-.flex-row-cd {
-  position: relative;
-  width: 60%;
-  height: 91.302px;
-  margin: 5% 20% 1% 20%;
-  justify-content: space-between;
-}
-.shipping {
-  position: absolute;
-  width: 10.31%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-size: 100% 100%;
-}
-.refund {
-  position: absolute;
-  width: 7.04%;
-  height: 100%;
-  top: 0;
-  left: 48.05%;
-  background-size: 100% 100%;
-}
-.support {
-  position: absolute;
-  width: 6.93%;
-  height: 100%;
-  top: 0;
-  left: 93.07%;
-  background-size: 100% 100%;
-}
-.flex-row-bf {
-  position: relative;
-  width: 60%;
-  height: 48px;
-  margin: 0% 15% 1% 15%;
-  justify-content: space-between;
-}
-.free-shipping {
+
+.content1 {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  height: 89.58%;
-  left: 0;
-  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
-  color: #22262a;
-  font-size: 27px;
-  font-weight: 500;
-  line-height: 40.5px;
-  text-align: left;
-  white-space: nowrap;
-}
-.refund-100 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  height: 87.5%;
-  left: 50%;
-  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
-  color: #22262a;
-  font-size: 27px;
-  font-weight: 500;
-  line-height: 40.5px;
-  text-align: left;
-  white-space: nowrap;
-}
-.support-24-7 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  height: 88.83%;
-  left: 97%;
-  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
-  color: #22262a;
-  font-size: 27px;
-  font-weight: 500;
-  line-height: 40.5px;
-  text-align: left;
-  white-space: nowrap;
-}
-.flex-row-d-1e {
-  display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-between;
-  position: relative;
-  width: 60%;
-  height: 98.989px;
-  margin: 0% 15% 1% 15%;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.lorem-ipsum-printing {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-shrink: 0;
-  position: relative;
-  width: 197.555px;
-  height: 98.989px;
-  left: 0;
-  left: 3%;
-  font-family: Proxima Nova, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
-  color: #22262a;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.924px;
+
+.flex-row-cd,
+.flex-row-bf,
+.flex-row-d-1e {
+  flex: 1;
   text-align: center;
+  padding: 20px;
+  max-width: 33.33%;
+  box-sizing: border-box;
 }
-.lorem-ipsum-printing-1f {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-shrink: 0;
-  position: relative;
-  width: 197.555px;
-  height: 98.989px;
-  left: 9%;
-  font-family: Proxima Nova, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
-  color: #22262a;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.924px;
+
+.service {
   text-align: center;
+  width: 100%;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
+
+.shipping,
+.refund,
+.support {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.free-shipping,
+.refund-100,
+.support-24-7 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.lorem-ipsum-printing,
+.lorem-ipsum-printing-1f,
 .lorem-ipsum-printing-20 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-shrink: 0;
-  position: relative;
-  width: 197.555px;
-  height: 98.989px;
-  left: 13%;
-  font-family: Proxima Nova, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
-  color: #22262a;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.924px;
-  text-align: center;
+  font-size: 16px;
+  display: block;
+  margin-top: 10px;
 }
+
 .selling-products {
   display: block;
   position: relative;
