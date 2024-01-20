@@ -41,6 +41,8 @@
     <link rel="stylesheet" href="app\views\public\css\slideshow.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="app\views\public\css\contact-us.css">
+    <link rel="stylesheet" href="app\views\public\css\about-us.css">
 
 </head>
 

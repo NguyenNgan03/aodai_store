@@ -9,7 +9,7 @@ class Search extends Database {
 
     public function model()
     {
-        return "search";
+        return "searchs";
     }
 
     public function searchProducts($query) {

@@ -30,9 +30,9 @@ class HomeController extends CustomerController
         parent::template('app\views\users\Products\products.php');
     }
     
-    public function information()
+    public function about()
     {
-        parent::template('app\views\users\information\information.php');
+        parent::template('app\views\users\home\about.php');
     }
 
     public function contact()
