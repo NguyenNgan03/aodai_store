@@ -81,7 +81,7 @@ class UserController extends CustomerController{
 
     public function profile()
     {
-        parent::template('views/users/partials/pages/profile.php');
+        parent::template('app\views\users\profile\index.php');
     }
 }
 ?>

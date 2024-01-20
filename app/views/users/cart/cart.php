@@ -29,52 +29,36 @@
                                     </tr>
                                 </tfoot>
                                 <tbody>
-                                    <tr>
-                                        <td class="romove-item"><a href="#" title="cancel" class="icon"><i class="fa fa-trash-o"></i></a></td>
-                                        <td class="cart-image">
-                                            <a class="entry-thumbnail" href="detail.html">
-                                                <img src="https://product.hstatic.net/1000136076/product/img_6780_076d07ac93784bd6a49519fdf9fa69fa_master.jpeg" alt="">
-                                            </a>
-                                        </td>
-                                        <td class="cart-product-name-info">
-                                            <h4 class='cart-product-description'><a href="detail.html">Áo dài Truyền thống Tinh khôi - Hồng</a></h4>
-                                            <div class="cart-product-info">
-                                                <span class="product-color">COLOR:<span>Blue</span></span></br>
-                                                <span class="product-color">SIZE:<span>xl</span></span>
-                                            </div>
-                                        </td>
-                                        <!-- <td class="cart-product-edit"><a href="#" class="product-edit">Edit</a></td> -->
-                                        <td class="cart-product-quantity">
-                                            <div class="quant-input">
-                                                <input type="number" value="1" min="1">
-                                            </div>
-                                        </td>
-                                        <td class="cart-product-sub-total"><span class="cart-sub-total-price">750.000</span></td>
-                                        <td class="cart-product-grand-total"><span class="cart-grand-total-price">750.000</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="romove-item"><a href="#" title="cancel" class="icon"><i class="fa fa-trash-o"></i></a></td>
-                                        <td class="cart-image">
-                                            <a class="entry-thumbnail" href="detail.html">
-                                                <img src="https://product.hstatic.net/1000136076/product/img_6780_076d07ac93784bd6a49519fdf9fa69fa_master.jpeg" alt="">
-                                            </a>
-                                        </td>
-                                        <td class="cart-product-name-info">
-                                            <h4 class='cart-product-description'><a href="detail.html">Áo dài Truyền thống Tinh khôi - Hồng</a></h4>
-                                            <div class="cart-product-info">
-                                                <span class="product-color">COLOR:<span>Pink</span></span></br>
-                                                <span class="product-color">SIZE:<span>m</span></span>
-                                            </div>
-                                        </td>
-                                        <!-- <td class="cart-product-edit"><a href="#" class="product-edit">Edit</a></td> -->
-                                        <td class="cart-product-quantity">
-                                            <div class="quant-input">
-                                                <input type="number" value="1" min="1">
-                                            </div>
-                                        </td>
-                                        <td class="cart-product-sub-total"><span class="cart-sub-total-price">750.000</span></td>
-                                        <td class="cart-product-grand-total"><span class="cart-grand-total-price">750.000</span></td>
-                                    </tr>
+                                    <?php
+                                    // Lấy thông tin sản phẩm từ $products dựa trên $product_id
+                                    // $productInfo = $products[$product_id];
+                                    $cartItems = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
+                                    ?>
+                                    <?php foreach ($cartItems as $product_id => $item) : ?>
+                                        <tr>
+                                            <td class="romove-item"><a href="#" title="cancel" class="icon"><i class="fa fa-trash-o"></i></a></td>
+                                            <td class="cart-image">
+                                                <a class="entry-thumbnail" href="detail.html">
+                                                    <img src="<?php echo $item['image'] ?>" alt="ảnh">
+                                                </a>
+                                            </td>
+                                            <td class="cart-product-name-info">
+                                                <h4 class="cart-product-description"><a href="?controller=product&action=detail&page=customer&id=<?= $product_id; ?>"><?= $item['name']; ?></a></h4>
+                                                <div class="cart-product-info">
+                                                    <span class="product-color">COLOR:<span><?php echo $item['color'] ?></span></span></br>
+                                                    <span class="product-color">SIZE:<span><?php echo $item['size'] ?></span></span>
+                                                </div>
+                                            </td>
+                                            <!-- <td class="cart-product-edit"><a href="#" class="product-edit">Edit</a></td> -->
+                                            <td class="cart-product-quantity">
+                                                <div class="quant-input">
+                                                   <span><?php echo $item['quantity'] ?></span>
+                                                </div>
+                                            </td>
+                                            <td class="cart-product-sub-total"><span class="cart-sub-total-price"><?= $item['price'] * $item['quantity']; ?> VNĐ</span></td>
+                                            <td class="cart-product-grand-total"><span class="cart-grand-total-price"><?= $item['price'] * $item['quantity']; ?> VNĐ</span></td>
+                                        </tr>
+                                    <?php endforeach ?>
                                 </tbody>
                             </table>
                         </div>

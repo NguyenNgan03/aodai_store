@@ -35,9 +35,16 @@
             <ul class="links">
                 <li><a href="?controller=home&action=contact&page=customer">Liên Hệ</a></li>
             </ul>
-            <ul class="links">
-                <li><a href="?controller=home&action=cart&page=customer"><i class="fa fa-shopping-cart"></i></a></li>
-            </ul>
+            <?php
+            // Kiểm tra xem người dùng đã đăng nhập hay chưa
+            if (isset($_SESSION['username'])) :
+                // Nếu đã đăng nhập, hiển thị phần giỏ hàng
+            ?>
+                <ul class="links">
+                    <li><a href="?controller=home&action=cart&page=customer"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            <?php endif; ?>
+
             <div class="dropdown">
                 <button class="dropbtn">
                 <?php
