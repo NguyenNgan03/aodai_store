@@ -36,8 +36,6 @@ class Vourcher extends Database
         return $this->insertData($tableName, $params);
     }
 
-    ///
-
     public function getVourcherById($vourcher_id)
     {
         $tableName = $this->model();
@@ -71,5 +69,4 @@ class Vourcher extends Database
 
         return $this->deleteData($tableName, $condition, $params);
     }
-
 }

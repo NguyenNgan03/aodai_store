@@ -87,7 +87,6 @@ class ProductController extends AdminController
     public function edit()
     {
         if (isset($_GET['id'])) {
-            $product = new Product();
             $data['products'] = $this->product->getProductById($_GET['id']);
             parent::template("app/views/admin/products/edit.php", $data);
         }

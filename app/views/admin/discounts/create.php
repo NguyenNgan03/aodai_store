@@ -10,20 +10,20 @@
         <form class="col-12" action="/?page=Admin&controller=Discount&action=CreatePost" method="post" class="row">
             <div class="border p-3">
                 <div class="form-group form-floating py-2 col-12">
-                    <label class="ms-2" style="">Name</label>
-                    <input class="form-control border-0 shadow" name="name" require/>
+                    <label class="ms-2">Name</label>
+                    <input class="form-control border-0 shadow" name="name" require />
                 </div>
                 <div class="form-group form-floating py-2 col-12">
-                    <label type="number" class="ms-2" style="">Discount rate</label>
-                    <input class="form-control border-0 shadow" name="discount_rate" require/>
+                    <label type="number" class="ms-2">Discount rate</label>
+                    <input class="form-control border-0 shadow" name="discount_rate" require />
                 </div>
                 <div class="form-group form-floating py-2 col-12">
-                    <label class="ms-2" style="">Start date</label>
-                    <input type="datetime-local" class="form-control border-0 shadow" name="start_date" require/>
+                    <label class="ms-2">Start date</label>
+                    <input type="datetime-local" class="form-control border-0 shadow" name="start_date" require />
                 </div>
                 <div class="form-group form-floating py-2 col-12">
-                    <label class="ms-2" style="">End date</label>
-                    <input type="datetime-local" class="form-control border-0 shadow" name="end_date" require/>
+                    <label class="ms-2">End date</label>
+                    <input type="datetime-local" class="form-control border-0 shadow" name="end_date" require />
                 </div>
                 <div class="row pt-2">
                     <div class="col-6 col-md-3">
