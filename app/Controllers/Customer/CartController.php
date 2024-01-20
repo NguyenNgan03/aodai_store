@@ -52,19 +52,5 @@ class CartController extends CustomerController
         }
     }
 
-    // public function viewCart()
-    // {
-    //     if (!isset($_SESSION[''])) {
-    //         $product_id = $_POST['product_id'];
-    //     }
-    //      // Lấy dữ liệu từ session
-    //      $cartItems = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
-
-    //      // Truyền dữ liệu vào view
-    //      include 'app\views\users\cart\cart.php';
-    // }
-
     // Các phương thức khác cho quản lý giỏ hàng có thể được thêm ở đây
 }
-
-?>
