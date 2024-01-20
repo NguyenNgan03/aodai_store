@@ -1,4 +1,3 @@
-
 <section class="p-3 p-md-4 p-xl-5" style="justify-content: center;">
   <div class="container">
     <div class="card border-light-subtle shadow-sm">
@@ -15,7 +14,7 @@
                 </div>
               </div>
             </div>
-            <form  method="POST" action="?controller=user&action=login&page=customer">
+            <form method="POST" action="?controller=user&action=login&page=customer">
               <div class="row gy-3 gy-md-4 overflow-hidden">
                 <div class="col-12">
                   <label for="name" class="form-label">User Name <span class="text-danger">*</span></label>

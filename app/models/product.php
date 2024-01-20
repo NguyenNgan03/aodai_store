@@ -26,8 +26,20 @@ class Product extends Database
         return $result;
     }
 
-    public function create($name, $discount_id, $category_id, $description, $price, $color, $material, $size, $image1, $image2, $image3, $image4)
-    {
+    public function create(
+        $name,
+        $discount_id,
+        $category_id,
+        $description,
+        $price,
+        $color,
+        $material,
+        $size,
+        $image1,
+        $image2,
+        $image3,
+        $image4
+    ) {
         $tableName = $this->model();
         $params = [
             'name' => $name,
@@ -88,12 +100,11 @@ class Product extends Database
                 GROUP BY products.id";
         $params = [':product_id' => $product_id];
         $data = $this->getDataByQuery($sql, $params);
-        foreach ($data as $row)
-        {
+        foreach ($data as $row) {
             return $row;
         }
     }
-    
+
     public function getProductByPrice($price)
     {
         $tableName = $this->model();

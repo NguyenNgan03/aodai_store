@@ -44,7 +44,7 @@
             <div class="container mt-5">
               <div class="choose">
                 <div class="color">
-                  
+
                   <label class="color-label">Chọn màu:</label>
                   <span name="color" id="color"> <?php echo $products['color'] ?></span>
                 </div>
@@ -61,7 +61,6 @@
               </div>
             </div>
             <div class="container mt-5">
-
               <input type="hidden" name="product_id" value="<?= $products['id']; ?>">
               <div class="row">
                 <div class="quantity-container">
@@ -76,16 +75,10 @@
             </div>
             <input type="hidden" name="product_id" value="<?= $products['id']; ?>">
             <input type="hidden" name="quantity" value="1"> <!-- Giá trị số lượng mặc định -->
-
-
             <button type="button" class="btn btn-outline-primary" onclick="addToCart()"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</button>
-
   </form>
 </div>
 </div>
-
-
-
 <!-- Modal -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -104,7 +97,6 @@
     </div>
   </div>
 </div>
-
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
@@ -197,20 +189,20 @@
   }
   // Cập nhật nút tăng số lượng
   document.getElementById('incrementBtn').addEventListener('click', function() {
-  // Tăng giá trị
-  if (currentQuantity >= 1) {
-  currentQuantity++;
-  // Hiển thị giá trị trong ô input
-  document.getElementById('quantity').value = currentQuantity;
-}});
+    // Tăng giá trị
+    if (currentQuantity >= 1) {
+      currentQuantity++;
+      // Hiển thị giá trị trong ô input
+      document.getElementById('quantity').value = currentQuantity;
+    }
+  });
 
-document.getElementById('decrementBtn').addEventListener('click', function() {
-  if (currentQuantity > 1) {
-    // Giảm giá trị
-    currentQuantity--;
-    // Hiển thị giá trị trong ô input
-    document.getElementById('quantity').value = currentQuantity;
-  }
-});
-
+  document.getElementById('decrementBtn').addEventListener('click', function() {
+    if (currentQuantity > 1) {
+      // Giảm giá trị
+      currentQuantity--;
+      // Hiển thị giá trị trong ô input
+      document.getElementById('quantity').value = currentQuantity;
+    }
+  });
 </script>

@@ -58,19 +58,19 @@ class User extends Database
             'email' => $email,
             'role' => $role,
         ];
-// var_dump($params);
-// die;
+        // var_dump($params);
+        // die;
         try {
             $result = $this->insertData($tableName, $params);
-// var_dump($result);
-// die;
+            // var_dump($result);
+            // die;
             if (!$result) {
                 echo "Có lỗi khi thêm dữ liệu vào cơ sở dữ liệu.";
             }
         } catch (Exception $e) {
             echo "Có lỗi xảy ra: " . $e->getMessage();
         }
-        return $result; 
+        return $result;
     }
 
 
@@ -88,8 +88,6 @@ class User extends Database
         ];
         return $this->insertData($tableName, $params);
     }
-
-    ///
 
     public function getUserById($user_id)
     {

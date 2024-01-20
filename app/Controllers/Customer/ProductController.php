@@ -9,11 +9,8 @@ include 'app\models\Discount.php';
 class ProductController extends CustomerController
 {
     private $product;
-    // private $category;
-
     public function __construct() {
         $this->product = new Product;
-       
     }
     
     public function index()
@@ -32,20 +29,8 @@ class ProductController extends CustomerController
         else
         $data['products'] = $product->index();
         parent::template('app\views\users\Products\products.php',$data);
-        
     }
-
-    function create()
-    {
-    }
-
-    function store()
-    {
-    }
-    public function category(){
-        
-    }
-
+    
     public function detail()
     {
         if (isset($_GET['id'])) {

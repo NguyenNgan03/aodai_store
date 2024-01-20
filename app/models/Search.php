@@ -16,7 +16,7 @@ class Search extends Database {
         // Using a LIKE query to search for products containing the given name
         $sql = "SELECT * FROM products WHERE name LIKE :query";
         $params = ['query' => '%' .$query. '%'];
-        
+
         // Execute the query
         $results = $this->db->query($sql, $params);
 

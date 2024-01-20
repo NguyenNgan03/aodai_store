@@ -30,7 +30,6 @@ class Order extends Database
     {
         $tableName = $this->model();
         $params = [
-
             'user_id' => $user_id,
             'order_date' => $order_date,
             'shipping_address' => $shipping_address,

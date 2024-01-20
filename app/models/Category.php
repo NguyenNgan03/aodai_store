@@ -19,8 +19,7 @@ class Category extends Database
         $params = [':category_id' => (int)$category_id];
         $data = $this->getDataByQuery($sql, $params);
 
-        foreach($data as $value)
-        {
+        foreach ($data as $value) {
             return $value;
         }
 

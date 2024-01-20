@@ -11,7 +11,6 @@
                                         <th class="cart-romove item">Remove</th>
                                         <th class="cart-description item">Image</th>
                                         <th class="cart-product-name item">Product Name</th>
-                                        <!-- <th class="cart-edit item">Edit</th> -->
                                         <th class="cart-qty item">Quantity</th>
                                         <th class="cart-sub-total item">Subtotal</th>
                                         <th class="cart-total last-item">Grandtotal</th>
@@ -30,8 +29,6 @@
                                 </tfoot>
                                 <tbody>
                                     <?php
-                                    // Lấy thông tin sản phẩm từ $products dựa trên $product_id
-                                    // $productInfo = $products[$product_id];
                                     $cartItems = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
                                     ?>
                                     <?php foreach ($cartItems as $product_id => $item) : ?>
@@ -49,10 +46,10 @@
                                                     <span class="product-color">SIZE:<span><?php echo $item['size'] ?></span></span>
                                                 </div>
                                             </td>
-                                            <!-- <td class="cart-product-edit"><a href="#" class="product-edit">Edit</a></td> -->
+
                                             <td class="cart-product-quantity">
                                                 <div class="quant-input">
-                                                   <span><?php echo $item['quantity'] ?></span>
+                                                    <span><?php echo $item['quantity'] ?></span>
                                                 </div>
                                             </td>
                                             <td class="cart-product-sub-total"><span class="cart-sub-total-price"><?= $item['price'] * $item['quantity']; ?> VNĐ</span></td>
@@ -81,7 +78,7 @@
                                 <tr>
                                     <td>
                                         <div class="cart-checkout-btn pull-right">
-                                            <button type="submit" class="btn btn-primary checkout-btn"><a  href="?controller=cart&action=checkout&page=customer" style="color: white;">PROCCED TO CHEKOUT</a></button>
+                                            <button type="submit" class="btn btn-primary checkout-btn"><a href="?controller=cart&action=checkout&page=customer" style="color: white;">PROCCED TO CHEKOUT</a></button>
                                         </div>
                                     </td>
                                 </tr>
