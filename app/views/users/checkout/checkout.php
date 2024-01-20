@@ -1,0 +1,137 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="app\views\public\css\checkout.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<div class="container">
+    <div class="row">
+        <div class="col-xl-8">
+            <div class="card">
+                <div class="card-body">
+                    <ol class="activity-checkout mb-0 px-4 mt-3">
+                        <li class="checkout-item">
+                            <div class="avatar checkout-icon p-1">
+                                <div class="avatar-title rounded-circle bg-primary">
+                                    <i class="bx bxs-receipt text-white font-size-20"></i>
+                                </div>
+                            </div>
+                            <div class="feed-item-list">
+                                <div>
+                                    <h5 class="font-size-16 mb-1">Thông tin thanh toán</h5>
+                                    <div class="mb-3">
+                                        <form>
+                                            <div>
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="billing-name">Tên</label>
+                                                            <input type="text" class="form-control" id="billing-name" placeholder="Nhập tên">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="billing-email-address">Email</label>
+                                                            <input type="email" class="form-control" id="billing-email-address" placeholder="Nhập Email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="billing-phone">Số điện thoại</label>
+                                                            <input type="text" class="form-control" id="billing-phone" placeholder="Nhập SĐT">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="billing-address">Địa chỉ</label>
+                                                    <textarea class="form-control" id="billing-address" rows="3" placeholder="Nhập địa chỉ đầy đủ"></textarea>
+                                                </div>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ol>
+                </div>
+            </div>
+            <div class="row my-4">
+                <div class="col">
+                    <a href="ecommerce-products.html" class="btn btn-link text-muted">
+                        <i class="mdi mdi-arrow-left me-1"></i> Continue Shopping </a>
+                </div>
+                <div class="col">
+                    <div class="text-end mt-2 mt-sm-0">
+                        <a href="#" class="btn btn-success">
+                            <i class="mdi mdi-cart-outline me-1"></i> Hoàn tất </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <div class="card checkout-order-summary">
+                <div class="card-body">
+                    <div class="p-3 bg-light mb-3">
+                        <h5 class="font-size-16 mb-0">Thông tin đơn hàng</h5>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-centered mb-0 table-nowrap">
+                            <thead>
+                                <tr>
+                                    <th class="border-top-0" style="width: 110px;" scope="col">Sản phẩm</th>
+                                    <th class="border-top-0" scope="col">Mô tả sản phẩm</th>
+                                    <th class="border-top-0" scope="col">Giá</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><img src="https://www.bootdey.com/image/280x280/FF00FF/000000" alt="product-img" title="product-img" class="avatar-lg rounded"></th>
+                                    <td>
+                                        <h5 class="font-size-16 text-truncate"><a href="#" class="text-dark">Waterproof Mobile Phone</a></h5>
+
+                                        <p class="text-muted mb-0 mt-1">$ 260 x 2</p>
+                                    </td>
+                                    <td>$ 520</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><img src="https://www.bootdey.com/image/280x280/FF00FF/000000" alt="product-img" title="product-img" class="avatar-lg rounded"></th>
+                                    <td>
+                                        <h5 class="font-size-16 text-truncate"><a href="#" class="text-dark">Smartphone Dual Camera</a></h5>
+
+                                        <p class="text-muted mb-0 mt-1">$ 260 x 1</p>
+                                    </td>
+                                    <td>$ 260</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <h5 class="font-size-14 m-0">Tổng thu :</h5>
+                                    </td>
+                                    <td>
+                                        780000 VNĐ
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <h5 class="font-size-14 m-0">Phí vận chuyển :</h5>
+                                    </td>
+                                    <td>
+                                        25000 VNĐ
+                                    </td>
+                                </tr>
+                                <tr class="bg-light">
+                                    <td colspan="2">
+                                        <h5 class="font-size-14 m-0">Tổng thanh toán:</h5>
+                                    </td>
+                                    <td>
+                                        805000 VNĐ
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

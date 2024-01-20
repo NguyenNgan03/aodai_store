@@ -2,21 +2,9 @@
 include 'app\models\Product.php';
 include 'app\models\Category.php';
 include_once dirname(__DIR__) . '/CustomerController.php';
-// use aodai_store\app\models\Product;
-
-// use aodai_store\app\models\Product;
 
 class HomeController extends CustomerController
 {
-    // private $product;
-    // private $category;
-
-    // public function __construct()
-    // {
-    //     $this->product = new Product;
-    //     $this->category = new Category;
-    // }
-
     public function index()
     {
         $product = new Product();
@@ -49,12 +37,7 @@ class HomeController extends CustomerController
     {
         parent::template('app\views\users\cart\cart.php');
     }
-    
-    // public function search()
-    // {
-    //     $keyword = $_GET["keyword"];
-    //     echo "từ khóa cần tìm: " . $keyword;
-    // }
+
     public function editProfile()
     {
         parent::template('app\views\users\profile\editProfile.php');

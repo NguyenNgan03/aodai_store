@@ -45,8 +45,6 @@
                                                 <div class="product">
                                                     <div class="product-image">
                                                         <div class="image"> <a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"><img src="<?= $product['image1']; ?>" alt=""></a> </div>
-                                                        <!-- /.image -->
-
                                                         <div class="tag new"><span>new</span></div>
                                                     </div>
 

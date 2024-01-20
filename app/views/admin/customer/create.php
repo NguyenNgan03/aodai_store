@@ -4,8 +4,8 @@
             <input type="text" class="form-control" placeholder="Name" name="username">
         </div>
         <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" name="password">
-            </div>
+            <input type="password" class="form-control" placeholder="Password" name="password">
+        </div>
         <div class="form-group">
             <input type="email" class="form-control" placeholder="Email" name="email">
         </div>

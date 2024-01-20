@@ -21,7 +21,7 @@
             <input name="note-update" id="note-update" type="text" placeholder="Enter Note" required />
 
             <div class="payment_status-select">
-            <label for="payment_status-update"><b>Payment Status</b></label>
+                <label for="payment_status-update"><b>Payment Status</b></label>
                 <select name="payment_status-update" id="payment_status-update">
                     <option value="Paid">Paid</option>
                     <option value="Unpaid" selected>Unpaid</option>
@@ -29,7 +29,7 @@
             </div>
 
             <div class="shp_status-select">
-            <label for="shp_status-update"><b>Shipping Status</b></label>
+                <label for="shp_status-update"><b>Shipping Status</b></label>
                 <select name="shp_status-update" id="shp_status-update">
                     <option value="Paid">Paid</option>
                     <option value="Unpaid" selected>Unpaid</option>
