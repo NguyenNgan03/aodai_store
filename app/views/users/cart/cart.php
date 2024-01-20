@@ -97,7 +97,7 @@
                                 <tr>
                                     <td>
                                         <div class="cart-checkout-btn pull-right">
-                                            <button type="submit" class="btn btn-primary checkout-btn">PROCCED TO CHEKOUT</button>
+                                            <button type="submit" class="btn btn-primary checkout-btn"><a  href="?controller=cart&action=checkout&page=customer" style="color: white;">PROCCED TO CHEKOUT</a></button>
                                         </div>
                                     </td>
                                 </tr>
