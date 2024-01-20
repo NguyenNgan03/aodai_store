@@ -21,11 +21,13 @@ class CartController extends CustomerController
             $cart[$productId] = $quantity;
             $_SESSION['cart'] = $cart;
 
-            header('Location: ?controller=product&action=detail&page=customer&id='. $productId);
+            header('Location: ?controller=product&action=detail&page=customer&id=' . $productId);
         }
     }
-
+    
+    public function checkout()
+    {
+        parent::template('app\views\users\checkout\checkout.php');
+    }
     // Các phương thức khác cho quản lý giỏ hàng có thể được thêm ở đây
 }
-
-?>
