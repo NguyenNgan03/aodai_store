@@ -1,0 +1,19 @@
+.search-note{
+    align-items: center;
+    justify-content: center;
+}
+
+.search-note img {
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+}
+
+.search-note h3{
+    text-align: center;
+}
+
+.search-note p{
+    text-align: center;
+    font-size: 24px;
+}

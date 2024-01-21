@@ -56,4 +56,5 @@ class HomeController extends CustomerController
         $data["user"] = isset($user) ? $user : null;
         parent::template('app\views\users\profile\editProfile.php', $data);
     }
+
 }
