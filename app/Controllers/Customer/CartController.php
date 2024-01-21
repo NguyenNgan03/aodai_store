@@ -24,6 +24,7 @@ class CartController extends CustomerController
            
             if (array_key_exists($product_id, $cart)) {
                 $cart[$product_id]['quantity'] = $quantity +=1 ;
+                $cart[$product_id]['size'] = $size ;
             } else {
                 $cart[$product_id] = [
                     'id' => $product['id'],
