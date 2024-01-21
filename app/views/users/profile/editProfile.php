@@ -7,9 +7,9 @@
             <div class="card mb-4 mb-xl-0">
                 <div class="card-header">Ảnh đại diện</div>
                 <div class="card-body text-center">
-                    <img class="img-account-profile rounded-circle mb-2" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt>
-                    <div class="small font-italic text-muted mb-4">JPG hoặc PNG không lớn hơn 5MB</div>
-                    <button class="btn btn-primary" type="button">Tải lên hình ảnh mới</button>
+                    <img class="img-account-profile rounded-circle mb-2" src="<? $user["avatar"] ?>" alt>
+                    <!-- <div class="small font-italic text-muted mb-4">JPG hoặc PNG không lớn hơn 5MB</div>
+                    <button class="btn btn-primary" type="button">Tải lên hình ảnh mới</button> -->
                 </div>
             </div>
         </div>
@@ -17,48 +17,50 @@
             <div class="card mb-4">
                 <div class="card-header">Chi tiết tài khoản</div>
                 <div class="card-body">
-                    <form>
+                    <form action="?page=Customer&controller=User&action=editProfile" method="post">
                         <div class="mb-3">
                             <label class="small mb-1" for="inputUsername">Tên người dùng (tên của bạn sẽ xuất hiện như thế nào với những người dùng khác trên trang web)</label>
-                            <input class="form-control" id="inputUsername" type="text" placeholder="Vui lòng nhập tên người dùng" value="Thanh Van">
+                            <input class="form-control" id="inputUsername" type="text" readonly placeholder="Vui lòng nhập tên người dùng" name="username" value="<?= $user["username"] ?>">
                         </div>
                         <div class="row gx-3 mb-3">
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputFirstName">Tên</label>
-                                <input class="form-control" id="inputFirstName" type="text" placeholder="Vui lòng nhập tên" value="Van">
+                                <input class="form-control" id="inputFirstName" type="text" placeholder="Vui lòng nhập tên" name="first_name" value="<?= $user["first_name"] ?>">
                             </div>
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputLastName">Họ</label>
-                                <input class="form-control" id="inputLastName" type="text" placeholder="Vui lòng nhập họ" value="Tran">
+                                <input class="form-control" id="inputLastName" type="text" placeholder="Vui lòng nhập họ" name="last_name" value="<?= $user["last_name"] ?>">
                             </div>
                         </div>
-                        
+
                         <div class="row gx-3 mb-3">
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputLocation">Địa chỉ</label>
-                                <input class="form-control" id="inputLocation" type="text" placeholder="Vui lòng nhập địa chỉ" value="San Francisco, CA">
+                                <input class="form-control" id="inputLocation" type="text" placeholder="Vui lòng nhập địa chỉ" name="address" value="<?= $user["address"] ?>">
                             </div>
                         </div>
 
                         <div class="mb-3">
                             <label class="small mb-1" for="inputEmailAddress">Email</label>
-                            <input class="form-control" id="inputEmailAddress" type="email" placeholder="Vui lòng nhập email" value="name@example.com">
+                            <input class="form-control" id="inputEmailAddress" type="email" placeholder="Vui lòng nhập email" name="email" value="<?= $user["email"] ?>">
                         </div>
 
                         <div class="row gx-3 mb-3">
 
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputPhone">Số điện thoại</label>
-                                <input class="form-control" id="inputPhone" type="tel" placeholder="Vui lòng nhập SĐT" value="555-123-4567">
+                                <input class="form-control" id="inputPhone" type="tel" name="phone" value="<?= $user["phone"] ?>">
                             </div>
 
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputBirthday">Ngày sinh</label>
-                                <input class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Vui lòng nhập ngày tháng năm sinh" value="06/10/1988">
+                                <input class="form-control" id="inputBirthday" type="date" name="birthday" placeholder="Vui lòng nhập ngày tháng năm sinh" name="birthday" value="<?= $user["birthday"] ?>">
                             </div>
+                            <input hidden name="id" value="<?= $user["id"] ?>">
+
                         </div>
 
-                        <button class="btn btn-primary" type="button">Lưu thay đổi</button>
+                        <button class="btn btn-primary" type="submit">Lưu thay đổi</button>
                     </form>
                 </div>
             </div>
