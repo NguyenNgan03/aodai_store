@@ -26,19 +26,26 @@ class Order extends Database
         return $result;
     }
 
-    public function create($user_id, $order_date, $shipping_address, $shipping_date, $notes, $payment_status, $shipping_status)
+    public function create($user_id, $phone, $shipping_address, $shipping_date, $notes, $payment_status, $shipping_status)
     {
         $tableName = $this->model();
         $params = [
             'user_id' => $user_id,
-            'order_date' => $order_date,
+            'phone' => $phone,         
             'shipping_address' => $shipping_address,
             'shipping_date' => $shipping_date,
             'notes' => $notes,
             'payment_status' => $payment_status,
             'shipping_status' => $shipping_status
         ];
-        return $this->insertData($tableName, $params);
+        $result = $this->insertData($tableName, $params);
+
+        if (!$result) {
+            // In thông báo lỗi SQL
+            echo "Lỗi SQL: ";
+        }
+
+        return $result;
     }
 
     public function getOrderById($order_id)

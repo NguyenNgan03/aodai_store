@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <?php
+    <?php    
     // Kiểm tra xem Người dùng có sử dụng Ghi nhớ Đăng nhập không?
     if (isset($_COOKIE['is_logged'])) {
         // Lấy thông tin từ COOKIE từ Web Browser của client gởi đến

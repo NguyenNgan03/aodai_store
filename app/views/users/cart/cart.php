@@ -3,7 +3,7 @@
     <div class="body-content outer-top-xs">
         <div class="container">
             <div class="row">
-                <form action="?controller=cart&action=checkout&page=customer">
+                <form action="?controller=cart&action=checkout&page=customer" method="post">                                    
                 <div class="shopping-cart">
                     <div class="shopping-cart-table">
                         <div class="table-responsive">

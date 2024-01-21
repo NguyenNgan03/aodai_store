@@ -18,35 +18,36 @@
                                 <div>
                                     <h5 class="font-size-16 mb-1">Thông tin thanh toán</h5>
                                     <div class="mb-3">
-                                        <form>
-                                            <div>
-                                                <div class="row">
-                                                    <div class="col-lg-4">
-                                                        <div class="mb-3">
-                                                            <label class="form-label" for="billing-name">Tên</label>
-                                                            <input type="text" class="form-control" id="billing-name" placeholder="Nhập tên">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="mb-3">
-                                                            <label class="form-label" for="billing-email-address">Email</label>
-                                                            <input type="email" class="form-control" id="billing-email-address" placeholder="Nhập Email">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="mb-3">
-                                                            <label class="form-label" for="billing-phone">Số điện thoại</label>
-                                                            <input type="text" class="form-control" id="billing-phone" placeholder="Nhập SĐT">
-                                                        </div>
+                                        <!-- Thêm thẻ form và thuộc tính method và action -->
+                                        <form method="post" action="?controller=checkout&action=processCheckout&page=customer">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="billing-name">Tên</label>
+                                                        <input type="text" name="billing-name" class="form-control" id="billing-name" placeholder="Nhập tên">
                                                     </div>
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="billing-address">Địa chỉ</label>
-                                                    <textarea class="form-control" id="billing-address" rows="3" placeholder="Nhập địa chỉ đầy đủ"></textarea>
+                                                <div class="col-lg-4">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="billing-email-address">Email</label>
+                                                        <input type="email" name="billing-email-address" class="form-control" id="billing-email-address" placeholder="Nhập Email">
+                                                    </div>
                                                 </div>
-
+                                                <div class="col-lg-4">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="billing-phone">Số điện thoại</label>
+                                                        <input type="text" class="form-control" name="billing-phone" id="billing-phone" placeholder="Nhập SĐT">
+                                                    </div>
+                                                </div>
                                             </div>
-                                       
+                                            <div class="mb-3">
+                                                <label class="form-label" for="billing-address">Địa chỉ</label>
+                                                <textarea class="form-control" id="billing-address" name="shipping_address" rows="3" placeholder="Nhập địa chỉ đầy đủ"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">
+                                                <i class="mdi mdi-cart-outline me-1"></i> Hoàn tất
+                                            </button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -60,14 +61,9 @@
                         <i class="mdi mdi-arrow-left me-1"></i> Continue Shopping </a>
                 </div>
                 <div class="col">
-                    <div class="text-end mt-2 mt-sm-0">
-                        <a href="#" class="btn btn-success">
-                            <button type="submit"></button>  <i class="mdi mdi-cart-outline me-1"></i> Hoàn tất </a></button>
-                            
-                    </div>
+                    <!-- Loại bỏ thẻ form đóng ở đây -->
                 </div>
             </div>
-            </form>
         </div>
         <div class="col-xl-4">
             <div class="card checkout-order-summary">
@@ -91,6 +87,7 @@
                                 ?>
                                 <?php
                                 foreach ($cartItems as $product_id => $item) :
+
                                     $subtotal += $item['price'] * $item['quantity'];
                                 ?>
                                     <tr>
@@ -109,15 +106,7 @@
                                         <h5 class="font-size-14 m-0">Tổng thu :</h5>
                                     </td>
                                     <td>
-                                    <?= $subtotal; ?> VNĐ
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <h5 class="font-size-14 m-0">Phí vận chuyển :</h5>
-                                    </td>
-                                    <td>
-                                        25000 VNĐ
+                                        <?= $subtotal; ?> VNĐ
                                     </td>
                                 </tr>
                                 <tr class="bg-light">

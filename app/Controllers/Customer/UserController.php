@@ -34,7 +34,7 @@ class UserController extends CustomerController
                     setcookie('is_logged', true, $cookieExpire, '/', null, true, true);
                     setcookie("username_logged", $username, $cookieExpire, "/", null, true, true);
                 }
-
+                $_SESSION['user_id'] = $this->user->getUserIdByCredentials($username,$password);
                 $_SESSION['username'] = $user['username'];
 
                 if ($user['role'] == 'admin') {
