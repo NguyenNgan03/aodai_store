@@ -6,3 +6,8 @@ RewriteCond %{REQUEST_FILENAME} !-f
 
 # Chuyển hướng tất cả các yêu cầu không phải là thư mục và tệp tin thực tế đến index.php
 RewriteRule ^(.*)$ index.php [L,QSA]
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L]

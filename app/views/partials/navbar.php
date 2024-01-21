@@ -25,13 +25,14 @@
                 <img src="app\views\public\Images\Logo.png" alt="Logo">
             </div>
             <div class="box">
-                <form class="sbox" action="?controller=search&page=Customer&action=index" method="get">
-                    <input class="stext" type="text" name="q" placeholder="Tìm kiếm...">
+                <form class="sbox" action="?controller=search&action=index&page=customer" method="post" onsubmit="return validateSearchForm()">
+                    <input class="stext" type="text" name="q" id="searchInput" placeholder="Tìm kiếm...">
                     <button class="sbutton" type="submit">
                         <i class="fa fa-search"></i>
                     </button>
                 </form>
             </div>
+
             <ul class="links">
                 <li><a href="?controller=home&action=index&page=customer">Trang Chủ</a></li>
             </ul>

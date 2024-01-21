@@ -9,6 +9,7 @@
     <meta name="keywords" content="MediaCenter, Template, eCommerce">
     <meta name="robots" content="all">
     <title>Document</title>
+    <link rel="stylesheet" href="app\views\public\css\styles.css">
     <link rel="stylesheet" href="app\views\public\css\navbar.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400&display=swap" />
@@ -63,6 +64,7 @@
     
     <script src="app\views\public\js\quantity.js"></script>
     <script src="app\views\public\js\detail.js"></script>
+    <script src="app\views\public\js\search.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="app\views\public\js\slideshow.js"></script>
     <script src="app\views\public\js\bootstrap-hover-dropdown.min.js"></script>

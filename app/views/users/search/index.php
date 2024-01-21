@@ -1,20 +1,22 @@
 <?php if (!empty($searchResults)) : ?>
-    <h2>Kết quả tìm kiếm:</h2>
-    <div class="product-list">
+    <div class="row-product">
         <?php foreach ($searchResults as $product) : ?>
-            <div class="row-product">
-                <div class="item-product">
-                    <img class="img-product" src="<?= $products['image1']; ?>">
-                    <div>
-                        <h3 class="name-product"><?= $products['name']; ?></h3>
-                        <div class="price">
-                            <span class="price-count"><?= $products['price']; ?> VNĐ</span>
-                        </div>
+            <div class="item-product">
+                <a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"><img class="img-product" src="<?= $product['image1']; ?>"></a>
+                <div>
+
+                    <h3 class="name-product"><a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>"><?= $product['name']; ?></a></h3>
+                    <div class="price">
+                        <span class="price-count"><?= $product['price']; ?> VNĐ</span>
                     </div>
                 </div>
             </div>
         <?php endforeach; ?>
     </div>
 <?php else : ?>
-    echo '<p>Không có kết quả tìm kiếm.</p>';
+    <div class="search-note">
+        <img src="app\views\public\Images\search.jpg" />
+        <h3>Chúng tôi không tìm thấy bất kỳ kết quả nào</h3>
+        <p>Đảm bảo tất cả các từ đều đúng chính tả hoặc thử từ khóa khác.</p>
+    </div>
 <?php endif; ?>
