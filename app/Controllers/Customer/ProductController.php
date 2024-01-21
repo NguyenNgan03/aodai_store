@@ -5,10 +5,12 @@
 include 'app\models\Product.php';
 include 'app\models\Category.php';
 include 'app\models\Discount.php'; 
+include 'app\models\Comment.php'; 
 
 class ProductController extends CustomerController
 {
     private $product;
+    
     public function __construct() {
         $this->product = new Product;
     }
@@ -34,7 +36,9 @@ class ProductController extends CustomerController
     public function detail()
     {
         if (isset($_GET['id'])) {
-        $data['products'] = $this->product->getProductDetail($_GET['id']);   
+        $comment = new Comment();
+        $data['products'] = $this->product->getProductDetail($_GET['id']); 
+        $data['comments']  = $comment->getCommentByProductId($_GET['id']);
         parent::template('app\views\users\products\detail.php', $data);
         }else{
             echo 'lỗi ko bắt đc id';

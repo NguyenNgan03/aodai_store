@@ -54,8 +54,9 @@ class UserController extends CustomerController
             $last_name = $_POST['last_name'];
             $email = $_POST['email'];
             $role = $_POST['role'];
+            $avatar = "user3.jpg";
 
-            $result = $this->user->registerUser($username, $password, $firt_name, $last_name, $email, $role);
+            $result = $this->user->registerUser($username, $password, $firt_name, $last_name, $email, $role, $avatar);
             if ($result) {
                 header('Location: ?controller=user&action=getLogin&page=customer');
                 exit();
@@ -77,6 +78,28 @@ class UserController extends CustomerController
 
     public function profile()
     {
-        parent::template('app\views\users\profile\index.php');
+        $username = isset($_SESSION["username"]) ? $_SESSION["username"] : null;
+        if ($username !== null) {
+            $user =  $this->user->getUserByUsername($username)[0];
+        }
+        $data["user"] = isset($user) ? $user : null;
+        parent::template('app\views\users\profile\index.php', $data);
+    }
+    
+    public function editProfile()
+    {
+        $params = [
+            "username" => $_POST["username"],
+            "last_name" => $_POST["last_name"],
+            "first_name" => $_POST["first_name"],
+            "address" => $_POST["address"],
+            "email" => $_POST["email"],
+            "phone" => $_POST["phone"],
+            "birthday" => $_POST["birthday"],
+            "updated_at" => (new DateTime())->format("Y-m-d H:i:s"),
+        ];
+        $id = $_POST["id"];
+        $this->user->editProfile($id, $params);
+        header('Location: ?controller=home&action=editProfile&page=customer');
     }
 }

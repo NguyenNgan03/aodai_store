@@ -1,10 +1,19 @@
 <?php
 include 'app\models\Product.php';
 include 'app\models\Category.php';
+include 'app\models\User.php';
 include_once dirname(__DIR__) . '/CustomerController.php';
 
 class HomeController extends CustomerController
 {
+
+    private $user;
+
+    public function __construct()
+    {
+        $this->user = new User;
+    }
+
     public function index()
     {
         $product = new Product();
@@ -17,7 +26,7 @@ class HomeController extends CustomerController
     {
         parent::template('app\views\users\Products\products.php');
     }
-    
+
     public function about()
     {
         parent::template('app\views\users\home\about.php');
@@ -40,6 +49,11 @@ class HomeController extends CustomerController
 
     public function editProfile()
     {
-        parent::template('app\views\users\profile\editProfile.php');
+        $username = isset($_SESSION["username"]) ? $_SESSION["username"] : null;
+        if ($username !== null) {
+            $user =  $this->user->getUserByUsername($username)[0];
+        }
+        $data["user"] = isset($user) ? $user : null;
+        parent::template('app\views\users\profile\editProfile.php', $data);
     }
 }

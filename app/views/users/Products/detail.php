@@ -124,8 +124,12 @@
   <!-- Comment section -->
   <div class="comments" id="comments">
     <div class="form-group">
-      <textarea class="form-control" id="newComment" placeholder="Thêm bình luận"></textarea>
-      <button class="btn btn-primary" onclick="addComment()">Thêm bình luận</button>
+      <form action="?page=Customer&controller=Comment&action=createComment" method="post">
+        <textarea class="form-control" id="newComment" placeholder="Thêm bình luận" name="content"></textarea>
+        <input hidden name="product_id" value="<?= $products['id']; ?>">
+        <button class="btn btn-primary" type="sumbit">Thêm bình luận</button>
+      </form>
+
     </div>
 
     <!-- Hiển thị danh sách bình luận -->
