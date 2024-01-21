@@ -42,4 +42,5 @@ class HomeController extends CustomerController
     {
         parent::template('app\views\users\profile\editProfile.php');
     }
+
 }

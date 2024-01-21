@@ -1,25 +1,35 @@
 <?php
-class Search extends Database {
+class Search extends Database
+{
     private $db;
 
     public function __construct()
     {
         parent::__construct();
+        $this->db = $this->getConnection();
     }
 
     public function model()
     {
-        return "searchs";
+        return "products";
     }
 
-    public function searchProducts($query) {
-        // Using a LIKE query to search for products containing the given name
-        $sql = "SELECT * FROM products WHERE name LIKE :query";
-        $params = ['query' => '%' .$query. '%'];
+    public function searchProducts($query)
+    {
+        try {
+            $sql = "SELECT * FROM products WHERE name LIKE :query";
+            $params = ['query' => '%' . $query . '%'];
 
-        // Execute the query
-        $results = $this->db->query($sql, $params);
+            $statement = $this->db->prepare($sql);
+            $statement->execute($params);
 
-        return $results;
+            $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            return $results;
+        } catch (Exception $e) {
+            // Ghi log hoặc hiển thị lỗi để kiểm tra
+            echo "Lỗi: " . $e->getMessage();
+            return false;
+        }
     }
 }

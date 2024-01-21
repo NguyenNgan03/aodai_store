@@ -1,5 +1,4 @@
 <?php
-
 include 'app\models\Search.php';
 include 'app\models\product.php';
 
@@ -14,13 +13,13 @@ class SearchController extends CustomerController
 
     public function index()
     {
-        $searchResults = [];
+        $searchResults = null;
 
-        if (isset($_GET['q'])) {
-            $query = $_GET['q'];
+        if (isset($_POST['q'])) {
+            $query = $_POST['q'];
             $searchResults = $this->search->searchProducts($query);
         }
-    
+
         parent::template('app\views\users\search\index.php', ['searchResults' => $searchResults]);
     }
 }
