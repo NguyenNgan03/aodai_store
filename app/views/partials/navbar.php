@@ -27,9 +27,9 @@
             <div class="box">
                 <form class="sbox" action="?controller=search&page=Customer&action=index" method="get">
                     <input class="stext" type="text" name="q" placeholder="Tìm kiếm...">
-                    <a class="sbutton" type="submit" href="">
+                    <button class="sbutton" type="submit">
                         <i class="fa fa-search"></i>
-                    </a>
+                    </button>
                 </form>
             </div>
             <ul class="links">
@@ -39,7 +39,7 @@
                 <li><a href="?controller=product&action=index&page=customer">Sản Phẩm</a></li>
             </ul>
             <ul class="links">
-                <li><a href="?controller=home&action=information&page=customer">Thông Tin</a></li>
+                <li><a href="?controller=home&action=about&page=customer">Thông Tin</a></li>
             </ul>
             <ul class="links">
                 <li><a href="?controller=home&action=contact&page=customer">Liên Hệ</a></li>
@@ -59,14 +59,14 @@
                     <?php
                     if (isset($_SESSION['username'])) {
                         // Nếu session 'username' tồn tại, hiển thị avatar user
-                        $avatarUrl = "app\views\public\Images\image3.png"; // Đường dẫn đến ảnh mặc định
+                        $avatarUrl = "https://i.pinimg.com/564x/ed/b1/cb/edb1cb2b9b27bdc64d23dfb535573e28.jpg"; // Đường dẫn đến ảnh mặc định
                         $avatar = isset($_SESSION['avatar']) ? $_SESSION['avatar'] : $avatarUrl;
                         echo '<a href="?controller=home&action=profile&page=customer">';
                         echo '<img src="' . $avatar . '" alt="Avatar">';
                         echo '</a>';
                     } else {
                         // Nếu session 'username' không tồn tại, hiển thị avatar mặc định
-                        $defaultAvatarUrl = "app\views\public\Images\default-avatar.jpg"; // Đường dẫn đến ảnh mặc định
+                        $defaultAvatarUrl = "https://i.pinimg.com/564x/ed/b1/cb/edb1cb2b9b27bdc64d23dfb535573e28.jpg"; // Đường dẫn đến ảnh mặc định
                         echo '<img src="' . $defaultAvatarUrl . '" alt="Default Avatar">';
                     }
                     ?>

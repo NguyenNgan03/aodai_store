@@ -22,6 +22,18 @@ class Comment extends Database
         }
         return $result;
     }
+    
+    public function add($content, $product_id, $user_id)
+    {
+        $tableName = $this->model();
+        $params = [
+            'content' => $content,
+            'product_id' => $product_id,
+            'user_id' => $user_id,
+            'created_at' => (new DateTime()) -> format("Y-m-d H:i:s"),
+        ];
+        return $this->insertData($tableName, $params);
+    }
 
     public function create($content)
     {
@@ -37,6 +49,15 @@ class Comment extends Database
         $tableName = $this->model();
         $sql = "SELECT * FROM $tableName WHERE id = :comment_id";
         $params = [':comment_id' => $comment_id];
+        $data = $this->getDataByQuery($sql, $params);
+        return $data;
+    }
+
+    public function getCommentByProductId($product_id)
+    {
+        $tableName = $this->model();
+        $sql = "SELECT * FROM $tableName WHERE product_id = :product_id Order BY created_at DESC";
+        $params = [':product_id' => $product_id];
         $data = $this->getDataByQuery($sql, $params);
         return $data;
     }
@@ -60,7 +81,7 @@ class Comment extends Database
         $tableName = $this->model();
         $condition = "id = :id";
         $params = [':id' => (int)$id];
-
+    
         return $this->deleteData($tableName, $condition, $params);
     }
 }
