@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="app\views\public\css\indexProfile.css">
 <link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css" integrity="sha384-jbCTJB16Q17718YM9U22iJkhuGbS0Gd2LjaWb4YJEZToOPmnKDjySVa323U+W7Fv" crossorigin="anonymous">
+<? var_dump($user) ?>
 <div class="container">
     <div class="row">
         <div class="col-md-3">
@@ -7,11 +8,11 @@
                 <div class="border-bottom p-4">
                     <div class="osahan-user text-center">
                         <div class="osahan-user-media">
-                            <img class="mb-3 rounded-pill shadow-sm mt-1" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="gurdeep singh osahan">
+                            <img class="mb-3 rounded-pill shadow-sm mt-1" src="<? $user["avatar"] ?>" alt="gurdeep singh osahan">
                             <div class="osahan-user-media-body">
-                                <h6 class="mb-2">Thanh Vân</h6>
-                                <p class="mb-1">555-123-4567</p>
-                                <p class="mb-1">van.tran@gmail.com</p>
+                                <h6 class="mb-2"><?= $user["username"] ?></h6>
+                                <p class="mb-1"><?= $user["phone"] ?></p>
+                                <p class="mb-1"><?= $user["email"] ?></p>
                                 <a class="text-primary mr-3" href="?controller=home&action=editProfile&page=customer"><i class="icofont-ui-edit"></i> CHỈNH SỬA THÔNG TIN</a>
                             </div>
                         </div>
@@ -125,7 +126,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-md-4 col-sm-6 mb-4 pb-2">
                                 <div class="list-card bg-white h-100 rounded overflow-hidden position-relative shadow-sm">
                                     <div class="list-card-image">

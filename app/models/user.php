@@ -46,7 +46,7 @@ class User extends Database
         return $result;
     }
 
-    public function registerUser($name, $password, $firt_name, $last_name, $email, $role)
+    public function registerUser($name, $password, $firt_name, $last_name, $email, $role, $avatar)
     {
         $tableName = $this->model();
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -57,6 +57,7 @@ class User extends Database
             'last_name' => $last_name,
             'email' => $email,
             'role' => $role,
+            'avatar' => $avatar,
         ];
         // var_dump($params);
         // die;
@@ -100,13 +101,12 @@ class User extends Database
 
     public function getUserByUsername($username)
     {
-        $stmt = $this->user->getConnection()->prepare("SELECT * FROM users WHERE username = ?");
-        $stmt->bind_param("s", $username);
-
-        $stmt->execute();
-        $result = $stmt->get_result();
-
-        $user = $result->fetch_assoc();
+        $tableName = $this->model();
+        $sql = "SELECT * FROM $tableName WHERE username = :username";
+        $params = [
+            ":username" => $username
+        ];
+        $user = $this -> query($sql, $params);
 
         return $user;
     }
@@ -135,5 +135,13 @@ class User extends Database
         $params = [':id' => (int)$id];
 
         return $this->deleteData($tableName, $condition, $params);
+    }
+    
+    public function editProfile($id, $params){
+        $tableName = $this->model();
+        $data = $params;
+        $condition = "id = :id";
+        $params = [':id' => (int)$id];
+        return $this->updateData($tableName, $data, $condition, $params);
     }
 }
