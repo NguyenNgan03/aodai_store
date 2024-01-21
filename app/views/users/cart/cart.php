@@ -1,9 +1,11 @@
+
 <body class="cnt-home">
     <div class="body-content outer-top-xs">
         <div class="container">
-            <div class="row ">
+            <div class="row">
+                <form action="?controller=cart&action=checkout&page=customer">
                 <div class="shopping-cart">
-                    <div class="shopping-cart-table ">
+                    <div class="shopping-cart-table">
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -25,15 +27,23 @@
                                                 </span>
                                             </div>
                                         </td>
-                                    </tr>
+                                    </tr> 
                                 </tfoot>
                                 <tbody>
                                     <?php
-                                    $cartItems = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
+                                        $cartItems = isset($_COOKIE['cart']) ? json_decode($_COOKIE['cart'], true) : [];
+                                        $subtotal = 0; 
                                     ?>
-                                    <?php foreach ($cartItems as $product_id => $item) : ?>
+                                    <?php 
+                                        foreach ($cartItems as $product_id => $item) : 
+                                        $subtotal += $item['price'] * $item['quantity'];
+                                    ?>
                                         <tr>
-                                            <td class="romove-item"><a href="#" title="cancel" class="icon"><i class="fa fa-trash-o"></i></a></td>
+                                            <td class="romove-item">
+                                                <a href="#" title="Remove" class="icon" onclick="confirmDelete(<?= $product_id; ?>)">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </a>
+                                            </td>
                                             <td class="cart-image">
                                                 <a class="entry-thumbnail" href="detail.html">
                                                     <img src="<?php echo $item['image'] ?>" alt="ảnh">
@@ -42,7 +52,7 @@
                                             <td class="cart-product-name-info">
                                                 <h4 class="cart-product-description"><a href="?controller=product&action=detail&page=customer&id=<?= $product_id; ?>"><?= $item['name']; ?></a></h4>
                                                 <div class="cart-product-info">
-                                                    <span class="product-color">COLOR:<span><?php echo $item['color'] ?></span></span></br>
+                                                    <span class="product-color">COLOR:<span><?php echo $item['color'] ?></span></span><br>
                                                     <span class="product-color">SIZE:<span><?php echo $item['size'] ?></span></span>
                                                 </div>
                                             </td>
@@ -66,10 +76,10 @@
                                 <tr>
                                     <th>
                                         <div class="cart-sub-total">
-                                            Subtotal<span class="inner-left-md">750.000</span>
+                                            Subtotal<span class="inner-left-md"><?= $subtotal; ?> VNĐ</span>
                                         </div>
                                         <div class="cart-grand-total">
-                                            Grand Total<span class="inner-left-md">750.000</span>
+                                            Grand Total<span class="inner-left-md"><?= $subtotal; ?> VNĐ</span>
                                         </div>
                                     </th>
                                 </tr>
@@ -78,7 +88,7 @@
                                 <tr>
                                     <td>
                                         <div class="cart-checkout-btn pull-right">
-                                            <button type="submit" class="btn btn-primary checkout-btn"><a href="?controller=cart&action=checkout&page=customer" style="color: white;">PROCCED TO CHEKOUT</a></button>
+                                            <button type="submit" class="btn btn-primary checkout-btn"><a href="?controller=cart&action=checkout&page=customer" style="color: white;">PROCEED TO CHECKOUT</a></button>
                                         </div>
                                     </td>
                                 </tr>
@@ -86,7 +96,18 @@
                         </table>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
     </div>
+    <script>
+        function confirmDelete(productId) {
+            var confirmation = confirm("Bạn muốn xóa sản phẩm này khỏi giỏ hàng?");
+            if (confirmation) {
+                window.location.href = `?controller=cart&action=removeItem&page=customer&product_id=${productId}`;
+            } else {
+                // Người dùng ấn "No", không thực hiện xóa
+            }
+        }
+    </script>
 </body>

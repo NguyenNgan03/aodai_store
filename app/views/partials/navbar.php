@@ -10,6 +10,15 @@
 </head>
 
 <body>
+    <?php
+    // Kiểm tra xem Người dùng có sử dụng Ghi nhớ Đăng nhập không?
+    if (isset($_COOKIE['is_logged'])) {
+        // Lấy thông tin từ COOKIE từ Web Browser của client gởi đến
+        $username_logged = isset($_COOKIE['username_logged']) ? $_COOKIE['username_logged'] : '';
+
+        echo "Xin chào <b>$username_logged</b>! đến mua sắm tại shop.";
+    }
+    ?>
     <section class="header-navbar">
         <div class="navbar">
             <div class="logo">

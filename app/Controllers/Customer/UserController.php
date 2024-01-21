@@ -17,28 +17,38 @@ class UserController extends CustomerController
     }
 
     public function login()
-    {
-        if (isset($_POST['login'])) {
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-            if ($username != "" && $password != "") {
-                $user = $this->user->getUser($username, $password);
-                if ($user) {
-                    $_SESSION['username'] = $user['username'];
+{
+    if (isset($_POST['login'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $remember_me = isset($_POST['remember_me']) ? 1 : 0;
 
-                    if ($user['role'] == 'admin') {
-                        header('location: ?controller=dashboard&action=index&page=Admin');
-                    } else {
-                        header('location: ?controller=home&action=index&page=customer');
-                    }
-                } else {
-                    echo 'Mật khẩu sai';
+        if ($username != "" && $password != "") {
+            $user = $this->user->getUser($username,$password);
+
+            // Kiểm tra mật khẩu
+            if ($user && password_verify($password, $user['password'])) {
+                if ($remember_me == 1) {
+                    // Lưu thông tin vào cookie an toàn
+                    $cookieExpire = time() + 3600; // 1 giờ
+                    setcookie('is_logged', true, $cookieExpire, '/', null, true, true);
+                    setcookie("username_logged", $username, $cookieExpire, "/", null, true, true);
                 }
+
+                $_SESSION['username'] = $user['username'];
+
+                if ($user['role'] == 'admin') {
+                    header('location: ?controller=dashboard&action=index&page=Admin');
+                } else {
+                    header('location: ?controller=home&action=index&page=customer');
+                }
+                exit();
             } else {
-                echo 'Trường name và pass không được trống';
+                echo 'Tên đăng nhập hoặc mật khẩu không đúng.';
             }
         }
     }
+}
 
     public function getRegister()
     {

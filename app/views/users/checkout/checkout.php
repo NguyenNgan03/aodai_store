@@ -46,13 +46,11 @@
                                                 </div>
 
                                             </div>
-                                        </form>
+                                       
                                     </div>
                                 </div>
                             </div>
                         </li>
-
-
                     </ol>
                 </div>
             </div>
@@ -64,10 +62,12 @@
                 <div class="col">
                     <div class="text-end mt-2 mt-sm-0">
                         <a href="#" class="btn btn-success">
-                            <i class="mdi mdi-cart-outline me-1"></i> Hoàn tất </a>
+                            <button type="submit"></button>  <i class="mdi mdi-cart-outline me-1"></i> Hoàn tất </a></button>
+                            
                     </div>
                 </div>
             </div>
+            </form>
         </div>
         <div class="col-xl-4">
             <div class="card checkout-order-summary">
@@ -85,30 +85,31 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row"><img src="https://www.bootdey.com/image/280x280/FF00FF/000000" alt="product-img" title="product-img" class="avatar-lg rounded"></th>
-                                    <td>
-                                        <h5 class="font-size-16 text-truncate"><a href="#" class="text-dark">Waterproof Mobile Phone</a></h5>
+                                <?php
+                                $cartItems = isset($_COOKIE['cart']) ? json_decode($_COOKIE['cart'], true) : [];
+                                $subtotal = 0;
+                                ?>
+                                <?php
+                                foreach ($cartItems as $product_id => $item) :
+                                    $subtotal += $item['price'] * $item['quantity'];
+                                ?>
+                                    <tr>
+                                        <th scope="row"><img src="<?php echo $item['image'] ?>" alt="product-img" title="product-img" class="avatar-lg rounded"></th>
+                                        <td>
+                                            <h5 class="font-size-16 text-truncate"><a href="#" class="text-dark"><?php echo $item['name'] ?></a></h5>
 
-                                        <p class="text-muted mb-0 mt-1">$ 260 x 2</p>
-                                    </td>
-                                    <td>$ 520</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><img src="https://www.bootdey.com/image/280x280/FF00FF/000000" alt="product-img" title="product-img" class="avatar-lg rounded"></th>
-                                    <td>
-                                        <h5 class="font-size-16 text-truncate"><a href="#" class="text-dark">Smartphone Dual Camera</a></h5>
+                                            <p class="text-muted mb-0 mt-1"><?php echo $item['price'] ?> VNĐ x <?php echo $item['quantity'] ?></p>
+                                        </td>
+                                        <td> <?php echo ($item['price'] * $item['quantity']) ?> VNĐ </td>
+                                    </tr>
+                                <?php endforeach ?>
 
-                                        <p class="text-muted mb-0 mt-1">$ 260 x 1</p>
-                                    </td>
-                                    <td>$ 260</td>
-                                </tr>
                                 <tr>
                                     <td colspan="2">
                                         <h5 class="font-size-14 m-0">Tổng thu :</h5>
                                     </td>
                                     <td>
-                                        780000 VNĐ
+                                    <?= $subtotal; ?> VNĐ
                                     </td>
                                 </tr>
                                 <tr>

@@ -45,7 +45,7 @@
               <div class="choose">
                 <div class="color">
 
-                  <label class="color-label">Chọn màu:</label>
+                  <label class="color-label">Màu:</label>
                   <span name="color" id="color"> <?php echo $products['color'] ?></span>
                 </div>
                 <div class="size">
