@@ -29,19 +29,17 @@ class CheckoutController extends Database
             $paymentStatus = "Tiền mặt"; 
             $shippingStatus = "";
 
-            $orderId = $this->orderModel->create($user_id, $phone,$shippingAddress, $shippingDate, $notes, $paymentStatus, $shippingStatus);
+            $orderId = $this->orderModel->create($user_id, $phone,$shippingAddress, $shippingDate, $notes, $paymentStatus, $shippingStatus); 
+            
             if ($orderId) {
                 
                 $cartItems = isset($_COOKIE['cart']) ? json_decode($_COOKIE['cart'], true) : [];
 
                 foreach ($cartItems as $product_id => $item) {
-                    $this->orderDetailModel->createOrderDetail($orderId, $product_id, $item['quantity'], $item['price']);
+                $this->orderDetailModel->createOrderDetail($orderId, $product_id, $item['quantity'], $item['price']);
+                   
                 }
 
-                // Gửi thông báo hoặc chuyển hướng đến trang cảm ơn
-                echo "Đơn hàng của bạn đã được đặt thành công!";
-            } else {
-                echo "Có lỗi xảy ra khi xử lý đơn hàng. Vui lòng thử lại!";
             }
         }
     }

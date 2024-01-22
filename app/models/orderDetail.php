@@ -1,6 +1,7 @@
 <?php
 class orderDetail extends Database
 {
+
     public function __construct()
     {
         parent::__construct();
@@ -8,8 +9,9 @@ class orderDetail extends Database
 
     public function model()
     {
-        return "oder_detail";
+        return "order_detail";
     }
+
     public function createOrderDetail($order_id, $product_id, $quantity, $price)
     {
         $tableName = $this->model();
@@ -19,7 +21,16 @@ class orderDetail extends Database
             'quantity' => $quantity,
             'price' => $price
         ];
-        return $this->insertData($tableName, $params);
+        $this->insertData($tableName, $params);
+    } 
+
+    public function getOrderInfo($order_id)
+    {
+        $tableName = $this->model();
+        $sql = "SELECT * FROM $tableName WHERE id = :order_id";
+        $params = [':order_id' => $order_id];
+        $data = $this->getDataByQuery($sql, $params);
+        return $data;
     }
 }
 

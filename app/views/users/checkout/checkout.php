@@ -18,7 +18,6 @@
                                 <div>
                                     <h5 class="font-size-16 mb-1">Thông tin thanh toán</h5>
                                     <div class="mb-3">
-                                        <!-- Thêm thẻ form và thuộc tính method và action -->
                                         <form method="post" action="?controller=checkout&action=processCheckout&page=customer">
                                             <div class="row">
                                                 <div class="col-lg-4">
@@ -61,7 +60,6 @@
                         <i class="mdi mdi-arrow-left me-1"></i> Continue Shopping </a>
                 </div>
                 <div class="col">
-                    <!-- Loại bỏ thẻ form đóng ở đây -->
                 </div>
             </div>
         </div>
