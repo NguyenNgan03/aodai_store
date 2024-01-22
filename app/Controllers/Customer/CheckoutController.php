@@ -37,8 +37,10 @@ class CheckoutController extends Database
 
                 foreach ($cartItems as $product_id => $item) {
                 $this->orderDetailModel->createOrderDetail($orderId, $product_id, $item['quantity'], $item['price']);
-                   
                 }
+                setcookie('cart', '', time() - 3600, '/');
+                header('Location: ?controller=user&action=profile&page=customer');
+                exit;
 
             }
         }

@@ -36,7 +36,8 @@ class UserController extends CustomerController
                 }
                 $_SESSION['user_id'] = $this->user->getUserIdByCredentials($username,$password);
                 $_SESSION['username'] = $user['username'];
-
+                $_SESSION['role'] = $user['role'];
+                
                 if ($user['role'] == 'admin') {
                     header('location: ?controller=dashboard&action=index&page=Admin');
                 } else {

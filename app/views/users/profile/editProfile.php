@@ -7,7 +7,7 @@
             <div class="card mb-4 mb-xl-0">
                 <div class="card-header">Ảnh đại diện</div>
                 <div class="card-body text-center">
-                    <img class="img-account-profile rounded-circle mb-2" src="<? $user["avatar"] ?>" alt>
+                    <img class="img-account-profile rounded-circle mb-2" src="https://i.pinimg.com/564x/ed/b1/cb/edb1cb2b9b27bdc64d23dfb535573e28.jpg" alt>
                     <!-- <div class="small font-italic text-muted mb-4">JPG hoặc PNG không lớn hơn 5MB</div>
                     <button class="btn btn-primary" type="button">Tải lên hình ảnh mới</button> -->
                 </div>

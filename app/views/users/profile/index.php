@@ -8,7 +8,7 @@
                 <div class="border-bottom p-4">
                     <div class="osahan-user text-center">
                         <div class="osahan-user-media">
-                            <img class="mb-3 rounded-pill shadow-sm mt-1" src="<? $user["avatar"] ?>" alt="gurdeep singh osahan">
+                            <img class="mb-3 rounded-pill shadow-sm mt-1" src="https://i.pinimg.com/564x/ed/b1/cb/edb1cb2b9b27bdc64d23dfb535573e28.jpg" alt="gurdeep singh osahan">
                             <div class="osahan-user-media-body">
                                 <h6 class="mb-2"><?= $user["username"] ?></h6>
                                 <p class="mb-1"><?= $user["phone"] ?></p>

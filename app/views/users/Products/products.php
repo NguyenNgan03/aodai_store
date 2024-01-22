@@ -21,8 +21,8 @@
                             </div>
                             <div class="form">
                                 <form action="/?page=customer&controller=Product" method="post">
-                                    <div class="price-range-holder"> 
-                                        <span class="min-max"> 
+                                    <div class="price-range-holder">
+                                        <span class="min-max">
                                             <span class="pull-left">500.000</span>
                                             <span class="pull-right">2.000.000</span>
                                         </span>
@@ -65,7 +65,7 @@
                                                             <ul class="list-unstyled">
                                                                 <li class="add-cart-button btn-group">
                                                                     <a href="?controller=product&action=detail&page=customer&id=<?= $product['id']; ?>">
-                                                                        <button class="btn btn-primary icon" data-toggle="dropdown" type="button" onclick="return true;">
+                                                                        <button class="btn btn-primary icon" type="button" onclick="return true;">
                                                                             Xem chi tiết <i class="fa fa-info-circle"></i>
                                                                         </button>
                                                                     </a>
