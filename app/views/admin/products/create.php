@@ -40,19 +40,19 @@
         </div>
         <div class="form-group">
             <label for="image1">Image 1:</label>
-            <input type="file" class="form-control" name="image1" accept="image/*">
+            <input type="text" class="form-control" name="image1" >
         </div>
         <div class="form-group">
             <label for="image2">Image 2:</label>
-            <input type="file" class="form-control" name="image2" accept="image/*">
+            <input type="text" class="form-control" name="image2" >
         </div>
         <div class="form-group">
             <label for="image3">Image 3:</label>
-            <input type="file" class="form-control" name="image3" accept="image/*">
+            <input type="text" class="form-control" name="image3" >
         </div>
         <div class="form-group">
             <label for="image4">Image 4:</label>
-            <input type="file" class="form-control" name="image4" accept="image/*">
+            <input type="text" class="form-control" name="image4" >
         </div>
 
         <div class="form-group">

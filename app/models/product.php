@@ -92,7 +92,8 @@ class Product extends Database
                         products.image3,
                         products.image4,
                         categories.name as category_name,
-                        discounts.name as discount_name
+                        discounts.name as discount_name,
+                        discounts.discount_rate
                         FROM products
                 INNER JOIN categories ON products.category_id = categories.id
                 INNER JOIN discounts ON products.discount_id = discounts.id

@@ -99,6 +99,27 @@ class User extends Database
         return $data;
     }
 
+    public function getUserIdByCredentials($username, $password)
+    {
+        $tableName = $this->model();
+        $params = [
+            "username" => $username
+        ];
+
+        $data = $this->getData($tableName, $params);
+        $result = null;
+
+        foreach ($data as $row) {
+            if (password_verify($password, $row['password'])) {
+                $result = $row['id'];
+                break;
+            }
+        }
+
+        return $result;
+    }
+
+
     public function getUserByUsername($username)
     {
         $tableName = $this->model();

@@ -38,7 +38,6 @@ class App
 
         // Kiểm tra sự tồn tại của file controller dựa trên giá trị của 'page' và 'controller'
         if (file_exists('app/Controllers/' . $page . '/' . $controller . 'Controller.php')) {
-
             // Include file Controller.php và file controller của 'page'
             include 'app/Controllers/Controller.php';
             include 'app/Controllers/' . $page . 'Controller.php'; 

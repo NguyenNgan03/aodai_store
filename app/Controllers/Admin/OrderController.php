@@ -1,14 +1,17 @@
 <?php
 include 'app\models\Order.php';
+include 'app\models\orderDetail.php';
 
 
 class OrderController extends AdminController
 {
     private $order;
+    private $orderDetail;
 
     public function __construct()
     {
         $this->order = new order;
+        $this->orderDetail = new orderDetail;
     }
 
     public function index()
@@ -105,5 +108,17 @@ class OrderController extends AdminController
 					window.location.href('?controller=order&action=index&page=admin');</script>";
             }
         }
+    }
+    public function createOrder($billingName, $billingEmailAddress, $billingPhone, $shippingAddress, $orderDate, $shippingDate, $notes, $paymentStatus, $shippingStatus)
+    {
+        
+        // Lưu thông tin đơn hàng vào bảng orders
+        return $this->order->create($billingName, $orderDate, $shippingAddress, $shippingDate, $notes, $paymentStatus, $shippingStatus);
+    }
+
+    public function createOrderDetail($orderId, $productId, $quantity, $price)
+    {
+        // Lưu chi tiết đơn hàng vào bảng order_detail
+        return $this->orderDetail->createOrderDetail($orderId, $productId, $quantity, $price);
     }
 }

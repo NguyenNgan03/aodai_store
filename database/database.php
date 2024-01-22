@@ -93,7 +93,7 @@ class Database
 
             return true;
         } catch (PDOException $e) {
-            return false;
+            return $e->getMessage();
         }
     }
 
